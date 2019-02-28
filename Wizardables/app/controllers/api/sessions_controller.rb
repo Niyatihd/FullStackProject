@@ -18,7 +18,7 @@ class Api::SessionsController < ApplicationController
       logout
       render 'api/users/show'
     else
-      render json: {message: "You are already logged out"}
+      render json: ["Nobody Signed in"], status: 430
     end
   end
 end
