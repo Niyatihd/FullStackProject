@@ -5,11 +5,12 @@ const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
       <h3>Wizardables</h3>
-      <div id="search-btn">
-        <button>Create a Wizardable</button>
-        <input type="text" placeholder="Search.."></input>
-      </div>
-      <div>
+      <form className="search-form">
+        <input type="text" placeholder="  Let's Make.." name="search" />
+        <button type="submit"><i class="search-btn"></i></button>
+        <button id="search-btn">Create a Wizardable</button>
+      </form>     
+      <div className="session-btns">
         <Link to="/login">Login</Link>
         <Link to="/signup">Sign Up</Link>
       </div>
