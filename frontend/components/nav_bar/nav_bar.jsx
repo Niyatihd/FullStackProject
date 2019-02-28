@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
+    <>
     <nav className="login-signup">
       <div className="session-title">
         <div className="nav-logo-title">
@@ -22,6 +23,8 @@ const Greeting = ({ currentUser, logout }) => {
         <Link to="/signup">SignUp</Link>
       </div>
     </nav>
+    <div className="empty-below-nav-bar"></div>
+    </>
   );
   const personalGreeting = () => (
     <hgroup className="header-group">

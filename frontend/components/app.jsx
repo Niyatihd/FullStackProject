@@ -3,6 +3,7 @@ import { Route, Link, Switch} from 'react-router-dom';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
+import Splash from './splash/splash';
 import { AuthRoute } from '../api_util/route_api_util/route_util';
 // import { ProtectedRoute } from '../api_util/route_utils';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -16,12 +17,12 @@ const App = () => (
     <header>
       <Link to="/" className="header-link">
       </Link>
-      {/* <NavBarContainer /> */}
+      <NavBarContainer />
     </header>
     <Switch>
       <AuthRoute exact path="/login" component={LoginContainer} />
       <AuthRoute exact path="/signup" component={SignupContainer} />
-      <Route exact path="/" component={NavBarContainer} />
+      <Route exact path="/" component={Splash} />
     </Switch>
   </div>
 );
