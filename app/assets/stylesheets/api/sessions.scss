@@ -1,0 +1,42 @@
+// Place all the styles related to the api/sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  margin: 0 auto;
+  background-image: url(/images);
+}
+nav {
+  position: relative;
+  display: flex;
+  height: 78px;
+  width: 100%;
+  background-color: #eee;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+nav > h3 {
+  margin-left: 10px;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+nav > div {
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#search-btn > button {
+  height: 20px;
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 15px;
+}
