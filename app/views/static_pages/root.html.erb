@@ -4,7 +4,19 @@
       <%= render("api/users/user.json.jbuilder",
           user: current_user).html_safe %>
   </script>
-<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 <% end %>
+
+
+<script type='text/javascript'>
+  window.images = {
+    background: '<%= image_url('Wizarding-World-of-Harry-Potter.jpg') %>',
+    logo: '<%= image_url('nav-bar/kisspng-harry-potter-and-the-deathly-hallows-hedwig-drawin-flying-owl-5adcc6b2d49476.4843594415244182268707.jpg') %>',
+    logo_hp: '<%= image_url('hp.png') %>'
+  }
+</script>
+
+
 
 <main id='root'>React is Broken</main>

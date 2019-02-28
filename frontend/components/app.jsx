@@ -5,6 +5,11 @@ import LoginContainer from './session/login_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import { AuthRoute } from '../api_util/route_api_util/route_util';
 // import { ProtectedRoute } from '../api_util/route_utils';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faSearch)
 
 const App = () => (
   <div>
