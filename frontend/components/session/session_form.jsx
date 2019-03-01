@@ -14,6 +14,10 @@ class SessionForm extends React.Component {
     this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   handleInput(type) {
     return (
       (e) => {
@@ -82,17 +86,17 @@ class SessionForm extends React.Component {
             <div className="session-login">
               <br/>
               <label>
-                <input placeholder=" Username" className="login-input" type="text" value={this.state.username} onChange={this.handleInput("username")} />
+                <input placeholder="  Username" className="login-input" type="text" value={this.state.username} onChange={this.handleInput("username")} />
               </label>
               <br/>
               <br/>
               <label>
-                <input placeholder=" Email" className="login-input" type="text" value={this.state.email} onChange={this.handleInput("email")} />
+                <input placeholder="  Email" className="login-input" type="text" value={this.state.email} onChange={this.handleInput("email")} />
               </label>
               <br/>
               <br/>
               <label>
-                <input placeholder=" Password" className="login-input" type="password" value={this.state.password} onChange={this.handleInput("password")} />
+                <input placeholder="  Password" className="login-input" type="password" value={this.state.password} onChange={this.handleInput("password")} />
               </label>
               <br/>
               <br/>
@@ -100,6 +104,7 @@ class SessionForm extends React.Component {
               <br/>
               <br/>
               <button className="session-submit" onClick={this.handleDemoSubmit}>Demo Login</button>
+              <br/>
               <br/>
               <br/>
               {this.renderAlternateMsg()}
