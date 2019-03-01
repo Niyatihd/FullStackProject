@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'harry2';
-  src: url("<%= asset_path 'HP.TTF' %>");
+  src: asset-url('HP.TTF');
 }
 
 div > img {

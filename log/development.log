@@ -17103,3 +17103,75 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 57ms (Views: 47.9ms | ActiveRecord: 6.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-01 14:57:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 196ms (Views: 188.6ms | ActiveRecord: 4.6ms)
+
+
+
+ArgumentError - invalid %-encoding (%3C%=%20asset_path%20'HP.TTF'%20%%3E):
+
+Started GET "/" for 127.0.0.1 at 2019-03-01 14:57:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 51ms (Views: 44.3ms | ActiveRecord: 4.6ms)
+
+
+
+ArgumentError - invalid %-encoding (%3C%=%20asset_path%20'HP.TTF'%20%%3E):
+
+Started GET "/" for 127.0.0.1 at 2019-03-01 14:57:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 2.7ms)
+
+
+
+ArgumentError - invalid %-encoding (%3C%=%20asset_path%20'HP.TTF'%20%%3E):
+
+Started GET "/" for 127.0.0.1 at 2019-03-01 14:57:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 1.8ms)
+
+
+
+ArgumentError - invalid %-encoding (%3C%=%20asset_path%20'HP.TTF'%20%%3E):
+
+Started GET "/" for 127.0.0.1 at 2019-03-01 14:57:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 74ms (Views: 65.7ms | ActiveRecord: 1.5ms)
+
+
+
+ArgumentError - invalid %-encoding (%3C%=%20asset_path%20'HP.TTF'%20%%3E):
+
+Started GET "/" for 127.0.0.1 at 2019-03-01 14:58:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 68ms (Views: 53.4ms | ActiveRecord: 11.2ms)
+
+
+
+ArgumentError - invalid %-encoding (%3C%=%20asset_path%20'HP.TTF'%20%%3E):
+
