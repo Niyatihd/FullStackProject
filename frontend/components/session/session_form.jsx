@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
   }
 
   handleInput(type) {
@@ -27,6 +28,18 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+  }
+  
+  handleDemoSubmit(e) {
+    debugger
+    e.preventDefault();
+
+    const user = {
+                  username: "freedobby",
+                  email: "professor_dobby@hogwarts.com",
+                  password: "dobbyisafreeelf"
+                };
+    this.props.demoLogin(user);
   }
 
   renderErrors() {
@@ -45,11 +58,10 @@ class SessionForm extends React.Component {
     return (
       <div className="session-login-form">
         <img id='signup-bg' src={window.images.signup_bg} />
-        <form onSubmit={this.handleSubmit} className="session-login-form-box">
+        <form className="session-login-form-box">
           <div className="empty-div"></div>
           <div className="session-login-form-content">
             <span> Welcome Wizards!</span>
-            {this.renderErrors()}
             <div className="session-login">
               <br/>
               <label>
@@ -70,7 +82,11 @@ class SessionForm extends React.Component {
               <button className="session-submit" onClick={this.handleSubmit}>{this.props.formType}!</button>
               <br/>
               <br/>
+              <button className="session-submit" onClick={this.handleDemoSubmit}>Demo Login</button>
+              <br/>
+              <br/>
               <span>Already a member? {this.props.navLink}</span>
+              <div className="errors"> {this.renderErrors()} </div>
             </div>
           </div>
         </form>

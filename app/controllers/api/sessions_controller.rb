@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render 'api/users/show'
     else
-      render json: ["Invalid Username/Password, Please Sign Up"], status: 420
+      render json: ["Invalid Username/Password"], status: 420
     end
   end
 

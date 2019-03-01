@@ -9,12 +9,12 @@ const Greeting = ({ currentUser, logout }) => {
       <div className="session-title">
         <div className="nav-logo-title">
           <img id='nav-bar-logo' src={window.images.logo_hp} />
-          <h3>Wizardables</h3>
+            <h3><a href="/">Wizardables</a></h3>
         </div>
         <form className="search-form">
           <input type="text" placeholder="  Let's Make ..." name="search" />
           <button type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
-          <button id="new-proj-btn">Featured</button>
+          <button id="featured-proj-btn">Featured</button>
           <button id="new-proj-btn">Create a Wizardable</button>
         </form>
       </div>     
@@ -30,10 +30,37 @@ const Greeting = ({ currentUser, logout }) => {
     </>
   );
   const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
+    <>
+      <nav className="login-signup">
+        <div className="session-title">
+          <div className="nav-logo-title">
+            <img id='nav-bar-logo' src={window.images.logo_hp} />
+            <h3><a href="/">Wizardables</a></h3>
+          </div>
+          <form className="search-form">
+            <input type="text" placeholder="  Let's Make ..." name="search" />
+            <button type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
+            <button id="new-proj-btn">Featured</button>
+            <button id="new-proj-btn">Create a Wizardable</button>
+          </form>
+        </div>
+        <div className="nav-bar-right-end">
+          <img id='welcome-user' src={window.images.freedobby} />
+          <div className="session-btns">
+            <p className="header-name">Hello, {currentUser.username}</p>
+            <button className="header-button" onClick={logout}>Log Out</button>
+          </div>
+        </div>
+      </nav>
+      <div className="empty-below-nav-bar">
+        <img id='nav-bar-slogan-logo' src={window.images.slogan_logo} />
+        <span>AT HOGWARTS, help is always given to those who ask for it.</span>
+      </div>
+    </>
+    // <hgroup className="header-group">
+    //   <h2 className="header-name">Hi, {currentUser.username}!</h2>
+    //   <button className="header-button" onClick={logout}>Log Out</button>
+    // </hgroup>
   );
 
   return currentUser ? personalGreeting() : sessionLinks();

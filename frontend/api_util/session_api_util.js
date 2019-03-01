@@ -8,6 +8,16 @@ export const postUser = (user) => {
   );
 };
 
+export const postDemoUser = (user) => {
+  return (
+    $.ajax({
+      url: "api/users",
+      method: "post",
+      data: { user }
+    })
+  );
+};
+
 export const postSession = (user) => {
   return (
     $.ajax({

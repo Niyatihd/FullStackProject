@@ -60,7 +60,8 @@ nav {
   margin-left: 50px;
 }
 
-.nav-logo-title>h3 {
+.nav-logo-title > h3 > a {
+  text-decoration: none;
   margin-left: 0px;
   font-size: 22px;
   color: rgba(255, 140, 0, 0.988);
@@ -85,19 +86,40 @@ form>button>.search-icon {
 
 .session-btns {
   margin-right: 60px;
-  width: 118px;
+  width: 150px;
   display: flex;
   justify-content: space-between;
   // padding: 10px;
   font-size: 15px;
   color: darkgray;
+  align-items: center;
 }
 
 .session-btns > a {
   color: grey;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   margin-left: 10px;
+}
+
+.session-btns > p {
+  color: grey;
+  font-size: 13px;
+  width: 180px;
+  padding: 0;
+  font-size: 17px;
+  margin-right: 20px;
+}
+
+.session-btns > button {
+  text-decoration: none;
+  font-size: 13px;
+  color: grey;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  width: 150px;
 }
 
 form.search-form button:nth-child(2) {
@@ -179,4 +201,18 @@ form.search-form::after {
   height: 25px;
   width: 30px;
   margin-right: 5px;
+}
+
+.nav-bar-right-end {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#welcome-user {
+  height: 50px;
+  width: 50px;
+  border-radius: 4px;
+  margin-right: 15px;
 }
