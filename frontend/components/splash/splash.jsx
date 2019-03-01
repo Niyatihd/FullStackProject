@@ -39,10 +39,18 @@ class Splash extends React.Component {
     return (
       <div className="splash-bkgrd'">
         <img id='splash-bkgrd-img' src={this.images[this.state.currentImageIdx]} />
+        <div className="splash-dynamic-text">
+          <form>
+            <span>Let's Make</span>
+            <div className="splash-input">
+              <input type="text"/>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }
-};
+}
 
 export default Splash;
 

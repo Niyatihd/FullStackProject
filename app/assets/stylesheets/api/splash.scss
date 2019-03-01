@@ -2,8 +2,47 @@
 //   margin: 0 auto;
 // }
 
+@font-face {
+  font-family: 'harry2';
+  src: url('/assets/HP.TTF');
+}
+
 div > img {
   width: 100%;
   background-size: cover;
   height: 591px;
+}
+
+.splash-dynamic-text {
+  position: absolute;
+  top: 317px;
+  left: 485px;
+  display: flex;
+}
+
+.splash-dynamic-text > form {
+  display: flex;
+}
+
+.splash-dynamic-text > form > span {
+  color: white;
+  // font-weight: bold;
+  font-size: 76px;
+  font-family: 'harry2';
+  text-shadow: 3px 2px black;
+}
+
+.splash-input > input {
+  width: 400px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 4px solid white;
+  box-shadow: 0 2px;
+}
+
+.splash-input {
+  position: relative;
+  top: 60px;
+  margin-left: 20px;
 }
