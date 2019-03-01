@@ -54,6 +54,24 @@ class SessionForm extends React.Component {
     )
   }
 
+  renderAlternateMsg() {
+   return this.props.formType === "signup" ?
+        <span>Already a member? {this.props.navLink}</span>
+        :
+        <span>New to Wizardables? {this.props.navLink}</span>
+  }
+  // renderAlternateMsg() {
+  //   if (this.props.formType === "signup") {
+  //     return (
+  //       <span>Already a member? {this.props.navLink}</span>
+  //     )
+  //   } else {
+  //     return (
+  //       <span>New to Wizardables? {this.props.navLink}</span>
+  //     )
+  //   }
+  // }
+
   render() {
     return (
       <div className="session-login-form">
@@ -85,7 +103,8 @@ class SessionForm extends React.Component {
               <button className="session-submit" onClick={this.handleDemoSubmit}>Demo Login</button>
               <br/>
               <br/>
-              <span>Already a member? {this.props.navLink}</span>
+              {this.renderAlternateMsg()}
+              {/* <span>Already a member? {this.props.navLink}</span> */}
               <div className="errors"> {this.renderErrors()} </div>
             </div>
           </div>
