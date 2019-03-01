@@ -33,7 +33,7 @@ div > img {
 }
 
 .splash-input > input {
-  width: 400px;
+  width: 410px;
   border: 0;
   outline: 0;
   background: transparent;
@@ -44,5 +44,15 @@ div > img {
 .splash-input {
   position: relative;
   top: 60px;
-  margin-left: 20px;
+  margin-left: 30px;
+}
+
+.splash-dyn-text {
+  color: rgba(255, 140, 0, 0.988);
+  font-size: 50px;
+  text-shadow: 3px 2px black;
+  font-family: 'harry2';
+  margin-left: 40px;
+  position: absolute;
+  top: -60px;
 }

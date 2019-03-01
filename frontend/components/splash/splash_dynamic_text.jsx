@@ -1,58 +1,45 @@
 import React from 'react';
 
-class Splash extends React.Component {
+class SplashDynamicText extends React.Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      currentImageIdx: 0
+      currentTextIdx: 0,
+      lastTextIdx: 0,
     };
 
-    this.setImage = this.setImage.bind(this);
+    this.setLastIdx = this.setLastIdx.bind(this);
 
-    this.images = [
-      window.images.splash1,
-      window.images.splash2,
-      window.images.splash3,
-      window.images.splash4,
-      window.images.splash5,
-      window.images.splash6,
-    ];
+    this.dynText = "Poly-Juice Potion       ".split('');
+  }
+  
+  setLastIdx() {
+    this.setState((state) => {
+      return { lastTextIdx: ((state.lastTextIdx + 1) % this.dynText.length + 1) };
+    });
   }
 
   componentDidMount() {
-    this.intervalId = setInterval(this.setImage, 5000);
+    this.intervalId = setInterval(this.setLastIdx, 250);
   }
 
   componentWillUnmount() {
     clearInterval(this.intervalId);
   }
 
-  setImage() {
-    this.setState((state) => {
-      return { currentImageIdx: ((state.currentImageIdx + 1) % 6) };
-    });
-  }
 
   render() {
     return (
-      <div className="splash-bkgrd'">
-        <img id='splash-bkgrd-img' src={this.images[this.state.currentImageIdx]} />
-        <div className="splash-dynamic-text">
-          <form>
-            <span>Let's Make</span>
-            <div className="splash-input">
-              <input type="text" />
-            </div>
-          </form>
-        </div>
+      <div className="splash-dyn-text">
+        { this.dynText.slice(this.state.currentTextIdx, this.state.lastTextIdx) }
       </div>
     )
   }
 };
 
-export default Splash;
+export default SplashDynamicText;
 
 
 

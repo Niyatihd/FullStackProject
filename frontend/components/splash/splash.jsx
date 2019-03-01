@@ -1,4 +1,5 @@
 import React from 'react';
+import SplashDynamicText from './splash_dynamic_text';
 
 class Splash extends React.Component {
 
@@ -43,6 +44,7 @@ class Splash extends React.Component {
           <form>
             <span>Let's Make</span>
             <div className="splash-input">
+              <SplashDynamicText />
               <input type="text"/>
             </div>
           </form>
