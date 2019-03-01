@@ -31,7 +31,6 @@ class SessionForm extends React.Component {
   }
   
   handleDemoSubmit(e) {
-    debugger
     e.preventDefault();
 
     const user = {
@@ -104,8 +103,7 @@ class SessionForm extends React.Component {
               <br/>
               <br/>
               {this.renderAlternateMsg()}
-              {/* <span>Already a member? {this.props.navLink}</span> */}
-              <div className="errors"> {this.renderErrors()} </div>
+              <div className="errors"> {this.renderErrors(this.props.errors)} </div>
             </div>
           </div>
         </form>

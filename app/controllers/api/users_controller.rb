@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render 'api/users/show'
     else
-      render json: @user.errors.full_messages, status: 420
+      render json: ["Invalid Username/Password"], status: 420
     end
   end
 
