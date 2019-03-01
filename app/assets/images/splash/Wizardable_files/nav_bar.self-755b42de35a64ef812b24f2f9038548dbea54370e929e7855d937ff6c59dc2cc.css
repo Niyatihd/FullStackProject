@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'parry_hotterregular';
+  src: url("/assets/ParryHotter");
+}
+@font-face {
+  font-family: 'harry2';
+  src: url("/assets/HP.TTF");
+}
+/* line 15, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+body {
+  margin: 0 auto;
+}
+
+/* line 20, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+nav {
+  position: relative;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  background-color: #eee;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1px;
+  border: 1px solid lightgrey;
+}
+
+/* line 33, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.session-title {
+  display: flex;
+  height: 70px;
+}
+
+/* line 38, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.nav-logo-title {
+  display: flex;
+  height: 70px;
+}
+
+/* line 43, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.search-form {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 423px;
+  display: flex;
+  font-size: 17px;
+  margin-left: 35px;
+}
+
+/* line 55, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+#nav-bar-logo {
+  position: relative;
+  top: 1px;
+  height: 65px;
+  width: 85px;
+  margin-left: 50px;
+}
+
+/* line 63, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.nav-logo-title > h3 {
+  margin-left: 0px;
+  font-size: 22px;
+  color: rgba(255, 140, 0, 0.988);
+  position: relative;
+  top: 19px;
+  font-family: 'harry2';
+  text-shadow: 1px 1px black;
+}
+
+/* line 73, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form > a {
+  width: 50px;
+  color: black;
+}
+
+/* line 78, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form > button > .search-icon {
+  color: white;
+  position: absolute;
+  top: 30px;
+  left: 430px;
+  height: 14px;
+}
+
+/* line 86, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.session-btns {
+  margin-right: 60px;
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: darkgray;
+}
+
+/* line 96, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.session-btns > a {
+  color: grey;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* line 102, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.session-btns > Link {
+  text-decoration: none;
+  color: darkgoldenrod;
+}
+
+/* line 107, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form.search-form button:nth-child(2) {
+  float: left;
+  height: 31px;
+  width: 7%;
+  background: #c8c8c8;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  margin-right: 15px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  border-left: none;
+  padding: 0;
+}
+
+/* line 123, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form.search-form button:nth-child(3) {
+  margin-right: 15px;
+  font-size: 13px;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  height: 29px;
+}
+
+/* line 132, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form.search-form button:nth-child(4) {
+  font-size: 13px;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  height: 29px;
+}
+
+/* line 140, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form.search-form > input {
+  border-top: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  border-right: none;
+  padding: 0;
+  font-size: 12.5px;
+  height: 29px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  width: 128px;
+}
+
+/* line 153, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form.search-form > input::placeholder {
+  color: darkgray;
+}
+
+/* line 157, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form.search-form button:hover {
+  background: rgba(245, 201, 148, 0.988);
+}
+
+/* line 161, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+form.search-form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* line 167, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.empty-below-nav-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 34px;
+}
+
+/* line 175, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+.empty-below-nav-bar > span {
+  background: #fff;
+  color: rgba(138, 134, 134, 0.673);
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+/* line 182, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/nav_bar.scss */
+#nav-bar-slogan-logo {
+  height: 25px;
+  width: 30px;
+  margin-right: 5px;
+}

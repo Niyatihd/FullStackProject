@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'harry2';
+  src: url("/assets/HP.TTF");
+}
+/* line 10, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/splash.scss */
+div > img {
+  width: 100%;
+  background-size: cover;
+  height: 591px;
+}
+
+/* line 16, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/splash.scss */
+.splash-dynamic-text {
+  position: absolute;
+  top: 317px;
+  left: 485px;
+  display: flex;
+}
+
+/* line 23, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/splash.scss */
+.splash-dynamic-text > form {
+  display: flex;
+}
+
+/* line 27, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/splash.scss */
+.splash-dynamic-text > form > span {
+  color: white;
+  font-size: 76px;
+  font-family: 'harry2';
+  text-shadow: 4px 2px black;
+}
+
+/* line 35, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/splash.scss */
+.splash-input > input {
+  width: 410px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 4px solid white;
+  box-shadow: 0 2px;
+}
+
+/* line 44, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/splash.scss */
+.splash-input {
+  position: relative;
+  top: 60px;
+  margin-left: 30px;
+}
+
+/* line 50, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/splash.scss */
+.splash-dyn-text {
+  color: rgba(255, 140, 0, 0.988);
+  font-size: 50px;
+  text-shadow: 3px 2px black;
+  font-family: 'harry2';
+  margin-left: 40px;
+  position: absolute;
+  top: -60px;
+}

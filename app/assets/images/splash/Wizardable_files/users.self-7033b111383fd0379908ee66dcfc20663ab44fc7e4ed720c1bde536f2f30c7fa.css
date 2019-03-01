@@ -1,0 +1,94 @@
+/* line 6, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.body {
+  margin: 0 auto;
+}
+
+/* line 10, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.session-login-form {
+  width: 100%;
+}
+
+/* line 14, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.session-login-form > .signup-bg {
+  width: 100%;
+  background-size: cover;
+  height: 591px;
+  position: sticky;
+}
+
+/* line 21, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.session-login-form-box {
+  position: absolute;
+  top: 106px;
+  width: 360px;
+  height: 100%;
+  margin-left: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 32, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.empty-div {
+  position: absolute;
+  top: 0px;
+  width: 360px;
+  height: 100%;
+  background: black;
+  opacity: 0.3;
+}
+
+/* line 41, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.session-login-form-content {
+  position: absolute;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+/* line 51, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.session-login-form-content > span {
+  color: white;
+  text-shadow: 3px 2px black;
+  font-family: 'harry2';
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+/* line 59, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.session-login {
+  width: 300px;
+}
+
+/* line 63, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.login-input, .session-submit {
+  width: 300px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: white;
+  opacity: 1;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+/* line 74, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.login-input::placeholder {
+  font-size: 15px;
+}
+
+/* line 78, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.session-submit {
+  background: rgba(255, 140, 0, 0.988);
+  font-size: 18px;
+  color: white;
+}
+
+/* line 84, /Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/assets/stylesheets/api/users.scss */
+.session-login > span, a {
+  color: white;
+  margin-left: 30px;
+}

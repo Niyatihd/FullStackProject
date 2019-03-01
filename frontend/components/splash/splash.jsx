@@ -19,6 +19,9 @@ class Splash extends React.Component {
       window.images.splash4,
       window.images.splash5,
       window.images.splash6,
+      window.images.splash7,
+      window.images.splash8,
+      window.images.splash9
     ];
   }
 
@@ -32,7 +35,7 @@ class Splash extends React.Component {
   
   setImage () {
     this.setState((state) => {
-      return { currentImageIdx: ((state.currentImageIdx + 1) % 6)};
+      return { currentImageIdx: ((state.currentImageIdx + 1) % this.images.length)};
     });
   }
   

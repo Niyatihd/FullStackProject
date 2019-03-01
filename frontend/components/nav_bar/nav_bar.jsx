@@ -19,11 +19,14 @@ const Greeting = ({ currentUser, logout }) => {
         </form>
       </div>     
       <div className="session-btns">
-        <Link to="/login">Login</Link>|
-        <Link to="/signup">SignUp</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Sign Up</Link>
       </div>
     </nav>
-    <div className="empty-below-nav-bar"></div>
+    <div className="empty-below-nav-bar">
+        <img id='nav-bar-slogan-logo' src={window.images.slogan_logo} />
+      <span>AT HOGWARTS, help is always given to those who ask for it.</span>
+    </div>
     </>
   );
   const personalGreeting = () => (

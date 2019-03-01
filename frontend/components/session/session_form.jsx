@@ -44,27 +44,34 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="session-login-form">
+        <img id='signup-bg' src={window.images.signup_bg} />
         <form onSubmit={this.handleSubmit} className="session-login-form-box">
-          Wizards Sign In!
-          <br/>
-          Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
-
-          <div className="session-login">
-            <br/>
-            <label>Username
-              <input className="login-input" type="text" value={this.state.username} onChange={this.handleInput("username")} />
-            </label>
-            <br/>
-            <label>Email
-              <input className="login-input" type="text" value={this.state.email} onChange={this.handleInput("email")} />
-            </label>
-            <br/>
-            <label>Password
-              <input className="login-input" type="password" value={this.state.password} onChange={this.handleInput("password")} />
-            </label>
-            <br/>
-            <button className="session-submit" onClick={this.handleSubmit}>{this.props.formType}</button>
+          <div className="empty-div"></div>
+          <div className="session-login-form-content">
+            <span> Welcome Wizards!</span>
+            {this.renderErrors()}
+            <div className="session-login">
+              <br/>
+              <label>
+                <input placeholder=" Username" className="login-input" type="text" value={this.state.username} onChange={this.handleInput("username")} />
+              </label>
+              <br/>
+              <br/>
+              <label>
+                <input placeholder=" Email" className="login-input" type="text" value={this.state.email} onChange={this.handleInput("email")} />
+              </label>
+              <br/>
+              <br/>
+              <label>
+                <input placeholder=" Password" className="login-input" type="password" value={this.state.password} onChange={this.handleInput("password")} />
+              </label>
+              <br/>
+              <br/>
+              <button className="session-submit" onClick={this.handleSubmit}>{this.props.formType}!</button>
+              <br/>
+              <br/>
+              <span>Already a member? {this.props.navLink}</span>
+            </div>
           </div>
         </form>
       </div>

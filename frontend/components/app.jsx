@@ -15,8 +15,6 @@ library.add(faSearch)
 const App = () => (
   <div>
     <header>
-      <Link to="/" className="header-link">
-      </Link>
       <NavBarContainer />
     </header>
     <Switch>
