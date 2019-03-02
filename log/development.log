@@ -20342,3 +20342,1172 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 115ms (Views: 110.2ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/?search=" for 127.0.0.1 at 2019-03-01 23:12:57 -0800
+Processing by StaticPagesController#root as HTML
+  Parameters: {"search"=>""}
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 146ms (Views: 141.5ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (19.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "robert"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rob@rob.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gTGYH-mmrJzKlWYhZBaQyA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "robert"], ["email", "rob@rob.com"], ["password_digest", "$2a$10$Ay4WZdXc8Usf.jIXJujb9elNRLWwgtPmbbVxUJZvljGG61P61f1xW"], ["session_token", "gTGYH-mmrJzKlWYhZBaQyA"], ["created_at", "2019-03-02 07:28:14.488366"], ["updated_at", "2019-03-02 07:28:14.488366"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ned"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ned@ned.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-GE4v_JYWNkYqsWNiYOm3g"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "ned"], ["email", "ned@ned.com"], ["password_digest", "$2a$10$fwaM7nZ5kUhwz7Dxctu4LeWzk620CrIkRrFdPGKqJVm17ZuJ9i7/K"], ["session_token", "-GE4v_JYWNkYqsWNiYOm3g"], ["created_at", "2019-03-02 07:28:14.548199"], ["updated_at", "2019-03-02 07:28:14.548199"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bilbo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bilbo@bilbo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ovrndj6o3qBl4j57LZSQLQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "bilbo"], ["email", "bilbo@bilbo.com"], ["password_digest", "$2a$10$3JSMJz7y6GCSNxrqyOkU5urqJ6.Q23bz7Eyibffw.u8bVorkC29dW"], ["session_token", "ovrndj6o3qBl4j57LZSQLQ"], ["created_at", "2019-03-02 07:28:14.608176"], ["updated_at", "2019-03-02 07:28:14.608176"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "freedobby"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "professor_dobby@hogwarts.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-uHokS1Jy6vzsOrmOABGZA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "freedobby"], ["email", "professor_dobby@hogwarts.com"], ["password_digest", "$2a$10$dvnM0KVvM2uWBUWlzWQ7oOHDCVftUlkpV5hE8N6TpNSvASeKLnhkO"], ["session_token", "-uHokS1Jy6vzsOrmOABGZA"], ["created_at", "2019-03-02 07:28:14.666195"], ["updated_at", "2019-03-02 07:28:14.666195"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mProject Exists (40.9ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" = $1 LIMIT $2[0m  [["title", "Poly-Juice Potion Recipe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (42.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (8465.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wizardable_development"[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (258.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wizardable_development"[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (209.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wizardable_test"[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (550.0ms)[0m  [1m[35mCREATE DATABASE "Wizardable_development" ENCODING = 'unicode'[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (412.7ms)[0m  [1m[35mCREATE DATABASE "Wizardable_test" ENCODING = 'unicode'[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6148984343658957045)[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateUsers (20190226204426)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (49.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190226204426_create_users.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20190226204426_create_users.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190226204426_create_users.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20190226204426_create_users.rb:13
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190226204426"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateProjects (20190301231134)
+  [1m[35m (40.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190301231134_create_projects.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_projects_on_title" ON "projects"  ("title")[0m
+  ↳ db/migrate/20190301231134_create_projects.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_projects_on_description" ON "projects"  ("description")[0m
+  ↳ db/migrate/20190301231134_create_projects.rb:11
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_projects_on_author_id" ON "projects"  ("author_id")[0m
+  ↳ db/migrate/20190301231134_create_projects.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190301231134"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateSteps (20190301234728)
+  [1m[35m (39.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "steps" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "project_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190301234728_create_steps.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_steps_on_title" ON "steps"  ("title")[0m
+  ↳ db/migrate/20190301234728_create_steps.rb:10
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_steps_on_description" ON "steps"  ("description")[0m
+  ↳ db/migrate/20190301234728_create_steps.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_steps_on_project_id" ON "steps"  ("project_id")[0m
+  ↳ db/migrate/20190301234728_create_steps.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190301234728"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-02 07:29:37.744651"], ["updated_at", "2019-03-02 07:29:37.744651"]]
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6148984343658957045)[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "robert"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rob@rob.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wY7KrRLNB3GtWZfSqbZJIw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "robert"], ["email", "rob@rob.com"], ["password_digest", "$2a$10$GMEYoRf0d31lovtIXcNKd.lh.JiAxMo6hFj7kPKE68mcE.xqrgkd6"], ["session_token", "wY7KrRLNB3GtWZfSqbZJIw"], ["created_at", "2019-03-02 07:30:27.051728"], ["updated_at", "2019-03-02 07:30:27.051728"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ned"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ned@ned.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kgtOXNuGk85BaxBkkVLGag"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "ned"], ["email", "ned@ned.com"], ["password_digest", "$2a$10$Nov3JeCSBPUHK.qH3NcpvOk9tlJBM2tDiklAt8.YXqSxQG6JebLk."], ["session_token", "kgtOXNuGk85BaxBkkVLGag"], ["created_at", "2019-03-02 07:30:27.155343"], ["updated_at", "2019-03-02 07:30:27.155343"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bilbo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bilbo@bilbo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gRsvqP-lmVG0M8AL0IlKHg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "bilbo"], ["email", "bilbo@bilbo.com"], ["password_digest", "$2a$10$EZFONYg7qI..6R1IZRO2ROoib1Vmw1p.4qUJPaJrLAkI7MJG1DzGG"], ["session_token", "gRsvqP-lmVG0M8AL0IlKHg"], ["created_at", "2019-03-02 07:30:27.222896"], ["updated_at", "2019-03-02 07:30:27.222896"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "freedobby"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "professor_dobby@hogwarts.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cX-uQ3qjN8PgIY-a3DUmNg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "freedobby"], ["email", "professor_dobby@hogwarts.com"], ["password_digest", "$2a$10$pCfYNGYH2IoonpP8fArYz.eJ0jf/0Xg..QFr00P9BWSCsJCe00BS2"], ["session_token", "cX-uQ3qjN8PgIY-a3DUmNg"], ["created_at", "2019-03-02 07:30:27.281801"], ["updated_at", "2019-03-02 07:30:27.281801"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mProject Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" = $1 LIMIT $2[0m  [["title", "Poly-Juice Potion Recipe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mProject Create (44.5ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Poly-Juice Potion Recipe"], ["description", "The Polyjuice Potion, which is a complex and time-consuming concoction, is best left to highly skilled witches and wizards. It enables the consumer to assume the physical appearance of another person, as long as they have first procured part of that individual's body to add to the brew (this may be anything — toenail clippings, dandruff or worse — but it is most usual to use hair)"], ["author_id", 1], ["created_at", "2019-03-02 07:30:27.315624"], ["updated_at", "2019-03-02 07:30:27.315624"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mStep Create (0.9ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step1: Ingredients"], ["description", "Fluxweed, Knotgrass, Lacewing flies, Leeches, Horn of Bicorn, BoomSlang skin, Hair of person you are turning into"], ["project_id", 1], ["created_at", "2019-03-02 07:30:27.420694"], ["updated_at", "2019-03-02 07:30:27.420694"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step2: Directions-Part1"], ["description", "Add 3 measures of fluxweed to the cauldron (must have been picked on a full moon)., Add 2 bundles of knotgrass to the cauldron., Stir 4 times clockwise., Wave your wand then let potion brew for 80 minutes (for a Pewter Cauldron. A Brass Cauldron will only require 68 and a copper one only 60.)"], ["project_id", 1], ["created_at", "2019-03-02 07:30:27.465479"], ["updated_at", "2019-03-02 07:30:27.465479"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step3: Directions-Part2"], ["description", "Add 3 measures of boomslang skin to the cauldron., Add 1 measure of bicorn horn to the mortar, crush to a fine powder, then add one measure of the crushed horn to the cauldron., Heat for 20 seconds at a high temperature., Wave your wand then let potion brew for 24 hours (for a Pewter Cauldron. A Brass Cauldron will only require 1224 minutes, and a copper one only 18 hours)."], ["project_id", 1], ["created_at", "2019-03-02 07:30:27.470616"], ["updated_at", "2019-03-02 07:30:27.470616"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step4: Directions-Part3"], ["description", "Add 1 additional scoop of lacewings to the cauldron., Stir 3 times, counter-clockwise., Split potion into multiple doses, if desired, then add the pieces of the person you wish to become., Wave your wand to complete the potion."], ["project_id", 1], ["created_at", "2019-03-02 07:30:27.473998"], ["updated_at", "2019-03-02 07:30:27.473998"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mStep Create (0.8ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step5: Directions-Part4"], ["description", "Before this final ingredient is added, Polyjuice looks like thick, dark mud that bubbles slowly. When the piece of the person to be imitated is added, however, the potion changes colour; it seems to react according to the nature of the person to be imitated, once even described as the 'essence' of the person. Good-hearted people result in more attractive colours and tastes, while mean people cause the opposite effect. Harry Potter's was a pure golden colour, whereas Gregory Goyle's tasted like overcooked cabbage and ‘looked like bogies’, Bellatrix Lestrange's tasted disgusting, worse than Gurdyroots and Mafalda Hopkirk's was a pleasant heliotrope colour. It is likely that the taste differs from potion to potion."], ["project_id", 1], ["created_at", "2019-03-02 07:30:27.476610"], ["updated_at", "2019-03-02 07:30:27.476610"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step6: Effects"], ["description", "The effects of a single dose last anywhere from ten minutes to twelve hours depending on how well the potion has been brewed., Continued drinking prior to the transformation wearing off extends the form's duration until the next dosage is required."], ["project_id", 1], ["created_at", "2019-03-02 07:30:27.480651"], ["updated_at", "2019-03-02 07:30:27.480651"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step7: Known Uses"], ["description", "Some of the known uses are:"], ["project_id", 1], ["created_at", "2019-03-02 07:30:27.483058"], ["updated_at", "2019-03-02 07:30:27.483058"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mStep Load (0.8ms)[0m  [1m[34mSELECT "steps".* FROM "steps"[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" >= $1 AND "projects"."id" < $2[0m  [["id", 1], ["id", 2]]
+  [1m[35m (55.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (218.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wizardable_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (202.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wizardable_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (484.9ms)[0m  [1m[35mCREATE DATABASE "Wizardable_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (366.3ms)[0m  [1m[35mCREATE DATABASE "Wizardable_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6148984343658957045)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190226204426)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (37.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190226204426_create_users.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20190226204426_create_users.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190226204426_create_users.rb:12
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20190226204426_create_users.rb:13
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190226204426"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20190301231134)
+  [1m[35m (30.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190301231134_create_projects.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_projects_on_title" ON "projects"  ("title")[0m
+  ↳ db/migrate/20190301231134_create_projects.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_projects_on_description" ON "projects"  ("description")[0m
+  ↳ db/migrate/20190301231134_create_projects.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_projects_on_author_id" ON "projects"  ("author_id")[0m
+  ↳ db/migrate/20190301231134_create_projects.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190301231134"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSteps (20190301234728)
+  [1m[35m (40.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "steps" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "project_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190301234728_create_steps.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_steps_on_title" ON "steps"  ("title")[0m
+  ↳ db/migrate/20190301234728_create_steps.rb:10
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_steps_on_description" ON "steps"  ("description")[0m
+  ↳ db/migrate/20190301234728_create_steps.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_steps_on_project_id" ON "steps"  ("project_id")[0m
+  ↳ db/migrate/20190301234728_create_steps.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190301234728"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-02 17:13:39.797558"], ["updated_at", "2019-03-02 17:13:39.797558"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6148984343658957045)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "robert"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rob@rob.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "a41s3e-lSkiqO5oZmfIaMg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "robert"], ["email", "rob@rob.com"], ["password_digest", "$2a$10$xthL0.Ls.Bb33w2FYIZxgOGa0hpHk/aFYrjTvJjDwOqfXMRtkAss2"], ["session_token", "a41s3e-lSkiqO5oZmfIaMg"], ["created_at", "2019-03-02 17:14:30.721460"], ["updated_at", "2019-03-02 17:14:30.721460"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ned"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ned@ned.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZNratA1CHZOS5iZEPqyH3A"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "ned"], ["email", "ned@ned.com"], ["password_digest", "$2a$10$E8JIkVOICpFCaPcD9104lO596V1rELtR.NeFFT577u1MmsReIQsIG"], ["session_token", "ZNratA1CHZOS5iZEPqyH3A"], ["created_at", "2019-03-02 17:14:30.824801"], ["updated_at", "2019-03-02 17:14:30.824801"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bilbo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bilbo@bilbo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ugKTSjtkNnwUdEmWd36Amw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "bilbo"], ["email", "bilbo@bilbo.com"], ["password_digest", "$2a$10$pfMPNAgnWQcf4JzQeXad5eE.sOm03lXH3ihvE9FEysCrwYCuduQla"], ["session_token", "ugKTSjtkNnwUdEmWd36Amw"], ["created_at", "2019-03-02 17:14:30.893066"], ["updated_at", "2019-03-02 17:14:30.893066"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "freedobby"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "professor_dobby@hogwarts.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3SIj9jjzCgnD8SoaCp1scg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "freedobby"], ["email", "professor_dobby@hogwarts.com"], ["password_digest", "$2a$10$XuQZtG1WqO5p93X9HMp/C.HZkma1lTWISnK/jM1Zumy7oly8bjPda"], ["session_token", "3SIj9jjzCgnD8SoaCp1scg"], ["created_at", "2019-03-02 17:14:30.950305"], ["updated_at", "2019-03-02 17:14:30.950305"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mProject Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" = $1 LIMIT $2[0m  [["title", "Poly-Juice Potion Recipe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mProject Create (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Poly-Juice Potion Recipe"], ["description", "The Polyjuice Potion, which is a complex and time-consuming concoction, is best left to highly skilled witches and wizards. It enables the consumer to assume the physical appearance of another person, as long as they have first procured part of that individual's body to add to the brew (this may be anything — toenail clippings, dandruff or worse — but it is most usual to use hair)"], ["author_id", 1], ["created_at", "2019-03-02 17:14:30.992554"], ["updated_at", "2019-03-02 17:14:30.992554"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mStep Create (1.4ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step1: Ingredients"], ["description", "Fluxweed, Knotgrass, Lacewing flies, Leeches, Horn of Bicorn, BoomSlang skin, Hair of person you are turning into"], ["project_id", 1], ["created_at", "2019-03-02 17:14:31.052397"], ["updated_at", "2019-03-02 17:14:31.052397"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (20.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step2: Directions-Part1"], ["description", "Add 3 measures of fluxweed to the cauldron (must have been picked on a full moon)., Add 2 bundles of knotgrass to the cauldron., Stir 4 times clockwise., Wave your wand then let potion brew for 80 minutes (for a Pewter Cauldron. A Brass Cauldron will only require 68 and a copper one only 60.)"], ["project_id", 1], ["created_at", "2019-03-02 17:14:31.077775"], ["updated_at", "2019-03-02 17:14:31.077775"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step3: Directions-Part2"], ["description", "Add 3 measures of boomslang skin to the cauldron., Add 1 measure of bicorn horn to the mortar, crush to a fine powder, then add one measure of the crushed horn to the cauldron., Heat for 20 seconds at a high temperature., Wave your wand then let potion brew for 24 hours (for a Pewter Cauldron. A Brass Cauldron will only require 1224 minutes, and a copper one only 18 hours)."], ["project_id", 1], ["created_at", "2019-03-02 17:14:31.080437"], ["updated_at", "2019-03-02 17:14:31.080437"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step4: Directions-Part3"], ["description", "Add 1 additional scoop of lacewings to the cauldron., Stir 3 times, counter-clockwise., Split potion into multiple doses, if desired, then add the pieces of the person you wish to become., Wave your wand to complete the potion."], ["project_id", 1], ["created_at", "2019-03-02 17:14:31.083072"], ["updated_at", "2019-03-02 17:14:31.083072"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mStep Create (0.4ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step5: Directions-Part4"], ["description", "Before this final ingredient is added, Polyjuice looks like thick, dark mud that bubbles slowly. When the piece of the person to be imitated is added, however, the potion changes colour; it seems to react according to the nature of the person to be imitated, once even described as the 'essence' of the person. Good-hearted people result in more attractive colours and tastes, while mean people cause the opposite effect. Harry Potter's was a pure golden colour, whereas Gregory Goyle's tasted like overcooked cabbage and ‘looked like bogies’, Bellatrix Lestrange's tasted disgusting, worse than Gurdyroots and Mafalda Hopkirk's was a pleasant heliotrope colour. It is likely that the taste differs from potion to potion."], ["project_id", 1], ["created_at", "2019-03-02 17:14:31.085741"], ["updated_at", "2019-03-02 17:14:31.085741"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step6: Effects"], ["description", "The effects of a single dose last anywhere from ten minutes to twelve hours depending on how well the potion has been brewed., Continued drinking prior to the transformation wearing off extends the form's duration until the next dosage is required."], ["project_id", 1], ["created_at", "2019-03-02 17:14:31.088265"], ["updated_at", "2019-03-02 17:14:31.088265"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mStep Create (0.2ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step7: Known Uses"], ["description", "Some of the known uses are:"], ["project_id", 1], ["created_at", "2019-03-02 17:14:31.090573"], ["updated_at", "2019-03-02 17:14:31.090573"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" = $1 LIMIT $2[0m  [["title", "Love Potion Recipe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Love Potion Recipe"], ["description", "Amortentia is the world's most powerful love potion, it's name comes from the Latin 'Amor Tentia' which means 'love held'. Not only is the potion very powerful, it's also considered to be highly dangerous."], ["author_id", 2], ["created_at", "2019-03-02 17:14:31.093927"], ["updated_at", "2019-03-02 17:14:31.093927"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step1: Ingredients"], ["description", "Ashwinder Eggs, Rose Thorns, Peppermint, Powdered Moonstone and Pearl Dust"], ["project_id", 2], ["created_at", "2019-03-02 17:14:31.096473"], ["updated_at", "2019-03-02 17:14:31.096473"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step2: Directions-Part1"], ["description", "First drop one ashwinder egg into your cauldron. These serpent eggs are a common ingredient in most love potions. You can buy these buy the dozen in any magic store."], ["project_id", 2], ["created_at", "2019-03-02 17:14:31.098826"], ["updated_at", "2019-03-02 17:14:31.098826"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step3: Directions-Part2"], ["description", "Next add in a handful of rose thorns. Be careful as these sometimes have sharp edges. Then add the peppermint, powedered moonstone and pearl dust. Stir your mixture well until steam rises from the cauldron."], ["project_id", 2], ["created_at", "2019-03-02 17:14:31.101108"], ["updated_at", "2019-03-02 17:14:31.101108"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:54
+  [1m[36mStep Create (0.2ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step4: Directions-Part3"], ["description", "Once your potion is ready, steam will rise from your cauldron in spirals and you will begin to smell a strong aroma. Amortentia has a different aroma for everyone who smells it, reminding each person of the things that they find most attractive. Amortentia is recognised by its distinctive for its mother of pearl sheen."], ["project_id", 2], ["created_at", "2019-03-02 17:14:31.103342"], ["updated_at", "2019-03-02 17:14:31.103342"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step5: Effects"], ["description", "Once prepared, you will need to get your crush to drink one drop of the potion, a single dose usually lasts up to 24 hours, the drinker will only hold an obsession for the person who administered the potion. However, this is not really love, its impossible to manufacture or imitate love but the drinker will become instantly infatuated with the person who administered it. Amortentia must be drunk continuously in order to maintain the false love. As stated its dangerous to underestimate a powerful infatuation. Despite its power, Amortentia doesnt create actual love; its impossible to manufacture or imitate love."], ["project_id", 2], ["created_at", "2019-03-02 17:14:31.105589"], ["updated_at", "2019-03-02 17:14:31.105589"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" = $1 LIMIT $2[0m  [["title", "Liquid luck Recipe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:60
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:60
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Liquid luck Recipe"], ["description", "Felix Felicis is liquid luck, which makes the person who drinks it lucky for a certain period of time."], ["author_id", 3], ["created_at", "2019-03-02 17:14:31.108754"], ["updated_at", "2019-03-02 17:14:31.108754"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:65
+  [1m[36mStep Create (0.2ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step1: Ingredients"], ["description", "Ashwinder egg, Squill bulb, Murtlap tentacle, Tincture of thyme, Occamy eggshell, Powdered common rue"], ["project_id", 3], ["created_at", "2019-03-02 17:14:31.111240"], ["updated_at", "2019-03-02 17:14:31.111240"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:66
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step2: Directions-Part1"], ["description", "Add Ashwinder egg to a cauldron, then add horseradish and heat. Juice a squill bulb, add to the cauldron and stir vigorously. Chop up anemone-like growth on the back of Murtlap, add to mixture and heat."], ["project_id", 3], ["created_at", "2019-03-02 17:14:31.114083"], ["updated_at", "2019-03-02 17:14:31.114083"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:67
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step3: Directions-Part2"], ["description", "Add a dash of tincture of thyme and stir slowly. Grind up Occamy eggshell and add to mixture. Stir slowly then heat the cauldron."], ["project_id", 3], ["created_at", "2019-03-02 17:14:31.117250"], ["updated_at", "2019-03-02 17:14:31.117250"]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:68
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step4: Directions-Part3"], ["description", "Add a sprinkle of powdered common rue. Stir vigorously then heat the cauldron one last time. Wave wand over potion in a figure of eight and say incantation Felixempra!"], ["project_id", 3], ["created_at", "2019-03-02 17:14:31.120153"], ["updated_at", "2019-03-02 17:14:31.120153"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:69
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step5: Effects"], ["description", "Felix Felicis causes the drinker to have a limited period of good luck, during which they are likely to to succeed in all endeavours in which success is possible. They have a strong perception of this effect, including a high level of confidence and a \"sensation of infinite opportunity.\""], ["project_id", 3], ["created_at", "2019-03-02 17:14:31.123155"], ["updated_at", "2019-03-02 17:14:31.123155"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:74
+  [1m[36mProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" = $1 LIMIT $2[0m  [["title", "Skele Gro Potion Recipe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:74
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:74
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Skele Gro Potion Recipe"], ["description", "Skele-Gro (alternately spelled Skelegro) is a dreadful-tasting potion which restores bones. It is able to mend broken bones and even regrow entire bones that have vanished or been otherwise lost. For regrowing entire bones, the process is a notably slow and painful process, that can take over a full day."], ["author_id", 4], ["created_at", "2019-03-02 17:14:31.127396"], ["updated_at", "2019-03-02 17:14:31.127396"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:74
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:79
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:79
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step1: Ingredients"], ["description", "scarab beetles, rose water, dried seahorses, doxy eggs, powdered sulfur, Chinese chomping cabbage, essence of dittany, chamomile flower petals, pufferfish, jellyfish, honeywater, griffin claws, Velnamēle Pepper"], ["project_id", 4], ["created_at", "2019-03-02 17:14:31.130171"], ["updated_at", "2019-03-02 17:14:31.130171"]]
+  ↳ db/seeds.rb:79
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:79
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step2: Directions-Part1"], ["description", "Crush 3 scarab beetles and 2 dried seahorses with mortar and pestle. Add 2.5 tablespoons of the crushed mixture to the cauldron. Add 3 milliliters of rose water to the cauldron. Leave the potion to brew in your cauldron for 60 minutes."], ["project_id", 4], ["created_at", "2019-03-02 17:14:31.132962"], ["updated_at", "2019-03-02 17:14:31.132962"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:81
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:81
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step3: Directions-Part2"], ["description", "Add 2 doxy eggs to the cauldron. Add 2 tablespoons of powdered sulfur. Carefully cut the Chinese chomping cabbage width-wise. Add the last 2 scarab beetles and 1 dried seahorse."], ["project_id", 4], ["created_at", "2019-03-02 17:14:31.135862"], ["updated_at", "2019-03-02 17:14:31.135862"]]
+  ↳ db/seeds.rb:81
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:81
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step4: Directions-Part3"], ["description", "Add 4 milliliters of rose water to the cauldron and let simmer. Add 2 milliliters of essence of dittany to the cauldron. Add 2 chamomile flower petals, 1 jellyfish, and 1 pufferfish to the cauldron. Add 2 chamomile flower petals to the cauldron."], ["project_id", 4], ["created_at", "2019-03-02 17:14:31.138736"], ["updated_at", "2019-03-02 17:14:31.138736"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mStep Create (0.3ms)[0m  [1m[32mINSERT INTO "steps" ("title", "description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Step5: Effects"], ["description", "Once consumed, the potion will slowly work to repair bone damage and even rebuild bones that have been removed through magical or non-magical means. This potion typically takes at least twelve hours to repair and regrow bones. Depending on the severity of the injury, it may take far longer. It should be noted, however, that the potion cannot rebuild limbs or parts of the body as a whole, only the skeletal structure. It also cannot repair bodies born with deformities, such as those born with missing bones."], ["project_id", 4], ["created_at", "2019-03-02 17:14:31.141705"], ["updated_at", "2019-03-02 17:14:31.141705"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" BETWEEN $1 AND $2[0m  [["id", 1], ["id", 5]]
+Started GET "/" for 127.0.0.1 at 2019-03-02 12:49:50 -0800
+  [1m[35m (46.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/niyatidesai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (41.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MncrTurG0ssHXgWWYwGoHw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (1928.5ms)
+Completed 200 OK in 2198ms (Views: 2151.3ms | ActiveRecord: 44.1ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-03-02 12:50:42 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"freedobby", "email"=>"professor_dobby@hogwarts.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "freedobby"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "freedobby"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "professor_dobby@hogwarts.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "cSQaNZYPFTInzTad-nAGDg"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "cSQaNZYPFTInzTad-nAGDg"], ["updated_at", "2019-03-02 20:50:42.487279"], ["id", 4]]
+  ↳ app/models/user.rb:49
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:49
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (5.1ms)
+Completed 200 OK in 124ms (Views: 12.8ms | ActiveRecord: 40.7ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2019-03-02 12:58:11 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cSQaNZYPFTInzTad-nAGDg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "freedobby"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "professor_dobby@hogwarts.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "1w1fD4E9BvctsBvlcxpcRg"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1w1fD4E9BvctsBvlcxpcRg"], ["updated_at", "2019-03-02 20:58:11.244899"], ["id", 4]]
+  ↳ app/models/user.rb:49
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:49
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 72ms (Views: 16.7ms | ActiveRecord: 48.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-03-02 12:58:34 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"freedobby", "email"=>"professor_dobby@hogwarts.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "freedobby"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "freedobby"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "professor_dobby@hogwarts.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "N-HwaDB9oT5_QKfiFyA6LA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "N-HwaDB9oT5_QKfiFyA6LA"], ["updated_at", "2019-03-02 20:58:34.823518"], ["id", 4]]
+  ↳ app/models/user.rb:49
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:49
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 76ms (Views: 10.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 13:17:00 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/index.json.jbuilder (292.3ms)
+Completed 500 Internal Server Error in 332ms (ActiveRecord: 10.5ms)
+
+
+
+NameError - undefined local variable or method `report' for #<#<Class:0x00007fe9747aefd0>:0x00007fe97479eba8>:
+  app/views/api/projects/index.json.jbuilder:2:in `block in _app_views_api_projects_index_json_jbuilder___4520683025349884354_70320329292420'
+  app/views/api/projects/index.json.jbuilder:1:in `_app_views_api_projects_index_json_jbuilder___4520683025349884354_70320329292420'
+  app/controllers/api/projects_controller.rb:6:in `index'
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 13:17:28 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/index.json.jbuilder (6.1ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-02 13:23:59 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+No template found for Api::ProjectsController#show, rendering head :no_content
+Completed 204 No Content in 114ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-02 13:24:02 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+No template found for Api::ProjectsController#show, rendering head :no_content
+Completed 204 No Content in 136ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:24:11 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"2"}
+No template found for Api::ProjectsController#show, rendering head :no_content
+Completed 204 No Content in 133ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:27:06 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"2"}
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (5.6ms)
+  Rendered api/projects/show.json.jbuilder (7.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `title' for nil:NilClass:
+  app/views/api/projects/_project.json.jbuilder:1:in `_app_views_api_projects__project_json_jbuilder___934039099132929262_70320345895740'
+  app/views/api/projects/show.json.jbuilder:1:in `_app_views_api_projects_show_json_jbuilder__657760534247996483_70320345924140'
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 13:27:27 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (61.5ms)
+Completed 200 OK in 92ms (Views: 23.6ms | ActiveRecord: 50.5ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-02 13:28:11 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (4.6ms)
+  Rendered api/projects/show.json.jbuilder (5.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `title' for nil:NilClass:
+  app/views/api/projects/_project.json.jbuilder:1:in `_app_views_api_projects__project_json_jbuilder___934039099132929262_70320342614860'
+  app/views/api/projects/show.json.jbuilder:1:in `_app_views_api_projects_show_json_jbuilder__657760534247996483_70320299386000'
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 13:29:15 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (8.3ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 13:31:18 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/index.json.jbuilder (14.9ms)
+Completed 200 OK in 34ms (Views: 16.3ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-02 13:31:22 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/show.json.jbuilder (2.1ms)
+Completed 200 OK in 19ms (Views: 13.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:34:43 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"2"}
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (3.5ms)
+  Rendered api/projects/show.json.jbuilder (4.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `title' for nil:NilClass:
+  app/views/api/projects/_project.json.jbuilder:1:in `_app_views_api_projects__project_json_jbuilder___934039099132929262_70320350799860'
+  app/views/api/projects/show.json.jbuilder:1:in `_app_views_api_projects_show_json_jbuilder__657760534247996483_70320350819940'
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:35:44 -0800
+
+SyntaxError - syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+...oject ? @project : render json: ['Project not found'], statu...
+...                          ^~~~~
+/Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/controllers/api/projects_controller.rb:41: syntax error, unexpected ',', expecting keyword_end
+...er json: ['Project not found'], status: :not_found
+...                              ^:
+  app/controllers/api/projects_controller.rb:41:in `'
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:35:45 -0800
+
+SyntaxError - syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+...oject ? @project : render json: ['Project not found'], statu...
+...                          ^~~~~
+/Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/controllers/api/projects_controller.rb:41: syntax error, unexpected ',', expecting keyword_end
+...er json: ['Project not found'], status: :not_found
+...                              ^:
+  app/controllers/api/projects_controller.rb:41:in `'
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:35:59 -0800
+
+SyntaxError - syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+...oject ? @project : render json: ['Project not found'] status...
+...                          ^~~~~
+/Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/controllers/api/projects_controller.rb:41: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...n: ['Project not found'] status: :not_found
+...                         ^~~~~~:
+  app/controllers/api/projects_controller.rb:41:in `'
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:36:01 -0800
+
+SyntaxError - syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+...oject ? @project : render json: ['Project not found'] status...
+...                          ^~~~~
+/Users/niyatidesai/Google Drive/01-App academy/01_fullstack/FullStackProject/app/controllers/api/projects_controller.rb:41: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...n: ['Project not found'] status: :not_found
+...                         ^~~~~~:
+  app/controllers/api/projects_controller.rb:41:in `'
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:36:42 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"2"}
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (3.5ms)
+  Rendered api/projects/show.json.jbuilder (4.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `title' for nil:NilClass:
+  app/views/api/projects/_project.json.jbuilder:1:in `_app_views_api_projects__project_json_jbuilder___934039099132929262_70320327262640'
+  app/views/api/projects/show.json.jbuilder:1:in `_app_views_api_projects_show_json_jbuilder__657760534247996483_70320327716800'
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:36:43 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"2"}
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (5.6ms)
+  Rendered api/projects/show.json.jbuilder (7.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `title' for nil:NilClass:
+  app/views/api/projects/_project.json.jbuilder:1:in `_app_views_api_projects__project_json_jbuilder___934039099132929262_70320351924660'
+  app/views/api/projects/show.json.jbuilder:1:in `_app_views_api_projects_show_json_jbuilder__657760534247996483_70320351956140'
+
+Started GET "/api/projects/2" for 127.0.0.1 at 2019-03-02 13:37:36 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:25
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/show.json.jbuilder (1.9ms)
+Completed 200 OK in 27ms (Views: 8.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/projects/7" for 127.0.0.1 at 2019-03-02 13:37:43 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:25
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Project with 'id'=7:
+  app/controllers/api/projects_controller.rb:25:in `show'
+
+Started GET "/api/projects/7" for 127.0.0.1 at 2019-03-02 13:38:12 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:25
+Completed 404 Not Found in 11ms (ActiveRecord: 4.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Project with 'id'=7:
+  app/controllers/api/projects_controller.rb:25:in `show'
+
+Started GET "/api/projects/7" for 127.0.0.1 at 2019-03-02 13:38:13 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:25
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Project with 'id'=7:
+  app/controllers/api/projects_controller.rb:25:in `show'
+
+Started POST "/api/session?user[username]=sirius&user[password]=[FILTERED]&user[email]=sirius@azkaban.com" for 127.0.0.1 at 2019-03-02 13:40:32 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"sirius", "password"=>"[FILTERED]", "email"=>"sirius@azkaban.com"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sirius"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+Completed 420  in 10ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/projects" for 127.0.0.1 at 2019-03-02 13:43:20 -0800
+
+AbstractController::ActionNotFound - The action 'create' could not be found for Api::ProjectsController:
+
+Started POST "/api/projects" for 127.0.0.1 at 2019-03-02 13:43:51 -0800
+
+AbstractController::ActionNotFound - The action 'create' could not be found for Api::ProjectsController:
+
+Started POST "/api/projects" for 127.0.0.1 at 2019-03-02 13:43:52 -0800
+
+AbstractController::ActionNotFound - The action 'create' could not be found for Api::ProjectsController:
+
+Started POST "/api/projects" for 127.0.0.1 at 2019-03-02 13:43:53 -0800
+
+AbstractController::ActionNotFound - The action 'create' could not be found for Api::ProjectsController:
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 13:44:23 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (3.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/index.json.jbuilder (21.1ms)
+Completed 200 OK in 48ms (Views: 21.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 13:44:37 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (15.7ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-02 13:46:59 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:45
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/show.json.jbuilder (2.2ms)
+Completed 200 OK in 26ms (Views: 9.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/projects/7" for 127.0.0.1 at 2019-03-02 13:47:06 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:45
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Project with 'id'=7:
+  app/controllers/api/projects_controller.rb:45:in `set_project'
+  app/controllers/api/projects_controller.rb:24:in `show'
+
+Started GET "/api/projects/7" for 127.0.0.1 at 2019-03-02 13:47:58 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+Completed 404 Not Found in 11ms (ActiveRecord: 5.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Project with 'id'=7:
+  app/controllers/api/projects_controller.rb:24:in `show'
+
+Started GET "/api/projects/7" for 127.0.0.1 at 2019-03-02 13:48:42 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+Completed 404 Not Found in 10ms (ActiveRecord: 4.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Project with 'id'=7:
+  app/controllers/api/projects_controller.rb:24:in `show'
+
+Started GET "/api/projects/7" for 127.0.0.1 at 2019-03-02 13:48:42 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Project with 'id'=7:
+  app/controllers/api/projects_controller.rb:24:in `show'
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-02 13:48:47 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  Rendered api/users/show.json.jbuilder (4.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.9ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/api/users/_user.json.jbuilder:1:in `_app_views_api_users__user_json_jbuilder___280731466175317914_70320350533620'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2853819005740144028_70320300664660'
+  app/controllers/api/projects_controller.rb:28:in `show'
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-02 13:49:17 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/show.json.jbuilder (2.1ms)
+Completed 200 OK in 32ms (Views: 12.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 14:23:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "N-HwaDB9oT5_QKfiFyA6LA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 523ms (Views: 511.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 14:23:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "N-HwaDB9oT5_QKfiFyA6LA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 585ms (Views: 581.7ms | ActiveRecord: 0.5ms)
+
+
