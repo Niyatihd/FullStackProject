@@ -20267,3 +20267,58 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 84ms (Views: 68.4ms | ActiveRecord: 11.3ms)
 
 
+Started GET "/?search=" for 127.0.0.1 at 2019-03-01 23:05:10 -0800
+Processing by StaticPagesController#root as HTML
+  Parameters: {"search"=>""}
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (1537.4ms)
+Completed 500 Internal Server Error in 1551ms (ActiveRecord: 5.0ms)
+
+
+
+Sprockets::Rails::Helper::AssetNotFound - The asset "nabar/freedobby.gif" is not present in the asset pipeline.:
+  app/views/static_pages/root.html.erb:31:in `_app_views_static_pages_root_html_erb__2832156749548116522_70347538701100'
+
+Started POST "/__better_errors/0b09e86652aee3f1/variables" for 127.0.0.1 at 2019-03-01 23:05:12 -0800
+Started GET "/?search=" for 127.0.0.1 at 2019-03-01 23:05:30 -0800
+Processing by StaticPagesController#root as HTML
+  Parameters: {"search"=>""}
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 265ms (Views: 262.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?search=" for 127.0.0.1 at 2019-03-01 23:06:44 -0800
+Processing by StaticPagesController#root as HTML
+  Parameters: {"search"=>""}
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 132ms (Views: 124.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/?search=" for 127.0.0.1 at 2019-03-01 23:07:07 -0800
+Processing by StaticPagesController#root as HTML
+  Parameters: {"search"=>""}
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 112ms (Views: 109.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?search=" for 127.0.0.1 at 2019-03-01 23:08:22 -0800
+Processing by StaticPagesController#root as HTML
+  Parameters: {"search"=>""}
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 128ms (Views: 118.3ms | ActiveRecord: 7.1ms)
+
+
