@@ -17,11 +17,14 @@ const Greeting = ({ currentUser, logout }) => {
           <button id="featured-proj-btn">Featured</button>
           <button id="new-proj-btn">Create a Wizardable</button>
         </form>
-      </div>     
-      <div className="session-btns">
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Sign Up</Link>
       </div>
+      {/* <div className="nav-bar-right-end"> */}
+        <div className="session-btns">
+          <img className='welcome-user' src={window.images.hp_navbar_logo} />    
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link>
+        </div>
+      {/* </div> */}
     </nav>
     <div className="empty-below-nav-bar">
         <img id='nav-bar-slogan-logo' src={window.images.slogan_logo} />
@@ -44,13 +47,13 @@ const Greeting = ({ currentUser, logout }) => {
             <button id="new-proj-btn">Create a Wizardable</button>
           </form>
         </div>
-        <div className="nav-bar-right-end">
-          <img id='welcome-user' src={window.images.freedobby} />
+        {/* <div className="nav-bar-right-end"> */}
           <div className="session-btns">
+          <img className='welcome-user' src={window.images.freedobby} />
             <p className="header-name">Hello, {currentUser.username}</p>
             <button className="header-button" onClick={logout}>Log Out</button>
           </div>
-        </div>
+        {/* </div> */}
       </nav>
       <div className="empty-below-nav-bar">
         <img id='nav-bar-slogan-logo' src={window.images.slogan_logo} />

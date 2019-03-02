@@ -7,17 +7,19 @@
   src: asset-url('HP.TTF');
 }
 
-div > img {
+#splash-bkgrd-img {
   width: 100%;
   background-size: cover;
   height: 591px;
 }
 
 .splash-dynamic-text {
+  width: 100%;
   position: absolute;
   top: 317px;
-  left: 485px;
+  left: 0;
   display: flex;
+  justify-content: center;
 }
 
 .splash-dynamic-text > form {
