@@ -29,9 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
     store = configureStore(preloadedState);
-    // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
-    // window.fetchProjects = fetchProjects;
+    window.store = store;
+    window.fetchProjects = fetchProjects();
     delete window.currentUser;
   } else {
     store = configureStore();

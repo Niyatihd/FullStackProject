@@ -1,7 +1,7 @@
 export const fetchProjects = () => {
   return (
     $.ajax({
-      url: "/api/projects",
+      url: "api/projects",
       method: "get"
     })
   );
