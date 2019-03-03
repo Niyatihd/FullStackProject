@@ -29,13 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
     store = configureStore(preloadedState);
-    window.store = store;
-    window.fetchProjects = fetchProjects();
     delete window.currentUser;
   } else {
     store = configureStore();
   }
- 
+  
+  ///////DELETE
+  window.store = store;
+  window.fetchProjects = fetchProjects();
+  ///////DELETE
+  
   
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);

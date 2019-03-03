@@ -8,7 +8,6 @@ const ProjectsReducer = (state={}, action) => {
 
   switch (action.type) {
     case RECEIVE_ALL_PROJECTS:
-      debugger
       return action.projects;
     default:
       return state;

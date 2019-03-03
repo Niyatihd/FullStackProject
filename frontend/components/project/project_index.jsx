@@ -3,11 +3,6 @@ import ProjectIndexItem from './project_index_item';
 import { Link } from 'react-router-dom';
 
 class ProjectIndex extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-    };
 
   componentDidMount() {
     this.props.fetchProjects();
@@ -22,7 +17,7 @@ class ProjectIndex extends React.Component {
 
     return (
       <div>
-          { project }
+        { project }
       </div>
     );
   }

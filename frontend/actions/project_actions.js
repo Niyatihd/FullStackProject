@@ -3,8 +3,6 @@ import * as ProjectAPIUtil from '../api_util/project_util';
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 
 
-
-
 //regular action creators
 
 export const receiveAllProjects = (projects) => ({
