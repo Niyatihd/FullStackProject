@@ -26113,3 +26113,386 @@ Processing by Api::ProjectsController#index as JSON
 Completed 200 OK in 33ms (Views: 26.3ms | ActiveRecord: 6.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:05:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 129ms (Views: 111.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:05:46 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/index.json.jbuilder (12.7ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:06:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 89ms (Views: 84.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:06:13 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (8.7ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:06:24 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (8.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (16.8ms)
+Completed 200 OK in 29ms (Views: 21.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:10:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.8ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...: 40px 0 40px 0": expected "{", was ";":
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1177143027322165423_70289163316740'
+
+Started POST "/__better_errors/caace2708172a8b4/variables" for 127.0.0.1 at 2019-03-02 22:10:28 -0800
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:11:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.6ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...: 40px 0 40px 0": expected "{", was ";":
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1177143027322165423_70289208268320'
+
+Started POST "/__better_errors/bcd3ca02bc066b1c/variables" for 127.0.0.1 at 2019-03-02 22:11:06 -0800
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:11:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (20.8ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.4ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...: 40px 0 40px 0": expected "{", was ";":
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1177143027322165423_70289195675080'
+
+Started POST "/__better_errors/fed1a8f888e04b26/variables" for 127.0.0.1 at 2019-03-02 22:11:38 -0800
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:11:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.3ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...: 40px 0 40px 0": expected "{", was ";":
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1177143027322165423_70289207713240'
+
+Started POST "/__better_errors/9ca7fa01be1318f6/variables" for 127.0.0.1 at 2019-03-02 22:11:47 -0800
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:12:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.5ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...: 40px 0 40px 0": expected "{", was ";":
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1177143027322165423_70289208334840'
+
+Started POST "/__better_errors/9ad533993b96e96f/variables" for 127.0.0.1 at 2019-03-02 22:12:14 -0800
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:13:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 144ms (Views: 139.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:13:18 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (16.2ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:15:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (129.8ms)
+Completed 200 OK in 283ms (Views: 277.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:15:55 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (8.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (32.6ms)
+Completed 200 OK in 42ms (Views: 23.0ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:21:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 116ms (Views: 105.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:21:17 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (20.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (93.3ms)
+Completed 200 OK in 107ms (Views: 23.7ms | ActiveRecord: 82.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:23:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 236ms (Views: 229.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:23:30 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (4.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (27.2ms)
+Completed 200 OK in 41ms (Views: 24.6ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:26:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 167ms (Views: 161.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:26:22 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (2.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (15.8ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:27:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 247ms (Views: 236.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:27:04 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (4.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (17.9ms)
+Completed 200 OK in 32ms (Views: 26.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:27:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 126ms (Views: 122.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:27:12 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (10.2ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:27:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 140ms (Views: 136.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:27:36 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (2.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (24.7ms)
+Completed 200 OK in 36ms (Views: 25.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:28:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 154ms (Views: 148.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:28:28 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (3.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (21.3ms)
+Completed 200 OK in 36ms (Views: 23.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:28:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 140ms (Views: 137.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:28:56 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/index.json.jbuilder (10.7ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-02 22:29:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UFOSznGNhahCgF6HdiOgqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 140ms (Views: 137.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-02 22:29:47 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (11.8ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 2.7ms)
+
+

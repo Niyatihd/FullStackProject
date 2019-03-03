@@ -95,3 +95,46 @@ step2 = Step.create!(title: 'Step2: Wand Movement', description: 'Swish and flic
 step3 = Step.create!(title: 'Step3: Willpower', description: 'Low; Visualize your energy coming from your body and lifting the object.', project_id: 5)
 step4 = Step.create!(title: 'Step4: Concentration', description: 'Moderate; on the thing you want to levitate', project_id: 5)
 step5 = Step.create!(title: 'Step5: Directions', description: "As you say Wingardium start the 'Swish' motion. Time the swish so that it ends just after you begin saying Leviosa. Then, as you finish saying Leviosa, do the 'Flick.' And remember, keep your mind focused on the target of your spell and visualize drawing energy from your body as we practiced before. I know it may take some time for you to get used to doing all of these things at once, but with practice, casting this spell and many others will become easier.", project_id: 5)
+
+# -----------------------
+# ***** project #6 ******
+# -----------------------
+project5 = Project.create!(title: 'Alohomora charm', description: "The Unlocking Charm, also known as the Thief's Friend (Alohomora) is a charm that unlocks the target, including doors, windows or other objects. It is also able to open doors locked by the Locking Spell (Colloportus), and as such, is its Counter-charm. There also exists a spell to prevent this charm from being used on a locked target.", author_id: 1)
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Incantation', description: 'Alohomora (‘al-LOH-ha-MOR-ah’)', project_id: 6)
+step2 = Step.create!(title: 'Step2: Wand Movement', description: 'Backward S curving up at the end', project_id: 6)
+step3 = Step.create!(title: 'Step3: Willpower', description: 'None for simple mechanical locks; minimal to very high for locks ranging from complex mechanical to complex magical.', project_id: 6)
+step4 = Step.create!(title: 'Step4: Concentration', description: 'Visualization of yourself unlocking the locks', project_id: 6)
+step5 = Step.create!(title: 'Step5: Directions', description: "The charm’s wand movement is a backward S that curves back upward at the end. The caster must focus upon the lock to be undone, whether it is just a physical lock or of magical design. It's important to begin the wand movement as you begin saying the spell and end it as you finish saying the spell, regardless of how quickly you say the spell or perform the movement. Depending upon the particular spell used to create the lock, the Unlocking Charm may prove ineffective.", project_id: 6)
+
+
+# -----------------------
+# ***** project #7 ******
+# -----------------------
+project5 = Project.create!(title: 'Finite charm', description: "The General Counter-Spell (Finite or Finite Incantatem) is a counter-spell for general use. It may be used in duels to counter or reverse minor damage, such as the effects of minor jinxes and curses.", author_id: 1)
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Incantation', description: 'Finite (fi-NEE-tay)', project_id: 7)
+step2 = Step.create!(title: 'Step2: Wand Movement', description: 'A swish to the right, followed by a bend down to the left and back up (in the shape of a shield).', project_id: 7)
+step3 = Step.create!(title: 'Step3: Willpower', description: 'Moderate to strong; depending on the charm(s) to be countered.', project_id: 7)
+step4 = Step.create!(title: 'Step4: Concentration', description: 'Moderate to strong depending on what you are cancelling; Focus on the target object.', project_id: 7)
+step5 = Step.create!(title: 'Step5: Directions', description: "The Effect-Cancelling Charm is a very interesting spell because, rather than give a person or object a quality or property it did not have before, it removes the effects placed on something by a spell. The spell is ineffective against Deep Charmed Objects, but it does remove the effects of any Shallow Object Charms that have been applied. It is also able to remove some negative effects, such as those from jinxes or hexes, from a living creature (humans included), though it is not as good at this task.", project_id: 7)
+
+# -----------------------
+# ***** project #8 ******
+# -----------------------
+project5 = Project.create!(title: 'Arresto Momentum charm', description: "he Slowing Charm (Arresto Momentum) is a charm that can be used by a witch or wizard to slow the velocity of an object.", author_id: 1)
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Incantation', description: 'Arresto Momentum (ah-REST-oh mo-MEN-tum)', project_id: 8)
+step2 = Step.create!(title: 'Step2: Wand Movement', description: 'Wave wand.', project_id: 8)
+step3 = Step.create!(title: 'Step3: Willpower', description: 'Very high; depending on the target’s speed and height.', project_id: 8)
+step4 = Step.create!(title: 'Step4: Concentration', description: 'Medium to high; direct the magic to the target object or person.', project_id: 8)
+step5 = Step.create!(title: 'Step5: Directions', description: "How does this spell work? I am sure that all of you know that objects fall at different speeds when you drop them in a liquid. Yet to make sure that we are all on the same page, I have brought you four different jars filled with water, corn syrup, oil, and honey. If you watch the speed in which a regular marble falls in these fluids, you will certainly notice a difference.", project_id: 7)
