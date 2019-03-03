@@ -12,7 +12,7 @@ class Api::ProjectsController < ApplicationController
   #   if @project.save
   #     render 'api/projects/show'
   #   else
-  #     render json: @report.errors.full_messages, status: :unprocessable_entity
+  #     render json: @project.errors.full_messages, status: :unprocessable_entity
   #   end
   # end
 
