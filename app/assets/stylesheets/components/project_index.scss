@@ -1,25 +1,95 @@
 
+@font-face {
+  font-family: 'harry2';
+  src: asset-url('HP.TTF');
+}
+
 .featured-title {
   margin-left: 30px;
 }
 
 .project-grid {
-  margin: 40px 0 0 0;
+  margin: 40px 0 40px 0;
   width: 100%;
   height: 377px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-flow: wrap;
+}
+
+@media all and (max-width: 800px) {
+  .project-grid {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .project-grid {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
 }
 
 .project-box {
-  width: 325px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 270px;
   height: 377px;
-  border: 1px solid darkgrey;
-  border-radius: 4px;
+  border: 0.5px solid lightgrey;
+  box-shadow: 0 2px lightgrey;
+}
+
+.project-box:hover {
+  height: 390px;
+  box-shadow: 4px 4px 4px 4px slategray;
 }
 
 #project-img {
-  width: 325px;
+  margin: 0;
+  padding: 0;
+  width: 270px;
   height: 270px;
+}
+
+.project-follows {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-follows > p {
+  font-size: 12px;
+}
+
+.project-follows > button {
+  font-size: 13px;
+  line-height: 15px;
+  font-family: 'harry2';
+  letter-spacing: 1px;
+}
+
+.project-follows>button:hover {
+  color: rgba(255, 140, 0, 0.988);
+  font-size: 17px;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  width: 270px;
+  height: 107px;
+}
+
+#project-icon {
+  width: 55px;
+  height: 55px;
+  border: 5px solid lightsteelblue;
+  border-radius: 33px;
 }
