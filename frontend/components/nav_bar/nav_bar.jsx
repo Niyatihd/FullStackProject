@@ -14,8 +14,8 @@ const Greeting = ({ currentUser, logout }) => {
         <form className="search-form">
           <input type="text" placeholder="  Let's Make ..." name="search" />
           <button type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
-          <button id="featured-proj-btn">Featured</button>
-          <button id="new-proj-btn">Create a Wizardable</button>
+          <Link to="/index" id="featured-proj-btn">Featured</Link>
+          <Link to="/index" id="new-proj-btn">Create a Wizardable</Link>
         </form>
       </div>
       {/* <div className="nav-bar-right-end"> */}
@@ -43,8 +43,8 @@ const Greeting = ({ currentUser, logout }) => {
           <form className="search-form">
             <input type="text" placeholder="  Let's Make ..." name="search" />
             <button type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
-            <button id="new-proj-btn">Featured</button>
-            <button id="new-proj-btn">Create a Wizardable</button>
+            <Link to="/index" id="featured-proj-btn">Featured</Link>
+            <Link to="/index" id="new-proj-btn">Create a Wizardable</Link>
           </form>
         </div>
         {/* <div className="nav-bar-right-end"> */}

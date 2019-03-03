@@ -22,6 +22,7 @@ class Api::ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    render 'api/projects/index'
   end
 
   def destroy

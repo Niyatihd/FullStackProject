@@ -4,6 +4,10 @@
   src: asset-url('HP.TTF');
 }
 
+// .project-wrapper {
+//   margin: 23px;
+// }
+
 .featured-title {
   margin-left: 90px;
 }
@@ -44,13 +48,17 @@
   }
 }
 
+.project-show {
+  margin: 0;
+}
+
 .project-box {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   width: 285px;
-  height: 377px;
+  height: 360px;
   border: 0.5px solid lightgrey;
   box-shadow: 0 2px lightgrey;
 }
@@ -104,11 +112,4 @@
   border-radius: 33px;
 }
 
-    // margin: 40px 0 40px 0;
-    // /* width: 100%; */
-    // height: 377px;
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
-    // flex-flow: wrap;
-    // margin: 0 70px 0 70px;
+   

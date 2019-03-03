@@ -16,7 +16,7 @@ library.add(faSearch)
 const App = () => (
   <div>
     <header>
-      <NavBarContainer />
+      <NavBarContainer name="top"/>
     </header>
     <Switch>
       <AuthRoute exact path="/login" component={LoginContainer} />

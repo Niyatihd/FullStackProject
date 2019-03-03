@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProjectIndexItem = props => (
-  <button>
   <div className="project-box">
-    <img id='project-img' src={props.image} />
+    <Link className="project-show" to="/index#top"><img id='project-img' src={props.image} /></Link>
     <div className="project-info">
       <img id='project-icon' src={props.image} />
       <div className="project-content">
@@ -16,7 +15,6 @@ const ProjectIndexItem = props => (
       </div>
     </div>
   </div>
-  </button>
 )
 
 export default ProjectIndexItem; 
