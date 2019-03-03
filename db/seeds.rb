@@ -27,7 +27,7 @@ user4 = User.create!(username: 'freedobby', email: 'professor_dobby@hogwarts.com
 # -----------------------
 # ***** project #1 ******
 # -----------------------
-project1 = Project.create!(title: 'Poly-Juice Potion Recipe', description: "The Polyjuice Potion, which is a complex and time-consuming concoction, is best left to highly skilled witches and wizards. It enables the consumer to assume the physical appearance of another person, as long as they have first procured part of that individual's body to add to the brew (this may be anything — toenail clippings, dandruff or worse — but it is most usual to use hair)", author_id: 1)
+project1 = Project.create!(title: 'Poly-Juice Potion Recipe', description: "The Polyjuice Potion, which is a complex and time-consuming concoction, is best left to highly skilled witches and wizards. It enables the consumer to assume the physical appearance of another person, as long as they have first procured part of that individual's body to add to the brew (this may be anything — toenail clippings, dandruff or worse — but it is most usual to use hair)", author_id: 4)
 
 # -----------------------
 # ******** steps ********
@@ -43,7 +43,7 @@ step7 = Step.create!(title: 'Step7: Known Uses', description: "Some of the known
 # -----------------------
 # ***** project #2 ******
 # -----------------------
-project2 = Project.create!(title: 'Love Potion Recipe', description: "Amortentia is the world's most powerful love potion, it's name comes from the Latin 'Amor Tentia' which means 'love held'. Not only is the potion very powerful, it's also considered to be highly dangerous.", author_id: 2)
+project2 = Project.create!(title: 'Love Potion Recipe', description: "Amortentia is the world's most powerful love potion, it's name comes from the Latin 'Amor Tentia' which means 'love held'. Not only is the potion very powerful, it's also considered to be highly dangerous.", author_id: 1)
 
 # -----------------------
 # ******** steps ********
@@ -71,7 +71,7 @@ step5 = Step.create!(title: 'Step5: Effects', description: 'Felix Felicis causes
 # -----------------------
 # ***** project #4 ******
 # -----------------------
-project4 = Project.create!(title: 'Skele Gro Potion Recipe', description: 'Skele-Gro (alternately spelled Skelegro) is a dreadful-tasting potion which restores bones. It is able to mend broken bones and even regrow entire bones that have vanished or been otherwise lost. For regrowing entire bones, the process is a notably slow and painful process, that can take over a full day.', author_id: 4)
+project4 = Project.create!(title: 'Skele Gro Potion Recipe', description: 'Skele-Gro (alternately spelled Skelegro) is a dreadful-tasting potion which restores bones. It is able to mend broken bones and even regrow entire bones that have vanished or been otherwise lost. For regrowing entire bones, the process is a notably slow and painful process, that can take over a full day.', author_id: 2)
 
 # -----------------------
 # ******** steps ********
@@ -81,3 +81,17 @@ step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Crush 3 sca
 step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Add 2 doxy eggs to the cauldron. Add 2 tablespoons of powdered sulfur. Carefully cut the Chinese chomping cabbage width-wise. Add the last 2 scarab beetles and 1 dried seahorse.', project_id: 4)
 step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Add 4 milliliters of rose water to the cauldron and let simmer. Add 2 milliliters of essence of dittany to the cauldron. Add 2 chamomile flower petals, 1 jellyfish, and 1 pufferfish to the cauldron. Add 2 chamomile flower petals to the cauldron.', project_id: 4)
 step5 = Step.create!(title: 'Step5: Effects', description: 'Once consumed, the potion will slowly work to repair bone damage and even rebuild bones that have been removed through magical or non-magical means. This potion typically takes at least twelve hours to repair and regrow bones. Depending on the severity of the injury, it may take far longer. It should be noted, however, that the potion cannot rebuild limbs or parts of the body as a whole, only the skeletal structure. It also cannot repair bodies born with deformities, such as those born with missing bones.', project_id: 4)
+
+# -----------------------
+# ***** project #5 ******
+# -----------------------
+project5 = Project.create!(title: 'Wingardium Leviosa charm', description: "The Levitation Charm is one of the first spells learnt by any young witch or wizard. With the charm a witch or wizard can make things fly with the flick of a wand. The charm is an excellent test of your magical skills, wand control and above all, patience.", author_id: 2)
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Incantation', description: 'Wingardium Leviosa (win-GAR-dee-um levi-O-sa)', project_id: 5)
+step2 = Step.create!(title: 'Step2: Wand Movement', description: 'Swish and flick', project_id: 5)
+step3 = Step.create!(title: 'Step3: Willpower', description: 'Low; Visualize your energy coming from your body and lifting the object.', project_id: 5)
+step4 = Step.create!(title: 'Step4: Concentration', description: 'Moderate; on the thing you want to levitate', project_id: 5)
+step5 = Step.create!(title: 'Step5: Directions', description: "As you say Wingardium start the 'Swish' motion. Time the swish so that it ends just after you begin saying Leviosa. Then, as you finish saying Leviosa, do the 'Flick.' And remember, keep your mind focused on the target of your spell and visualize drawing energy from your body as we practiced before. I know it may take some time for you to get used to doing all of these things at once, but with practice, casting this spell and many others will become easier.", project_id: 5)

@@ -1,5 +1,6 @@
 import React from 'react';
 import SplashDynamicText from './splash_dynamic_text';
+import ProjectIndexContainer from '../project/project_index_container';
 
 class Splash extends React.Component {
 
@@ -41,6 +42,7 @@ class Splash extends React.Component {
   
   render() {
     return (
+      <>
       <div className="splash-bkgrd'">
         <img id='splash-bkgrd-img' src={this.images[this.state.currentImageIdx]} />
         <div className="splash-dynamic-text">
@@ -53,7 +55,9 @@ class Splash extends React.Component {
           </form>
         </div>
       </div>
-    )
+      <ProjectIndexContainer />
+      </>
+    );
   }
 }
 
