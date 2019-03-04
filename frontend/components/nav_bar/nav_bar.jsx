@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import Splash from '../splash/splash';
 
 const Greeting = ({ currentUser, logout }) => {
+  // const handleLogout = (e) => {
+  //   e.preventDefault();
+  //   logout();
+  //   // return (<Redirect to="/" component={Splash} />)
+  // };
+
   const sessionLinks = () => (
     <>
     <nav className="login-signup">
@@ -51,7 +58,7 @@ const Greeting = ({ currentUser, logout }) => {
           <div className="session-btns">
           <img className='welcome-user' src={window.images.freedobby} />
             <p className="header-name">Hello, {currentUser.username}</p>
-            <button className="header-button" onClick={logout}>Log Out</button>
+            <Link to="/" className="header-button" onClick={logout} >Log Out</Link >
           </div>
         {/* </div> */}
       </nav>
