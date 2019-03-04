@@ -11,9 +11,11 @@ export const receiveAllProjects = (projects) => ({
   projects
 });
 
-export const receiveProject = (project) => ({
+export const receiveProject = ({ project, author, steps }) => ({
   type: RECEIVE_PROJECT,
-  project
+  project,
+  author,
+  steps
 });
 
 

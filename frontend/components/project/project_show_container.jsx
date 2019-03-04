@@ -10,6 +10,7 @@ const mapStateToProps = (state, { match }) => {
   // console.log(project instanceof Object);
   return ({
     projectId: projectId,
+    project: project
     // title: project.title
   });
 };

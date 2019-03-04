@@ -25,6 +25,23 @@
   margin: 0px 34px 0px 34px;
 }
 
+@media all and (min-width: 1745px) {
+  .project-grid {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: flex-start;
+    margin: 0px 100px 0px 93px;
+  }
+
+  .project-box {
+    margin: 0px 12px 30px 12px;
+  }
+
+  .featured-title {
+    padding: 0px 0 0px 103px;
+    align-self: flex-start;
+  }
+}
+
 @media all and (max-width: 800px) {
   .project-grid {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */

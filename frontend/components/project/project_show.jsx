@@ -30,33 +30,41 @@ class ProjectShow extends React.Component {
   }
 
   render() {
-    let step = Object.values(this.state.steps).map((step) => {
-      return(
-      <ProjectShowItem step={step} key={`{step.id}`}/>
-      );
-    })
+    if (this.props.project === undefined) {
+      return null;
+    }
+    // let step = Object.values(this.state.steps).map((step) => {
+    //   return(
+    //   <ProjectShowItem step={step} key={`{step.id}`}/>
+    //   );
+    // })
 
     return (
+      // <div>WORKS</div>
       <div>
-        <img id='project-show-bg' src={window.images.pjpotion} />
-        <div className="proj-title">
-          <img id='proj-icon' src={window.images.splash1} />
-          <h3 >{this.state.title}</h3>
-          <div className="proj-title-details">
-            <span>{this.state.author}</span>
-            <span>|</span>
-            <span>Followers {this.state.followsCount}</span>
-          </div>
-          <div>
-            <Link to="/" className="project-follow-link">Follow</Link>
-          </div>
-        </div>
-        <div className="proj-body">
-          <span>{this.state.description}</span>
-          <img id='proj-body-main-img' src={window.images.splash1} />
-        </div>
-        <div className="proj-step-body">{step}</div>
+        <div className="thisisTitle">{this.props.project.title}</div>
+        {/* <div>{this.props.project.author.username}</div> */}
       </div>
+      // <div>
+      //   <img id='project-show-bg' src={window.images.pjpotion} />
+      //   <div className="proj-title">
+      //     <img id='proj-icon' src={window.images.splash1} />
+      //     <h3 >{this.state.title}</h3>
+      //     <div className="proj-title-details">
+      //       <span>{this.state.author}</span>
+      //       <span>|</span>
+      //       <span>Followers {this.state.followsCount}</span>
+      //     </div>
+      //     <div>
+      //       <Link to="/" className="project-follow-link">Follow</Link>
+      //     </div>
+      //   </div>
+      //   <div className="proj-body">
+      //     <span>{this.state.description}</span>
+      //     <img id='proj-body-main-img' src={window.images.splash1} />
+      //   </div>
+      //   <div className="proj-step-body">{step}</div>
+      // </div>
     );
   }
 }
