@@ -28,10 +28,12 @@ nav {
   letter-spacing: 1px;
   border: 1px solid lightgrey;
   // font-family: 'Special Elite', cursive;
+  // flex-flow: row wrap;
 }
 
 .session-title {
   display: flex;
+  // flex-flow: row wrap;
   height: 70px;
 }
 

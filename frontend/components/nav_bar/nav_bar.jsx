@@ -9,7 +9,7 @@ const Greeting = ({ currentUser, logout }) => {
       <div className="session-title">
         <div className="nav-logo-title">
           <img id='nav-bar-logo' src={window.images.logo_hp} />
-            <h3><a href="/">Wizardables</a></h3>
+          <h3><a href="/">Wizardables</a></h3>
         </div>
         <form className="search-form">
           <input type="text" placeholder="  Let's Make ..." name="search" />

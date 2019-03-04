@@ -4,38 +4,36 @@
   src: asset-url('HP.TTF');
 }
 
-// .project-wrapper {
-//   margin: 23px;
-// }
+.project-wrapper {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .featured-title {
-  margin-left: 90px;
+  padding: 0px 0 0px 46px;
+  align-self: flex-start;
 }
 
 .project-grid {
-  margin: 40px 0 40px 0;
-  /* width: 100%; */
-  height: 377px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: wrap;
-  margin: 0 70px 40px 70px;
-
   // margin: 40px 0 40px 0;
-  // width: 100%;
-  // height: 377px;
-  // display: flex;
-  // justify-content: space-around;
-  // align-items: center;
-  // flex-flow: wrap;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  // margin: 0px 70px 0px 70px;
+  margin: 0px 34px 0px 34px;
 }
 
 @media all and (max-width: 800px) {
   .project-grid {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
     justify-content: flex-end;
-    margin-top: 20px;
+    margin: 0px 90px 0px 34px;
+  }
+
+  .project-box {
+    margin: 0px 12px 30px 12px;
   }
 }
 
@@ -55,8 +53,8 @@
 .project-box {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  // margin: 0px 16px 30px 19px;
+  margin: 0px 12px 30px 12px;
   width: 285px;
   height: 360px;
   border: 0.5px solid lightgrey;
@@ -64,7 +62,7 @@
 }
 
 .project-box:hover {
-  height: 390px;
+  height: 370px;
   box-shadow: 4px 4px 4px 4px slategray;
 }
 
@@ -78,20 +76,22 @@
 .project-follows {
   display: flex;
   justify-content: space-between;
+  width: 150px;
 }
 
 .project-follows > p {
   font-size: 12px;
 }
 
-.project-follows > button {
+.project-follow-link {
   font-size: 13px;
   line-height: 15px;
   font-family: 'harry2';
   letter-spacing: 1px;
+  color: gray;
 }
 
-.project-follows>button:hover {
+.project-follow-link:hover {
   color: rgba(255, 140, 0, 0.988);
   font-size: 17px;
 }
@@ -112,4 +112,23 @@
   border-radius: 33px;
 }
 
-   
+.proj-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proj-body > span {
+  width: 700px;
+  color: darkslategray;
+  margin: 30px 0 15px 0;
+  text-align: center;
+  font-family: cursive;
+  letter-spacing: 1px;
+}
+
+#proj-body-main-img {
+  width: 700px;
+  height: 500px;
+  margin: 30px 0 30px 0;
+}

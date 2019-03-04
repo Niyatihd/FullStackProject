@@ -6,3 +6,12 @@ export const fetchProjects = () => {
     })
   );
 };
+
+export const fetchProject = (id) => {
+  return (
+    $.ajax({
+      url: `api/projects/${id}`,
+      method: "get"
+    })
+  );
+};

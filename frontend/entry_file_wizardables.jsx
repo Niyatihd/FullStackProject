@@ -4,7 +4,13 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
+
+///////DELETE
 import { fetchProjects } from './actions/project_actions';
+import { fetchProject } from './actions/project_actions';
+///////DELETE
+
+
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   const store = configureStore();
@@ -21,6 +27,7 @@ import { fetchProjects } from './actions/project_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
+  // debugger
   if (window.currentUser) {
     const preloadedState = {
       session: { id: window.currentUser.id },
@@ -37,9 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ///////DELETE
   window.store = store;
   window.fetchProjects = fetchProjects();
+  window.fetchProject = fetchProject(1);
   ///////DELETE
   
-  
+  // debugger
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
