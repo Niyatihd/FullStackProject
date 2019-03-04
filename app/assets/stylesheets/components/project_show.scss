@@ -38,3 +38,31 @@
   justify-content: space-evenly;
   margin-top: -29px;
 }
+
+//***************************//
+//***** ProjectShowItem *****//
+//***************************//
+.proj-step-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proj-step-content > h3 {
+  font-family: 'harry2';
+  text-align: center;
+}
+
+.proj-step-content {
+  width: 700px;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: Nunito,
+  helvetica,
+  arial,
+  sans-serif;
+  font-weight: 300;
+  text-align: left;
+  color: #555;
+}

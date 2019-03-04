@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ProjectShowItem from './project_show_item';
 
 class ProjectShow extends React.Component {
   constructor(props) {
@@ -29,6 +30,11 @@ class ProjectShow extends React.Component {
   }
 
   render() {
+    let step = Object.values(this.state.steps).map((step) => {
+      return(
+      <ProjectShowItem step={step} key={`{step.id}`}/>
+      );
+    })
 
     return (
       <div>
@@ -49,6 +55,7 @@ class ProjectShow extends React.Component {
           <span>{this.state.description}</span>
           <img id='proj-body-main-img' src={window.images.splash1} />
         </div>
+        <div className="proj-step-body">{step}</div>
       </div>
     );
   }

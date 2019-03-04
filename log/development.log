@@ -43881,3 +43881,632 @@ Completed 200 OK in 51ms (Views: 12.3ms | ActiveRecord: 28.6ms)
 Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 07:43:41 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.3ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.3ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (17.5ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 07:50:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (102.3ms)
+Completed 200 OK in 713ms (Views: 701.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 07:50:08 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (85.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.4ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (48.6ms)
+Completed 200 OK in 161ms (Views: 38.9ms | ActiveRecord: 119.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 07:53:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 554ms (Views: 501.7ms | ActiveRecord: 49.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 07:54:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 506ms (Views: 496.5ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 07:54:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 07:56:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 546ms (Views: 542.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 07:56:46 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (12.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (1.4ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (36.9ms)
+Completed 200 OK in 266ms (Views: 32.4ms | ActiveRecord: 224.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 07:56:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2019-03-04 07:56:56 -0800
+Processing by Api::ProjectsController#index as JSON
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (17.0ms)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 07:56:58 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (3.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.2ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.5ms)
+  Rendered api/steps/_step.json.jbuilder (0.0ms)
+  Rendered api/steps/_step.json.jbuilder (0.0ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.0ms)
+  Rendered api/steps/_step.json.jbuilder (0.0ms)
+  Rendered api/steps/_step.json.jbuilder (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (15.0ms)
+Completed 200 OK in 33ms (Views: 24.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 07:58:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 517ms (Views: 514.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 07:58:19 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.3ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (32.7ms)
+Completed 200 OK in 206ms (Views: 47.5ms | ActiveRecord: 119.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 07:58:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 506ms (Views: 503.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 07:58:44 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (63.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (2.6ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (22.8ms)
+Completed 200 OK in 104ms (Views: 34.3ms | ActiveRecord: 68.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:03:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 856ms (Views: 848.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:03:25 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (7.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.4ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (23.1ms)
+Completed 200 OK in 45ms (Views: 32.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:06:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 581ms (Views: 577.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:06:05 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.4ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.6ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (17.7ms)
+Completed 200 OK in 41ms (Views: 28.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:06:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 154ms (Views: 151.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:06:41 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (19.9ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.0ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (38.3ms)
+Completed 200 OK in 50ms (Views: 27.1ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:07:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 132ms (Views: 127.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:07:09 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (1.4ms)
+  [1m[35m (79.1ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (7.7ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.8ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (135.6ms)
+Completed 200 OK in 158ms (Views: 49.7ms | ActiveRecord: 105.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:07:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 138ms (Views: 134.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:07:27 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.3ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.5ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (37.6ms)
+Completed 200 OK in 51ms (Views: 32.5ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:08:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 70ms (Views: 65.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:08:57 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (4.5ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.9ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (26.1ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:09:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:09:04 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (1.6ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (27.9ms)
+Completed 200 OK in 44ms (Views: 28.3ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:11:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 183ms (Views: 179.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:11:08 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (168.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (5.6ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (26.6ms)
+Completed 200 OK in 210ms (Views: 29.2ms | ActiveRecord: 179.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:11:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 136ms (Views: 133.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:11:24 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (47.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (2.6ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (20.0ms)
+Completed 200 OK in 102ms (Views: 49.4ms | ActiveRecord: 51.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:11:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:11:30 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.7ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (37.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (53.7ms)
+Completed 200 OK in 131ms (Views: 87.3ms | ActiveRecord: 39.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:11:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 137ms (Views: 133.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:11:41 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.4ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.2ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (18.7ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-04 08:12:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendered static_pages/root.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 164ms (Views: 159.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects/1" for 127.0.0.1 at 2019-03-04 08:12:03 -0800
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:24
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "steps"."id" FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:2
+  [1m[36mStep Load (0.9ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:3
+  Rendered api/steps/_step.json.jbuilder (0.4ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  Rendered api/steps/_step.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/projects/show.json.jbuilder:10
+  Rendered api/projects/show.json.jbuilder (20.1ms)
+Completed 200 OK in 43ms (Views: 37.5ms | ActiveRecord: 4.3ms)
+
+
