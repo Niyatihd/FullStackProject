@@ -1,2 +1,2 @@
-json.extract! step, :title, :description, :project_id
+json.extract! step, :id, :title, :description, :project_id
 

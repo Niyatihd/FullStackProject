@@ -1,17 +1,15 @@
 import { connect } from 'react-redux';
 import ProjectShow from './project_show';
 import { fetchProject } from '../../actions/project_actions';
-import { getProject } from '../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {
   let projectId = match.params.projectId;
-  let project = getProject(state, projectId);
-  // console.log(Object.keys(project));
-  // console.log(project instanceof Object);
+
   return ({
     projectId: projectId,
-    project: project
-    // title: project.title
+    project: state.project,
+    steps: state.steps,
+    author: state.author
   });
 };
 

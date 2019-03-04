@@ -10,7 +10,9 @@ end
   end
 end
 
-json.author @project.author
-
+# json.author @project.author 
+json.author do
+  json.extract! @project.author, :id, :username, :email
+end
 # //Note:Render each under separate headsto be an outermost key in 
 # the state and set their own reducers
