@@ -9,7 +9,7 @@ const entitiesReducer =  combineReducers({
   projects: ProjectsReducer,
   steps: StepsReducer,
   author: AuthorReducer,
-  project: ProjectsReducer
+  // project: ProjectsReducer
 });
 
 export default entitiesReducer;

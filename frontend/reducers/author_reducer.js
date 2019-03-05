@@ -12,9 +12,7 @@ const AuthorReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_PROJECT:
-      newState = merge({}, state, {
-        [action.author.id]: action.author
-      });
+      newState = merge({}, state, action.author);
       return newState;
     default:
       return state;

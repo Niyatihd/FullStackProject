@@ -40,36 +40,37 @@ class ProjectShow extends React.Component {
 
     let step = this.props.steps.map((step) => {
       return(
-        <ProjectShowItem step={step} key={`{step.id}`}/>
+        <ProjectShowItem step={step} key={`${step.id}`}/>
       );
     })
 
     return (
-      <div>WORKS</div>
+      // <div>WORKS</div>
       // <div>
       //   <div className="thisisTitle">{this.props.project.title}</div>
       //   {/* <div>{this.props.project.author.username}</div> */}
       // </div>
-      // <div>
-      //   <img id='project-show-bg' src={window.images.pjpotion} />
-      //   <div className="proj-title">
-      //     <img id='proj-icon' src={window.images.splash1} />
-      //     <h3 >{this.state.title}</h3>
-      //     <div className="proj-title-details">
-      //       <span>{this.state.author}</span>
-      //       <span>|</span>
-      //       <span>Followers {this.state.followsCount}</span>
-      //     </div>
-      //     <div>
-      //       <Link to="/" className="project-follow-link">Follow</Link>
-      //     </div>
-      //   </div>
-      //   <div className="proj-body">
-      //     <span>{this.state.description}</span>
-      //     <img id='proj-body-main-img' src={window.images.splash1} />
-      //   </div>
-      //   <div className="proj-step-body">{step}</div>
-      // </div>
+      <div className="proj-wrapper">
+        <img id='project-show-bg' src={window.images.pjpotion} />
+        <div className="proj-title">
+          <img id='proj-icon' src={window.images.splash1} />
+          <h3 >{this.props.project.title}</h3>
+          <div className="proj-title-details">
+            <span>{this.props.author.username}</span>
+            <span>|</span>
+            <span>Followers 29</span>
+          </div>
+          <div className="proj-link">
+            <Link to="/" className="proj-follow-link">Follow</Link>
+          </div>
+        </div>
+        <div className="proj-body">
+          <span>{this.props.project.description}</span>
+          <img id='proj-body-main-img' src={window.images.splash1} />
+        </div>
+        {step}
+        {/* <div className="proj-step-body">{step}</div> */}
+      </div>
     );
   }
 }
