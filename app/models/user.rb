@@ -4,19 +4,24 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
 
   #associations
+  has_many :authored_projects,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Project
+
   # has_many :follows,
   #   primary_key: :id,
   #   foreign_key: :user_id,
   #   class_name: :Follow
 
-  # has_many :projects,
+  # has_many :followed_projects,
   #   through: :follows, 
   #   source: :project
 
-  # has_many :project_comments,
-  #   primary_key: :id,
-  #   foreign_key: :author_id,
-  #   class_name: :Comment
+  has_many :project_comments,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Comment
 
   attr_reader :password
   after_initialize :ensure_session_token

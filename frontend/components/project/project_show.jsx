@@ -1,6 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import ProjectShowItem from './project_show_item';
+import ProjectCommentsIndex from './project_comments_index';
+import CreateCommentContainer from './create_comment_container';
+
 
 class ProjectShow extends React.Component {
   constructor(props) {
@@ -43,20 +47,21 @@ class ProjectShow extends React.Component {
         <ProjectShowItem step={step} key={`${step.id}`}/>
       );
     })
+    
+    let comment = this.props.comments.map((comment) => {
+      return(
+        <ProjectCommentsIndex comment={comment} key={`${comment.id}`}/>
+      );
+    })
 
     return (
-      // <div>WORKS</div>
-      // <div>
-      //   <div className="thisisTitle">{this.props.project.title}</div>
-      //   {/* <div>{this.props.project.author.username}</div> */}
-      // </div>
       <div className="proj-wrapper">
         <img id='project-show-bg' src={window.images.pjpotion} />
         <div className="proj-title">
           <img id='proj-icon' src={window.images.splash1} />
           <h3 >{this.props.project.title}</h3>
           <div className="proj-title-details">
-            <span>{this.props.author.username}</span>
+            <span>{this.props.project_author.username}</span>
             <span>|</span>
             <span>Followers 29</span>
           </div>
@@ -69,10 +74,15 @@ class ProjectShow extends React.Component {
           <img id='proj-body-main-img' src={window.images.splash1} />
         </div>
         {step}
-        {/* <div className="proj-step-body">{step}</div> */}
+        <div className="proj-comment-body"><h3>Discussions</h3>
+          <HashLink to={`${this.props.location.pathname}#goto-create-comment`} className="proj-comment-link">Comment</HashLink>
+        </div>
+        <div className="to-reverse-comments">{comment}</div>
+        {/* {comment} */}
+        <CreateCommentContainer />
       </div>
     );
   }
 }
 
-export default ProjectShow;
+export default withRouter(ProjectShow);

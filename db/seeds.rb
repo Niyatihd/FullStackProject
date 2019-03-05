@@ -8,20 +8,17 @@
 
 User.destroy_all
 Project.destroy_all
-# Comment.destroy_all
-
-
+Comment.destroy_all
 
 # -----------------------
 # ******* users *********
 # -----------------------
-user1 = User.create!(username: 'robert', email: 'rob@rob.com', password: 'passwordrob')
-user2 = User.create!(username: 'ned', email: 'ned@ned.com', password: 'passwordned')
-user3 = User.create!(username: 'bilbo', email: 'bilbo@bilbo.com', password: 'passwordbilbo')
-user4 = User.create!(username: 'freedobby', email: 'professor_dobby@hogwarts.com', password: 'dobbyisafreeelf')
+user1 = User.create!(username: 'Newt Scamander', email: 'newt@newt.com', password: 'passwordnewt')
+user2 = User.create!(username: 'Rubeus Hagrid', email: 'hagrid@hagrid.com', password: 'passwordhagrid')
+user3 = User.create!(username: 'HouseElf Kreature', email: 'kreature@kreature.com', password: 'passwordkreature')
+user4 = User.create!(username: 'FreeElf Dobby', email: 'professor_dobby@hogwarts.com', password: 'dobbyisafreeelf')
 
-# comment1 = Comment.create!(body: 'great!', user_id: user1.id, artwork_id: artwork1.id)
-# comment2 = Comment.create!(body: 'another great one', user_id: user2.id, artwork_id: artwork2.id)
+
 # Like.create!(user_id: user1.id, likeable_id: comment1.id, likeable_type: 'Comment')
 # Like.create!(user_id: user2.id, likeable_id: artwork2.id, likeable_type: 'Artwork')
 
@@ -139,3 +136,19 @@ step2 = Step.create!(title: 'Step2: Wand Movement', description: 'Wave wand.', p
 step3 = Step.create!(title: 'Step3: Willpower', description: 'Very high; depending on the target’s speed and height.', project_id: project8.id)
 step4 = Step.create!(title: 'Step4: Concentration', description: 'Medium to high; direct the magic to the target object or person.', project_id: project8.id)
 step5 = Step.create!(title: 'Step5: Directions', description: "How does this spell work? I am sure that all of you know that objects fall at different speeds when you drop them in a liquid. Yet to make sure that we are all on the same page, I have brought you four different jars filled with water, corn syrup, oil, and honey. If you watch the speed in which a regular marble falls in these fluids, you will certainly notice a difference.", project_id: project8.id)
+
+
+
+
+# -----------------------
+# ******* comments ******
+# -----------------------
+
+comment1 = Comment.create!(body: 'great!', author_id: user1.id, project_id: project1.id)
+comment2 = Comment.create!(body: 'another great one', author_id: user2.id, project_id: project2.id)
+comment3 = Comment.create!(body: 'great!', author_id: user3.id, project_id: project3.id)
+comment4 = Comment.create!(body: 'another great one', author_id: user4.id, project_id: project4.id)
+comment5 = Comment.create!(body: 'great!', author_id: user1.id, project_id: project5.id)
+comment6 = Comment.create!(body: 'another great one', author_id: user2.id, project_id: project6.id)
+comment7 = Comment.create!(body: 'great!', author_id: user3.id, project_id: project7.id)
+comment8 = Comment.create!(body: 'another great one', author_id: user4.id, project_id: project8.id)

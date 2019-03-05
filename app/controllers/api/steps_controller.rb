@@ -22,9 +22,4 @@ class Api::StepsController < ApplicationController
   #   params.require(:step).permit(:title, :description, :project_id)
   # end
 
-  # def show
-  #   @step = Step.find(params[:id])
-  #   render :show
-  # end
-
 end

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'harry2';
+  src: asset-url('HP.TTF');
+}
+
+.to-reverse-comments {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+}
+
+.proj-comment-body-part2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.proj-comment-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.proj-comment-body > h3 {
+  font-family: 'harry2';
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 26px;
+  margin: 0;
+  margin-top: 40px;
+}
+
+
+
+.proj-comment-content > p {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 15px;
+  font-family: serif;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  height: 50px;
+}
+
+.proj-comment-content {
+  width: 700px;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: Nunito,
+    helvetica,
+    arial,
+    sans-serif;
+  font-weight: 300;
+  text-align: left;
+  color: #555;
+  padding: 30px;
+}
+
+.proj-comment-content > span {
+  font-size: 13px;
+  color: cadetblue;
+}

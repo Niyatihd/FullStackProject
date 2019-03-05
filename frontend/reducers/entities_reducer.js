@@ -3,13 +3,14 @@ import UsersReducer from './users_reducer';
 import ProjectsReducer from './projects_reducer';
 import StepsReducer from './steps_reducer';
 import AuthorReducer from './author_reducer';
+import CommentsReducer from './comments_reducer';
 
 const entitiesReducer =  combineReducers({
   users: UsersReducer,
   projects: ProjectsReducer,
   steps: StepsReducer,
-  author: AuthorReducer,
-  // project: ProjectsReducer
+  project_author: AuthorReducer,
+  comments: CommentsReducer
 });
 
 export default entitiesReducer;

@@ -1,5 +1,6 @@
 json.project do
   json.partial! 'project', project: @project
+  json.commentIds @project.comments.pluck(:id)
 end
 
 @project.steps.each do |step|
@@ -10,9 +11,18 @@ end
   end
 end
 
+@project.comments.each do |comment|
+  json.comments do
+    json.set! comment.id do
+      json.partial! 'api/comments/comment', comment: comment
+    end
+  end
+end
+
 # json.author @project.author 
-json.author do
-  json.extract! @project.author, :id, :username, :email
+json.project_author do
+  json.extract! @project.project_author, :id, :username, :email
 end
 # //Note:Render each under separate headsto be an outermost key in 
 # the state and set their own reducers
+
