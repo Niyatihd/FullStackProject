@@ -12,11 +12,10 @@ const CommentsReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_PROJECT:
-      newState = merge({}, state, action.comments);
+      newState = merge({}, action.comments);
       return newState;
     case RECEIVE_COMMENT:
-    // debugger
-      const { comment, comment_author } = action;
+      const { comment } = action;
       const newComment = { [comment.id]: comment};
       return merge({}, state, newComment);
     default:

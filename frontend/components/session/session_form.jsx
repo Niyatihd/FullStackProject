@@ -63,17 +63,6 @@ class SessionForm extends React.Component {
         :
         <span>New to Wizardables? {this.props.navLink}</span>
   }
-  // renderAlternateMsg() {
-  //   if (this.props.formType === "signup") {
-  //     return (
-  //       <span>Already a member? {this.props.navLink}</span>
-  //     )
-  //   } else {
-  //     return (
-  //       <span>New to Wizardables? {this.props.navLink}</span>
-  //     )
-  //   }
-  // }
 
   render() {
     return (

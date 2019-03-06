@@ -22,9 +22,9 @@ class ProjectCommentForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state);
-    this.setState({
-      body: ""
-    });
+    // this.setState({
+    //   body: ""
+    // });
   }
 
   render() {
@@ -34,7 +34,7 @@ class ProjectCommentForm extends React.Component {
         <div className="comment-create-box">
           <form onSubmit={this.handleSubmit}>
             <textarea value={this.state.body} onChange={this.handleInput("body")} />
-            <input type="submit" value="Post" />
+            <input type="submit" value={this.props.formtype} />
             {/* <Link to="/">Add Images</Link> */}
           </form>
         </div>

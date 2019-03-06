@@ -9,9 +9,8 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.author_id = current_user.id
     @comment.project_id = params[:comment][:project_id]
-    # @comment.save
 
-    if @comment.save
+    if @comment.save #checks and saves the comment
       render 'api/comments/show'
     else
       render json: @comment, status: :unprocessable_entity
@@ -19,10 +18,11 @@ class Api::CommentsController < ApplicationController
   end
 
   def update 
+    # @comment = Comment.find(params[:id])
     @comment = current_user.project_comments.find(params[:id])
 
     if @comment.update_attributes(comment_params)
-      render :show
+      render 'api/comments/show'
     else
       render :json ["Not authorized to edit comment!!"], status: 435
     end

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import ProjectShowItem from './project_show_item';
-import ProjectCommentsIndex from './project_comments_index';
+import CommentsIndexItem from './comments_index_item';
 import CreateCommentContainer from './create_comment_container';
 
 
@@ -33,6 +33,8 @@ class ProjectShow extends React.Component {
     this.props.fetchProject(this.props.projectId);
   }
 
+
+
   render() {
     //////////IMPORTANT/////////
     ///render runs before componentDidMount(), so while it waits for component 
@@ -50,7 +52,7 @@ class ProjectShow extends React.Component {
     
     let comment = this.props.comments.map((comment) => {
       return(
-        <ProjectCommentsIndex comment={comment} key={`${comment.id}`}/>
+        <CommentsIndexItem comment={comment} key={`${comment.id}`} />
       );
     })
 
@@ -79,7 +81,7 @@ class ProjectShow extends React.Component {
         </div>
         <div className="to-reverse-comments">{comment}</div>
         {/* {comment} */}
-        <CreateCommentContainer />
+        {this.props.session.id ? <CreateCommentContainer /> : ""}
       </div>
     );
   }

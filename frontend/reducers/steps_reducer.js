@@ -12,7 +12,7 @@ const StepsReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_PROJECT:
-      newState = merge({}, state, action.steps);
+      newState = merge({}, action.steps);
       return newState;
     default:
       return state;

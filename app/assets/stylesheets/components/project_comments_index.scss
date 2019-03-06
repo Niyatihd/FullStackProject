@@ -34,6 +34,11 @@
   margin-top: 40px;
 }
 
+.comment-author-edit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 
 .proj-comment-content > p {
@@ -61,7 +66,20 @@
   padding: 30px;
 }
 
-.proj-comment-content > span {
+.proj-comment-content > div > span {
   font-size: 13px;
   color: cadetblue;
+}
+
+.comment-update-link {
+  background: orange;
+  border: 1px solid lightgrey;
+  height: 35px;
+  border-radius: 4px;
+  width: 80px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
 }

@@ -11,7 +11,9 @@ const mapStateToProps = ({ entities: { projects, project_author, users, steps, c
     project: projects[projectId],
     steps: Object.values(steps),
     project_author,
-    comments: Object.values(comments)
+    comments: Object.values(comments),
+    session,
+    users
   });
 };
 

@@ -15,7 +15,7 @@ const ProjectsReducer = (state={}, action) => {
       newState = merge({}, state, { [action.project.id] : action.project});
       return newState;
     case RECEIVE_COMMENT:
-      const { comment, comment_author } = action;
+      const { comment } = action;
       newState = merge({}, state);
       newState[comment.project_id].commentIds.push(comment.id);
       return newState;

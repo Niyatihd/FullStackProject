@@ -20,10 +20,9 @@ export const receiveProject = ({ project, project_author, steps, comments }) => 
   comments
 });
 
-export const receiveComment = ({ comment, comment_author }) => ({
+export const receiveComment = ({ comment}) => ({
   type: RECEIVE_COMMENT,
-  comment,
-  comment_author
+  comment
 });
 
 //Thunk action creators
@@ -37,7 +36,9 @@ export const fetchProject = (id) => (dispatch) => (
 );
 
 export const createComment = comment => dispatch => (
-  CommentAPIUtil.createComment(comment).then(payload => (
-    dispatch(receiveComment(payload))
-  ))
+  CommentAPIUtil.createComment(comment).then(payload => dispatch(receiveComment(payload)))
+);
+
+export const updateComment = comment => dispatch => (
+  CommentAPIUtil.updateComment(comment).then(payload => dispatch(receiveComment(payload)))
 );
