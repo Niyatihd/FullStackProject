@@ -1,3 +1,13 @@
+export const fetchComment = (id) => {
+  // debugger
+  return (
+    $.ajax({
+      url: `/api/comments/${id}`,
+      method: "get"
+    })
+  );
+};  
+
 export const createComment = (comment) => {
   // debugger
   return (

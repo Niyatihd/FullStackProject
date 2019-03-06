@@ -3,7 +3,7 @@
 import merge from 'lodash/merge';
 
 import {
-  RECEIVE_PROJECT, RECEIVE_COMMENT
+  RECEIVE_PROJECT, RECEIVE_COMMENT, REMOVE_COMMENT
 } from '../actions/project_actions';
 
 const CommentsReducer = (state = {}, action) => {
@@ -18,6 +18,11 @@ const CommentsReducer = (state = {}, action) => {
       const { comment } = action;
       const newComment = { [comment.id]: comment};
       return merge({}, state, newComment);
+    case REMOVE_COMMENT:
+      const { id } = action;
+      newState = merge( {}, state);
+      delete newState[id];
+      return newState;
     default:
       return state;
   }

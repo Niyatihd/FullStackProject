@@ -13,10 +13,39 @@ Comment.destroy_all
 # -----------------------
 # ******* users *********
 # -----------------------
-user1 = User.create!(username: 'Newt Scamander', email: 'newt@newt.com', password: 'passwordnewt')
-user2 = User.create!(username: 'Rubeus Hagrid', email: 'hagrid@hagrid.com', password: 'passwordhagrid')
-user3 = User.create!(username: 'HouseElf Kreature', email: 'kreature@kreature.com', password: 'passwordkreature')
+user1 = User.create!(username: 'Fred Weasley', email: 'fred@fred.com', password: 'passwordfred')
+user2 = User.create!(username: 'George Weasley', email: 'george@george.com', password: 'passwordgeorge')
+user3 = User.create!(username: 'HouseElf Kreacher', email: 'kreacher@kreacher.com', password: 'passwordkreacher')
 user4 = User.create!(username: 'FreeElf Dobby', email: 'professor_dobby@hogwarts.com', password: 'dobbyisafreeelf')
+user5 = User.create!(username: 'Harry Potter', email: 'harry@harry.com', password: 'passwordharry')
+user6 = User.create!(username: 'Ronald Weasley', email: 'ron@ron.com', password: 'passwordron')
+user7 = User.create!(username: 'Severus Snape', email: 'severus@severus.com', password: 'passwordseverus')
+user8 = User.create!(username: 'Albus Dumbledore', email: 'albus@albus.com', password: 'passwordalbus')
+user9 = User.create!(username: 'Hermoine Granger', email: 'hermoine@hermoine.com', password: 'passwordhermoine')
+user10 = User.create!(username: 'Neville Longbottom', email: 'neville@neville.com', password: 'passwordneville')
+user11 = User.create!(username: 'Parvati Patil', email: 'parvati@parvati.com', password: 'passwordparvati')
+user12 = User.create!(username: 'Dean Thomas', email: 'dean@dean.com', password: 'passworddean')
+user13 = User.create!(username: 'Luna Lovegood', email: 'luna@luna.com', password: 'passwordluna')
+user14 = User.create!(username: 'Draco Malfoy', email: 'draco@draco.com', password: 'passworddraco')
+user15 = User.create!(username: 'Tom Riddle', email: 'tom@tom.com', password: 'passwordtom')
+user16 = User.create!(username: 'Abeforth Dumbledore', email: 'abe@abe.com', password: 'passwordabe')
+user17 = User.create!(username: 'Remus Lupin', email: 'remus@remus.com', password: 'passwordremus')
+user18 = User.create!(username: 'Sirius Black', email: 'black@black.com', password: 'passwordblack')
+user19 = User.create!(username: 'Ginny Weasley', email: 'ginny@ginny.com', password: 'passwordginny')
+user20 = User.create!(username: 'Rubeus Hagrid', email: 'hagrid@hagrid.com', password: 'passwordhagrid')
+user21 = User.create!(username: 'Sorting Hat', email: 'hat@hat.com', password: 'passwordhat')
+user22 = User.create!(username: 'Newt Scamander', email: 'newt@newt.com', password: 'passwordnewt')
+user23 = User.create!(username: 'Dolores Umbridge', email: 'umbridge@umbridge.com', password: 'passwordumbridge')
+user24 = User.create!(username: 'Cho Chang', email: 'cho@cho.com', password: 'passwordcho')
+user25 = User.create!(username: 'Alastor Moody', email: 'moody@moody.com', password: 'passwordmoddy')
+user26 = User.create!(username: 'Horace Slughorn', email: 'slughorn@slughorn.com', password: 'passwordslughorn')
+user27= User.create!(username: 'Albus Severus Potter', email: 'albusseveruspotter@albusseveruspotter.com', password: 'passwordalbusseveruspotter')
+user28 = User.create!(username: 'James Potter', email: 'james@james.com', password: 'passwordjames')
+user29 = User.create!(username: 'Lily Potter', email: 'lily@lily.com', password: 'passwordlily')
+user30 = User.create!(username: 'Argus Filch', email: 'filch@filch.com', password: 'passwordfilch')
+
+
+
 
 
 # Like.create!(user_id: user1.id, likeable_id: comment1.id, likeable_type: 'Comment')
@@ -25,7 +54,7 @@ user4 = User.create!(username: 'FreeElf Dobby', email: 'professor_dobby@hogwarts
 # -----------------------
 # ***** project #1 ******
 # -----------------------
-project1 = Project.create!(title: 'Poly-Juice Potion Recipe', description: "The Polyjuice Potion, which is a complex and time-consuming concoction, is best left to highly skilled witches and wizards. It enables the consumer to assume the physical appearance of another person, as long as they have first procured part of that individual's body to add to the brew (this may be anything — toenail clippings, dandruff or worse — but it is most usual to use hair)", author_id: user4.id)
+project1 = Project.create!(title: 'Poly-Juice Potion Recipe', description: "The Polyjuice Potion, which is a complex and time-consuming concoction, is best left to highly skilled witches and wizards. It enables the consumer to assume the physical appearance of another person, as long as they have first procured part of that individual's body to add to the brew (this may be anything — toenail clippings, dandruff or worse — but it is most usual to use hair)", author_id: user4.id, category: 'Potion')
 
 # -----------------------
 # ******** steps ********
@@ -41,7 +70,7 @@ step7 = Step.create!(title: 'Step7: Known Uses', description: "Some of the known
 # -----------------------
 # ***** project #2 ******
 # -----------------------
-project2 = Project.create!(title: 'Love Potion Recipe', description: "Amortentia is the world's most powerful love potion, it's name comes from the Latin 'Amor Tentia' which means 'love held'. Not only is the potion very powerful, it's also considered to be highly dangerous.", author_id: user1.id)
+project2 = Project.create!(title: 'Love Potion Recipe', description: "Amortentia is the world's most powerful love potion, it's name comes from the Latin 'Amor Tentia' which means 'love held'. Not only is the potion very powerful, it's also considered to be highly dangerous.", author_id: user1.id, category: 'Potion')
 
 # -----------------------
 # ******** steps ********
@@ -55,7 +84,7 @@ step5 = Step.create!(title: 'Step5: Effects', description: 'Once prepared, you w
 # -----------------------
 # ***** project #3 ******
 # -----------------------
-project3 = Project.create!(title: 'Liquid luck Recipe', description: "Felix Felicis is liquid luck, which makes the person who drinks it lucky for a certain period of time.", author_id: user3.id)
+project3 = Project.create!(title: 'Liquid luck Recipe', description: "Felix Felicis is liquid luck, which makes the person who drinks it lucky for a certain period of time.", author_id: user3.id, category: 'Potion')
 
 # -----------------------
 # ******** steps ********
@@ -69,7 +98,7 @@ step5 = Step.create!(title: 'Step5: Effects', description: 'Felix Felicis causes
 # -----------------------
 # ***** project #4 ******
 # -----------------------
-project4 = Project.create!(title: 'Skele Gro Potion Recipe', description: 'Skele-Gro (alternately spelled Skelegro) is a dreadful-tasting potion which restores bones. It is able to mend broken bones and even regrow entire bones that have vanished or been otherwise lost. For regrowing entire bones, the process is a notably slow and painful process, that can take over a full day.', author_id: user2.id)
+project4 = Project.create!(title: 'Skele Gro Potion Recipe', description: 'Skele-Gro (alternately spelled Skelegro) is a dreadful-tasting potion which restores bones. It is able to mend broken bones and even regrow entire bones that have vanished or been otherwise lost. For regrowing entire bones, the process is a notably slow and painful process, that can take over a full day.', author_id: user2.id, category: 'Potion')
 
 # -----------------------
 # ******** steps ********
@@ -83,7 +112,7 @@ step5 = Step.create!(title: 'Step5: Effects', description: 'Once consumed, the p
 # -----------------------
 # ***** project #5 ******
 # -----------------------
-project5 = Project.create!(title: 'Wingardium Leviosa charm', description: "The Levitation Charm is one of the first spells learnt by any young witch or wizard. With the charm a witch or wizard can make things fly with the flick of a wand. The charm is an excellent test of your magical skills, wand control and above all, patience.", author_id: user2.id)
+project5 = Project.create!(title: 'Wingardium Leviosa charm', description: "The Levitation Charm is one of the first spells learnt by any young witch or wizard. With the charm a witch or wizard can make things fly with the flick of a wand. The charm is an excellent test of your magical skills, wand control and above all, patience.", author_id: user2.id, category: 'Charm')
 
 # -----------------------
 # ******** steps ********
@@ -97,7 +126,7 @@ step5 = Step.create!(title: 'Step5: Directions', description: "As you say Wingar
 # -----------------------
 # ***** project #6 ******
 # -----------------------
-project6 = Project.create!(title: 'Alohomora charm', description: "The Unlocking Charm, also known as the Thief's Friend (Alohomora) is a charm that unlocks the target, including doors, windows or other objects. It is also able to open doors locked by the Locking Spell (Colloportus), and as such, is its Counter-charm. There also exists a spell to prevent this charm from being used on a locked target.", author_id: user1.id)
+project6 = Project.create!(title: 'Alohomora charm', description: "The Unlocking Charm, also known as the Thief's Friend (Alohomora) is a charm that unlocks the target, including doors, windows or other objects. It is also able to open doors locked by the Locking Spell (Colloportus), and as such, is its Counter-charm. There also exists a spell to prevent this charm from being used on a locked target.", author_id: user1.id, category: 'Charm')
 
 # -----------------------
 # ******** steps ********
@@ -112,7 +141,7 @@ step5 = Step.create!(title: 'Step5: Directions', description: "The charm’s wan
 # -----------------------
 # ***** project #7 ******
 # -----------------------
-project7 = Project.create!(title: 'Finite charm', description: "The General Counter-Spell (Finite or Finite Incantatem) is a counter-spell for general use. It may be used in duels to counter or reverse minor damage, such as the effects of minor jinxes and curses.", author_id: user1.id)
+project7 = Project.create!(title: 'Finite charm', description: "The General Counter-Spell (Finite or Finite Incantatem) is a counter-spell for general use. It may be used in duels to counter or reverse minor damage, such as the effects of minor jinxes and curses.", author_id: user1.id, category: 'Charm')
 
 # -----------------------
 # ******** steps ********
@@ -126,7 +155,7 @@ step5 = Step.create!(title: 'Step5: Directions', description: "The Effect-Cancel
 # -----------------------
 # ***** project #8 ******
 # -----------------------
-project8 = Project.create!(title: 'Arresto Momentum charm', description: "he Slowing Charm (Arresto Momentum) is a charm that can be used by a witch or wizard to slow the velocity of an object.", author_id: user1.id)
+project8 = Project.create!(title: 'Arresto Momentum charm', description: "he Slowing Charm (Arresto Momentum) is a charm that can be used by a witch or wizard to slow the velocity of an object.", author_id: user1.id, category: 'Charm')
 
 # -----------------------
 # ******** steps ********
@@ -137,6 +166,62 @@ step3 = Step.create!(title: 'Step3: Willpower', description: 'Very high; dependi
 step4 = Step.create!(title: 'Step4: Concentration', description: 'Medium to high; direct the magic to the target object or person.', project_id: project8.id)
 step5 = Step.create!(title: 'Step5: Directions', description: "How does this spell work? I am sure that all of you know that objects fall at different speeds when you drop them in a liquid. Yet to make sure that we are all on the same page, I have brought you four different jars filled with water, corn syrup, oil, and honey. If you watch the speed in which a regular marble falls in these fluids, you will certainly notice a difference.", project_id: project8.id)
 
+# -----------------------
+# ***** project #9 ******
+# -----------------------
+project9 = Project.create!(title: 'Veritaserum Potion Recipe', description: "One of the most powerful potions ever seen, Veritaserum is a truth potion. It’s odourless and transparent liquid which forces the speaker tell the truth. Even it’s the most powerful truth serum, it is possible to use some techniques to resist its effects.", author_id: 9, category: 'Potion')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Ingredients', description: 'Wand, 1/2 a cauldron full of water, Powdered Griffin Claw, Shredded Boomslang Skin, Knotgrass, Snake Fangs, Powdered Snake Weed picked 21 days before a full moon, Stargrass picked on the summer solcest, Wormwood', project_id: 9)
+step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Add 8 measures of powdered griffin claws, add 3 pieces of shredded boomslang skin, add 2 measures of knotgrass', project_id: 9)
+step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Wave wand over cauldron and let stew for 30 minutes with peweter cauldron ( 28 minutes with silver and 22 minutes with copper). Add 5 easures of snake fangs, add 8 meausures of powdered snakeweed', project_id: 9)
+step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Add  measures of stargrass. Add 6 pieces of cut up wormwood. Wave wand over cauldron again and let stew for 78 minutes if pewter ( 75 minutes with silver and 70 minutes with copper)', project_id: 9)
+step5 = Step.create!(title: 'Step5: Effects', description: "Another potion whose use has been debated among ethicists for centuries is Veritaserum. While individual views on the subject vary, the two most popular in the literature are those who think it should be banned and those who think its use is permissible under certain circumstances.", project_id: 9)
+
+# -----------------------
+# ***** project #10 ******
+# -----------------------
+project10 = Project.create!(title: 'Draught of Living Death Potion Recipe', description: "The Draught of Living Death brings upon its drinker a very powerful sleep that can last indefinitely. This draught is very dangerous if not used with caution. This is an extremely dangerous potion. Execute with maximum caution.", author_id: 10, category: 'Potion')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Ingredients', description: 'Water, Powdered root of asphodel, Infusion of Wormwood, Valerian root, A Sopophorous Bean,A Sloth brain', project_id: 10)
+step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Add the Infusion of Wormwood. Add the powdered root of asphodel. Stir twice clockwise.', project_id: 10)
+step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Add the sloth brain. Add the Sopophorous bean juice. Stir seven times anti-clockwise.', project_id: 10)
+step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Half-Blood Prince \'s Notes: The Sopophorous bean should be crushed with a silver dagger, not cut, releases juices more efficiently. The juice from 13 Sopophorous beans should be used, rather than 12. Stir anticlockwise seven times and clockwise once instead.', project_id: 10)
+step5 = Step.create!(title: 'Step5: Effects', description: "The potion is difficult to concoct, since Hermione Granger, a very talented potion-maker, who managed to concoct Polyjuice Potion in her second year, had trouble doing it. Indeed, Horace Slughorn states that only once before in his career was a student (presumably Severus Snape, the Half-Blood Prince whose bookmarked instructions deviated from the potion-making process made a far more effective draught than any other student, though this was never confirmed) able to brew a mostly finished draught in only a single hour.", project_id: 10)
+
+# -----------------------
+# ***** project #11 ******
+# -----------------------
+project11 = Project.create!(title: 'Obliviate charm', description: "The Forgetfulness Charm is a popular memory-affecting charm frequently used by Ministry obliviators (whose name comes from this spell) to remove memories of the wizarding world from Muggle minds.", author_id: 11, category: 'Charm')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Incantation', description: 'Obliviate (oh-BLI-vee-ate)', project_id: 11)
+step2 = Step.create!(title: 'Step2: Wand Movement', description: 'Point your wand at the forehead of your target and move it in slow, clockwise circles, as if erasing a chalk board.', project_id: 11)
+step3 = Step.create!(title: 'Step3: Willpower', description: 'Willpower: Moderate.', project_id: 11)
+step4 = Step.create!(title: 'Step4: Concentration', description: 'Concentration: Very high; Concentration should be maintained on the memories to be removed. Keep in mind the spell\'s designated target.', project_id: 11)
+step5 = Step.create!(title: 'Step5: Directions', description: "To cast the spell, the user needs to understand the memories that are to be erased and concentrate on those. The more precise the caster’s concentration, the fewer unintended side effects will result. Casting many Forgetfulness Charms on one target in a short time will likely cause severe confusion in the target. Note that this spell does not truly erase memories but merely encapsulates an existing one within white filler, preventing the target from accessing or extracting the memory within the whitewash.", project_id: 11)
+
+
+# -----------------------
+# ***** project #12 ******
+# -----------------------
+project12 = Project.create!(title: 'Stupefy charm', description: "The Stunning Spell is an interesting spell because its effect has no known cause. We know for sure that the Stunning Spell causes the victim to fall instantly unconscious, but there are a plethora of reasons that can cause unconsciousness.", author_id: 12, category: 'Charm')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Incantation', description: 'Stupefy (STEW-puh-fye)', project_id: 12)
+step2 = Step.create!(title: 'Step2: Wand Movement', description: 'A downward vertical slash', project_id: 12)
+step3 = Step.create!(title: 'Step3: Willpower', description: 'Moderate', project_id: 12)
+step4 = Step.create!(title: 'Step4: Concentration', description: 'Moderate to high', project_id: 12)
+step5 = Step.create!(title: 'Step5: Directions', description: "Once the target is hit, the effect will be immediate and they will drop to the ground in a state of unconsciousness. At this point, they are considered unable to continue combat (if in a dueling situation) and are in danger. The individual is incapable of defending themselves, which now puts you, the caster, in a position of moral responsibility.", project_id: 12)
 
 
 
@@ -146,9 +231,9 @@ step5 = Step.create!(title: 'Step5: Directions', description: "How does this spe
 
 comment1 = Comment.create!(body: 'great!', author_id: user1.id, project_id: project1.id)
 comment2 = Comment.create!(body: 'another great one', author_id: user2.id, project_id: project2.id)
-comment3 = Comment.create!(body: 'great!', author_id: user3.id, project_id: project3.id)
-comment4 = Comment.create!(body: 'another great one', author_id: user4.id, project_id: project4.id)
-comment5 = Comment.create!(body: 'great!', author_id: user1.id, project_id: project5.id)
-comment6 = Comment.create!(body: 'another great one', author_id: user2.id, project_id: project6.id)
-comment7 = Comment.create!(body: 'great!', author_id: user3.id, project_id: project7.id)
-comment8 = Comment.create!(body: 'another great one', author_id: user4.id, project_id: project8.id)
+comment3 = Comment.create!(body: 'great work!', author_id: user3.id, project_id: project3.id)
+comment4 = Comment.create!(body: 'Yay! another great one', author_id: user4.id, project_id: project4.id)
+comment5 = Comment.create!(body: 'Awesome!', author_id: user1.id, project_id: project5.id)
+comment6 = Comment.create!(body: 'Keep up the great work', author_id: user2.id, project_id: project6.id)
+comment7 = Comment.create!(body: 'Fantastic!', author_id: user3.id, project_id: project7.id)
+comment8 = Comment.create!(body: 'Fab!', author_id: user4.id, project_id: project8.id)

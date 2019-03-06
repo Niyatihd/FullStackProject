@@ -1,21 +1,22 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import ProjectCommentForm from './project_comment_form';
+import CommentForm from './comment_form';
 import { updateComment } from '../../actions/project_actions';
 import { withRouter } from 'react-router-dom';
 
 
-const mapStateToProps = ({entities: {comments, }}, { match }) => {
+const mapStateToProps = ({entities: { comments }}, { match, comment, toggleEdit}) => {
   // debugger
   let projectId = match.params.projectId;
-  let commentId = match.params.commentId;
-  // let author_id = state.entities.users[state.session.id];
 
   return ({
     comment: {
-      body: comments[commentId].body,
+      id: comment.id,
+      body: comment.body,
       project_id: projectId
     },
-    formType: 'Update Comment'
+    formType: 'Update Comment',
+    toggleEdit
   });
 };
 
@@ -25,4 +26,4 @@ const mapDispatchToProps = (dispatch) => {
   });
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectCommentForm));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CommentForm));

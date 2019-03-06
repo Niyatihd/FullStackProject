@@ -4,6 +4,7 @@ import * as CommentAPIUtil from '../api_util/comment_api_util';
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
+export const REMOVE_COMMENT = "REMOVE_COMMENT";
 
 //regular action creators
 
@@ -25,6 +26,11 @@ export const receiveComment = ({ comment}) => ({
   comment
 });
 
+export const removeComment = (id) => ({
+  type: REMOVE_COMMENT,
+  id
+});
+
 //Thunk action creators
 
 export const fetchProjects = () => (dispatch) => (
@@ -41,4 +47,8 @@ export const createComment = comment => dispatch => (
 
 export const updateComment = comment => dispatch => (
   CommentAPIUtil.updateComment(comment).then(payload => dispatch(receiveComment(payload)))
+);
+
+export const deleteComment = id => dispatch => (
+  CommentAPIUtil.deleteComment(id).then(() => dispatch(removeComment(id)))
 );

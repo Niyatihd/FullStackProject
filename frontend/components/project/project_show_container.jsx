@@ -4,7 +4,6 @@ import { fetchProject } from '../../actions/project_actions';
 
 const mapStateToProps = ({ entities: { projects, project_author, users, steps, comments }, session, errors }, { match }) => {
   let projectId = match.params.projectId;
-  // let commentId = match.params.commentId;
 
   return ({
     projectId: projectId,
@@ -13,7 +12,8 @@ const mapStateToProps = ({ entities: { projects, project_author, users, steps, c
     project_author,
     comments: Object.values(comments),
     session,
-    users
+    users,
+    loggedIn: session.id !== null,
   });
 };
 
