@@ -1,10 +1,13 @@
 import * as ProjectAPIUtil from '../api_util/project_util';
 import * as CommentAPIUtil from '../api_util/comment_api_util';
+import * as FollowAPIUtil from '../api_util/follow_api_util';
 
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
+export const RECEIVE_FOLLOW = "RECEIVE_FOLLOW";
+export const REMOVE_FOLLOW = "REMOVE_FOLLOW";
 
 //regular action creators
 
@@ -13,12 +16,13 @@ export const receiveAllProjects = (projects) => ({
   projects
 });
 
-export const receiveProject = ({ project, project_author, steps, comments }) => ({
+export const receiveProject = ({ project, project_author, steps, comments, follows }) => ({
   type: RECEIVE_PROJECT,
   project,
   project_author,
   steps,
-  comments
+  comments,
+  follows
 });
 
 export const receiveComment = ({ comment}) => ({
@@ -28,6 +32,16 @@ export const receiveComment = ({ comment}) => ({
 
 export const removeComment = (id) => ({
   type: REMOVE_COMMENT,
+  id
+});
+
+export const receiveFollow = ({ follow }) => ({
+  type: RECEIVE_FOLLOW,
+  follow
+});
+
+export const removeFollow = (id) => ({
+  type: REMOVE_FOLLOW,
   id
 });
 
@@ -51,4 +65,12 @@ export const updateComment = comment => dispatch => (
 
 export const deleteComment = id => dispatch => (
   CommentAPIUtil.deleteComment(id).then(() => dispatch(removeComment(id)))
+);
+
+export const createFollow = follow => dispatch => (
+  FollowAPIUtil.createFollow(follow).then(payload => dispatch(receiveFollow(payload)))
+);
+
+export const deleteFollow = id => dispatch => (
+  FollowAPIUtil.deleteFollow(id).then(() => dispatch(removeFollow(id)))
 );

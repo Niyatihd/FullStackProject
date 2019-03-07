@@ -15,6 +15,7 @@ class ProjectShow extends React.Component {
   }
 
   render() {
+  
     //////////IMPORTANT/////////
     ///render runs before componentDidMount(), so while it waits for component 
     //to mount and fetch data, meanwhile we return null so that the app does not break
@@ -48,7 +49,11 @@ class ProjectShow extends React.Component {
         </div>
         {step}
         <div className="proj-comment-body"><h3>Discussions</h3>
+        {this.props.loggedIn ? 
           <HashLink to={`${this.props.location.pathname}#goto-create-comment`} className="proj-comment-link">Comment</HashLink>
+          :
+          <HashLink to={"/login"} className="proj-comment-link">Comment</HashLink>
+        }
         </div>
         <div className="to-reverse-comments">
           <div className="test">

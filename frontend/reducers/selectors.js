@@ -10,7 +10,7 @@ export const getProject = (state, projectId) => {
 };
 
 export const getProjectByCategory = (entities, category="") => {
-  debugger
+  // debugger
   let selected = {};
   let projects = entities.projects;
   let results = Object.values(projects);
@@ -22,4 +22,13 @@ export const getProjectByCategory = (entities, category="") => {
   }
 
   return selected;
+};
+
+export const getFollowId = (follows, user_id, project_id) => {
+  // debugger
+  for(var i = 0; i < follows.length; i++) {
+    if (follow[i].user_id === user_id && follow[i].project_id === project_id) {
+      return follow[i].id;
+    }
+  }
 };

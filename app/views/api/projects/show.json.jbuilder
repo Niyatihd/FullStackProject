@@ -19,6 +19,14 @@ end
   end
 end
 
+@project.follows.each do |follow|
+  json.follows do
+    json.set! follow.id do
+      json.partial! 'api/follows/follow', follow: follow
+    end
+  end
+end
+
 # json.author @project.author 
 json.project_author do
   json.extract! @project.project_author, :id, :username, :email

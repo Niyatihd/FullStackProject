@@ -83,6 +83,18 @@
   box-shadow: 4px 4px 4px 4px slategray;
 }
 
+.project-content {
+  margin-bottom: 15px;  
+}
+
+.project-content > h4 {
+  width: 160px;
+  // height: 93px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 #project-img {
   margin: 0;
   padding: 0;

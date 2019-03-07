@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.fetchProjects = fetchProjects();
   window.fetchProject = fetchProject(1);
+  // window.createFollow = fetchProject(1);
   ///////DELETE
   
   // debugger

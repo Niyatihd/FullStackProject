@@ -1,0 +1,1 @@
+json.extract! follow, :id, :project_id, :user_id

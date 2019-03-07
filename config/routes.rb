@@ -8,5 +8,6 @@
     resources :projects, only: [:index, :create, :edit, :show, :destroy]
     resources :steps, only: [:create, :edit, :destroy]
     resources :comments, only: [:index, :create, :update, :destroy, :show]
+    resources :follows, only: [:index, :create, :destroy, :show]
   end
 end

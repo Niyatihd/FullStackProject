@@ -18,7 +18,7 @@ library.add(faSearch)
 
 const App = () => (
   <div>
-    {/* <Modal /> */}
+    <Modal />
     <header>
       <NavBarContainer name="top"/>
     </header>

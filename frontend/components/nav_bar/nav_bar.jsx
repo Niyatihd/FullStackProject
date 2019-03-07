@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import Splash from '../splash/splash';
 
-const Greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, logout, newProjectButton, closeModal}) => {
   // const handleLogout = (e) => {
   //   e.preventDefault();
   //   logout();
@@ -22,7 +22,8 @@ const Greeting = ({ currentUser, logout }) => {
           <input type="text" placeholder="  Let's Make ..." name="search" />
           <button type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
           <Link to="/index" id="featured-proj-btn">Featured</Link>
-          <Link to="/index" id="new-proj-btn">Create a Wizardable</Link>
+          {newProjectButton}
+          {/* <button onClick={() => openModal('newProject')} id="new-proj-btn">Create a Wizardable</button> */}
         </form>
       </div>
       {/* <div className="nav-bar-right-end"> */}
@@ -51,7 +52,8 @@ const Greeting = ({ currentUser, logout }) => {
             <input type="text" placeholder="  Let's Make ..." name="search" />
             <button type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
             <Link to="/index" id="featured-proj-btn">Featured</Link>
-            <Link to="/index" id="new-proj-btn">Create a Wizardable</Link>
+            {newProjectButton}
+            {/* <button onClick={() => openModal('newProject')} id="new-proj-btn">Create a Wizardable</button> */}
           </form>
         </div>
         {/* <div className="nav-bar-right-end"> */}

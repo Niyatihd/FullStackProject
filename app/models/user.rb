@@ -9,14 +9,14 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: :Project
 
-  # has_many :follows,
-  #   primary_key: :id,
-  #   foreign_key: :user_id,
-  #   class_name: :Follow
+  has_many :follows,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Follow
 
-  # has_many :followed_projects,
-  #   through: :follows, 
-  #   source: :project
+  has_many :followed_projects,
+    through: :follows, 
+    source: :project
 
   has_many :project_comments,
     primary_key: :id,

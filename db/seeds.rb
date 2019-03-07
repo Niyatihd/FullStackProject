@@ -9,6 +9,7 @@
 User.destroy_all
 Project.destroy_all
 Comment.destroy_all
+Follow.destroy_all
 
 # -----------------------
 # ******* users *********
@@ -46,10 +47,6 @@ user30 = User.create!(username: 'Argus Filch', email: 'filch@filch.com', passwor
 
 
 
-
-
-# Like.create!(user_id: user1.id, likeable_id: comment1.id, likeable_type: 'Comment')
-# Like.create!(user_id: user2.id, likeable_id: artwork2.id, likeable_type: 'Artwork')
 
 # -----------------------
 # ***** project #1 ******
@@ -237,3 +234,34 @@ comment5 = Comment.create!(body: 'Awesome!', author_id: user1.id, project_id: pr
 comment6 = Comment.create!(body: 'Keep up the great work', author_id: user2.id, project_id: project6.id)
 comment7 = Comment.create!(body: 'Fantastic!', author_id: user3.id, project_id: project7.id)
 comment8 = Comment.create!(body: 'Fab!', author_id: user4.id, project_id: project8.id)
+
+
+# -----------------------
+# ***** follows    ******
+# -----------------------
+
+Follow.create!(user_id: user1.id, project_id: project1.id)
+Follow.create!(user_id: user1.id, project_id: project2.id)
+Follow.create!(user_id: user1.id, project_id: project3.id)
+Follow.create!(user_id: user1.id, project_id: project4.id)
+Follow.create!(user_id: user1.id, project_id: project5.id)
+Follow.create!(user_id: user1.id, project_id: project6.id)
+Follow.create!(user_id: user1.id, project_id: project7.id)
+Follow.create!(user_id: user1.id, project_id: project8.id)
+Follow.create!(user_id: user1.id, project_id: project9.id)
+Follow.create!(user_id: user1.id, project_id: project10.id)
+Follow.create!(user_id: user1.id, project_id: project11.id)
+Follow.create!(user_id: user1.id, project_id: project12.id)
+Follow.create!(user_id: user2.id, project_id: project1.id)
+Follow.create!(user_id: user3.id, project_id: project1.id)
+Follow.create!(user_id: user4.id, project_id: project1.id)
+Follow.create!(user_id: user5.id, project_id: project1.id)
+Follow.create!(user_id: user6.id, project_id: project1.id)
+Follow.create!(user_id: user7.id, project_id: project1.id)
+Follow.create!(user_id: user8.id, project_id: project1.id)
+Follow.create!(user_id: user9.id, project_id: project1.id)
+Follow.create!(user_id: user10.id, project_id: project1.id)
+Follow.create!(user_id: user11.id, project_id: project1.id)
+Follow.create!(user_id: user12.id, project_id: project1.id)
+Follow.create!(user_id: user13.id, project_id: project1.id)
+Follow.create!(user_id: user14.id, project_id: project1.id)

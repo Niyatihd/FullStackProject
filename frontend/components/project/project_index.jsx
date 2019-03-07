@@ -22,7 +22,7 @@ class ProjectIndex extends React.Component {
   render () {
     let project = this.props.projects.map((project, i) => {
       return (
-        <ProjectIndexItem project={project} key={`${project.id}`} image={this.images[i]} />
+        <ProjectIndexItem project={project} key={project.id} image={this.images[i]} />
       )
     })
 
