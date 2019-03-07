@@ -30,4 +30,10 @@ class Project < ApplicationRecord
     follows.length
   end
 
+  def self.search_by_title(title)
+    # debugger
+    Project
+      .where("projects.title LIKE :title",  { title: "%#{title}%" })
+    end
+
 end

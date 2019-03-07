@@ -3,7 +3,8 @@ import merge from 'lodash/merge';
 import { RECEIVE_ALL_PROJECTS, 
          RECEIVE_PROJECT,
          RECEIVE_COMMENT, 
-         RECEIVE_FOLLOW} from '../actions/project_actions';
+         RECEIVE_FOLLOW,
+         REMOVE_FOLLOW} from '../actions/project_actions';
 
 const ProjectsReducer = (state={}, action) => {
   Object.freeze(state);
@@ -20,8 +21,16 @@ const ProjectsReducer = (state={}, action) => {
       newState = merge({}, state, comment);
       return newState;
     case RECEIVE_FOLLOW:
-      const { follow } = action;
-      newState = merge({}, state, follow);
+    // debugger
+      let { follow } = action;
+      newState = merge({}, state);
+      newState[follow.project_id].proj_follows += 1; 
+      return newState;
+    case REMOVE_FOLLOW:
+    // debugger
+      let { project_id, id } = action;
+      newState = merge({}, state);
+      newState[project_id].proj_follows -= 1;
       return newState;
     default:
       return state;

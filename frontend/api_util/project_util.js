@@ -1,8 +1,9 @@
-export const fetchProjects = () => {
+export const fetchProjects = (search_string) => {
   return (
     $.ajax({
-      url: "api/projects",
-      method: "get"
+      url: `api/projects`,
+      method: "get",
+      data: {search_string}
     })
   );
 };
@@ -36,3 +37,8 @@ export const deleteFollow = (id) => {
     })
   );
 };
+
+
+
+// DELETE
+window.fetchProjects = fetchProjects;

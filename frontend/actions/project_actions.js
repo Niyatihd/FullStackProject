@@ -40,15 +40,15 @@ export const receiveFollow = ({ follow }) => ({
   follow
 });
 
-export const removeFollow = (id) => ({
+export const removeFollow = (follow) => ({
   type: REMOVE_FOLLOW,
-  id
+  deletedFollow: follow
 });
 
 //Thunk action creators
 
-export const fetchProjects = () => (dispatch) => (
-  ProjectAPIUtil.fetchProjects().then((projects) => dispatch(receiveAllProjects(projects)))
+export const fetchProjects = (str) => (dispatch) => (
+  ProjectAPIUtil.fetchProjects(str).then((projects) => dispatch(receiveAllProjects(projects)))
 );
 
 export const fetchProject = (id) => (dispatch) => (
@@ -71,6 +71,6 @@ export const createFollow = follow => dispatch => (
   FollowAPIUtil.createFollow(follow).then(payload => dispatch(receiveFollow(payload)))
 );
 
-export const deleteFollow = id => dispatch => (
-  FollowAPIUtil.deleteFollow(id).then(() => dispatch(removeFollow(id)))
+export const deleteFollow = follow => dispatch => (
+  FollowAPIUtil.deleteFollow(follow).then((follow) => dispatch(removeFollow(follow)))
 );

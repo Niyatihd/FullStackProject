@@ -4,8 +4,10 @@ import { fetchProjects } from '../../actions/project_actions';
 
 const mapStateToProps = (state) => {
   let projects = Object.values(state.entities.projects);
+  let followsCount = Object.values(state.entities.follows)
   return ({
-    projects: projects
+    projects: projects,
+    followsCount: followsCount
   });
 };
 

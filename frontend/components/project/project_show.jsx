@@ -4,6 +4,8 @@ import { HashLink } from 'react-router-hash-link';
 import ProjectShowItem from './project_show_item';
 import CommentsIndexContainer from './comments_index_container';
 import CreateCommentContainer from './create_comment_container';
+import FollowsContainer from './follows_container';
+
 
 class ProjectShow extends React.Component {
   constructor(props) {
@@ -36,11 +38,13 @@ class ProjectShow extends React.Component {
           <h3 >{this.props.project.title}</h3>
           <div className="proj-title-details">
             <span>{this.props.project_author.username}</span>
-            <span>|</span>
-            <span>Followers 29</span>
-          </div>
-          <div className="proj-link">
-            <Link to="/" className="proj-follow-link">Follow</Link>
+            {/* <span>|</span> */}
+            {/* <span>{this.props.project.proj_follows}  Followers</span> */}
+            {/* <span>Followers 29</span> */}
+          {/* </div>
+          <div className="proj-link"> */}
+            <FollowsContainer className="proj-follow-link" project={this.props.project} />
+            {/* <Link to="/" className="proj-follow-link">Follow</Link> */}
           </div>
         </div>
         <div className="proj-body">

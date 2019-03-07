@@ -32,3 +32,13 @@ export const getFollowId = (follows, user_id, project_id) => {
     }
   }
 };
+
+// export const getFollowsCount= (follows) => {
+//   // debugger
+//   // for(var i = 0; i < follows.length; i++) {
+//   //   if (follow[i].user_id === user_id && follow[i].project_id === project_id) {
+//   //     return follow[i].id;
+//   //   }
+//   // }
+//   return (follows.length)
+// };

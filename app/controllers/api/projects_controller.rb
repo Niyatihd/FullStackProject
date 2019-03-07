@@ -2,7 +2,13 @@ class Api::ProjectsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @projects = Project.all
+    if params[:search_string]
+      @projects = Project.search_by_title(params[:search_string])
+    else
+      # debugger
+      @projects = Project.all
+    end
+
     render 'api/projects/index'
   end
 
@@ -22,6 +28,7 @@ class Api::ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    # debugger
     render 'api/projects/show'
   end
 
