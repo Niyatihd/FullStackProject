@@ -240,7 +240,7 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: '29 May, 1993'
 # -----------------------
 # ***** project #14 ******
 # -----------------------
-project14 = Project.create!(title: 'Marvolo Gaunt\'s Ring', description: "The ring's story begins (and ends) with its black stone. The stone happened to be the Resurrection Stone, one of the Deathly Hallows of legend, and had the symbol of the Deathly Hallows engraved on its surface.", author_id: 14, category: 'Horcrux')
+project14 = Project.create!(title: 'Marvolo Gaunt\'s Ring', description: "The ring's story begins (and ends) with its black stone. The stone happened to be the Resurrection Stone, one of the Deathly Hallows of legend, and had the symbol of the Deathly Hallows engraved on its surface. It was a horcrux.", author_id: 14, category: 'Horcrux')
 
 # -----------------------
 # ******** steps ********
@@ -257,7 +257,7 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: 'July 1996', p
 # -----------------------
 # ***** project #15 ******
 # -----------------------
-project15 = Project.create!(title: 'Salazar Slytherin\'s Locket', description: "The locket was a creation of Salazar Slytherin, the celebrated Founder of Slytherin House at Hogwarts School of Witchcraft and Wizardry. When Slytherin created the locket, he enchanted it so that only a Parselmouth, like himself, could open it.[3] When Slytherin left Hogwarts, he took the locket with him.", author_id: 15, category: 'Horcrux')
+project15 = Project.create!(title: 'Salazar Slytherin\'s Locket', description: "The locket was a creation of Salazar Slytherin, the celebrated Founder of Slytherin House at Hogwarts School of Witchcraft and Wizardry. When Slytherin created the locket, he enchanted it so that only a Parselmouth, like himself, could open it.[3] When Slytherin left Hogwarts, he took the locket with him. It was a horcrux.", author_id: 15, category: 'Horcrux')
 
 # -----------------------
 # ******** steps ********
@@ -274,7 +274,7 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: '28 December, 
 # -----------------------
 # ***** project #16 ******
 # -----------------------
-project16 = Project.create!(title: 'Helga Hufflepuff\'s Cup', description: "Helga Hufflepuff's Cup was a magical item created by Helga Hufflepuff, one of the founders of Hogwarts School of Witchcraft and Wizardry. It was a small golden cup with two finely-wrought handles with a badger engraved on the side and a few jewels.", author_id: 16, category: 'Horcrux')
+project16 = Project.create!(title: 'Helga Hufflepuff\'s Cup', description: "Helga Hufflepuff's Cup was a magical item created by Helga Hufflepuff, one of the founders of Hogwarts School of Witchcraft and Wizardry. It was a small golden cup with two finely-wrought handles with a badger engraved on the side and a few jewels. It was a horcrux.", author_id: 16, category: 'Horcrux')
 
 # -----------------------
 # ******** steps ********
@@ -291,7 +291,7 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: 'Battle of Hog
 # -----------------------
 # ***** project #17 ******
 # -----------------------
-project17 = Project.create!(title: 'Rowena Ravenclaw\'s Diadem', description: "Ravenclaw's Diadem[1] (also known as the Lost Diadem of Ravenclaw) was the only known relic once belonging to Rowena Ravenclaw, the founder of Ravenclaw House at Hogwarts School of Witchcraft and Wizardry. Etched upon its surface was Ravenclaw's famous quote: Wit beyond measure is man's greatest treasure.", author_id: 17, category: 'Horcrux')
+project17 = Project.create!(title: 'Rowena Ravenclaw\'s Diadem', description: "Ravenclaw's Diadem[1] (also known as the Lost Diadem of Ravenclaw) was the only known relic once belonging to Rowena Ravenclaw, the founder of Ravenclaw House at Hogwarts School of Witchcraft and Wizardry. Etched upon its surface was Ravenclaw's famous quote: Wit beyond measure is man's greatest treasure. It was a horcrux.", author_id: 17, category: 'Horcrux')
 
 # -----------------------
 # ******** steps ********
@@ -325,7 +325,7 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: 'Battle of Hog
 # -----------------------
 # ***** project #19 ******
 # -----------------------
-project19 = Project.create!(title: 'Quirinus Quirrell', description: "As a boy, Quirinus was gifted but also delicate, teased for his timidity and nerves during his school life. Feeling inadequate and wishing to prove himself, he developed an (initially theoretical) interest in the Dark Arts. The feelings of insignificance and worthlessness that this bullying fostered embittered the boy, forging a latent desire to make the world sit up and notice him.", author_id: 19, category: 'Horcrux')
+project19 = Project.create!(title: 'Quirinus Quirrell', description: "As a boy, Quirinus was gifted but also delicate, teased for his timidity and nerves during his school life. Feeling inadequate and wishing to prove himself, he developed an (initially theoretical) interest in the Dark Arts. The feelings of insignificance and worthlessness that this bullying fostered embittered the boy, forging a latent desire to make the world sit up and notice him. He was a pseudo horcrux.", author_id: 19, category: 'Horcrux')
 
 # -----------------------
 # ******** steps ********
@@ -342,7 +342,7 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: '4 June, 1992'
 # -----------------------
 # ***** project #20 ******
 # -----------------------
-project20 = Project.create!(title: 'Harry Potter', description: "Harry James Potter (b. 31 July, 1980) was an English half-blood wizard, one of the most famous wizards of modern times. He was the only child and son of James and Lily Potter (née Evans), both members of the original Order of the Phoenix. Harry's birth was overshadowed by a prophecy, naming either himself or Neville Longbottom as the one with the power to vanquish Lord Voldemort.", author_id: 20, category: 'Horcrux')
+project20 = Project.create!(title: 'Harry Potter', description: "Harry James Potter (b. 31 July, 1980) was an English half-blood wizard, one of the most famous wizards of modern times. He was the only child and son of James and Lily Potter (née Evans), both members of the original Order of the Phoenix. Harry's birth was overshadowed by a prophecy, naming either himself or Neville Longbottom as the one with the power to vanquish Lord Voldemort. He was a pseudo horcrux.", author_id: 20, category: 'Horcrux')
 
 # -----------------------
 # ******** steps ********

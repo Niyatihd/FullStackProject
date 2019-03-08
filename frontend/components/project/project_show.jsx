@@ -10,6 +10,75 @@ import FollowsContainer from './follows_container';
 class ProjectShow extends React.Component {
   constructor(props) {
     super(props);
+
+    this.images = [//gif
+      window.images.pjpotion,
+      window.images.lp2,
+      window.images.ll2,
+      window.images.sk2,
+      window.images.w2,
+      window.images.al3,
+      window.images.f2,
+      window.images.am2,
+      window.images.vb5,
+      window.images.dl4,
+      window.images.ob1,
+      window.images.st2,
+      window.images.tr3,
+      window.images.r1,
+      window.images.ss1,
+      window.images.hh1,
+      window.images.rrd1,
+      window.images.ng5,
+      window.images.qq2,
+      window.images.hjp2,
+    ];
+
+    this.images1 = [//icon
+      window.images.splash1,
+      window.images.lp1,
+      window.images.ll1,
+      window.images.sk1,
+      window.images.w1,
+      window.images.al1,
+      window.images.f1,
+      window.images.am4,
+      window.images.vb4,
+      window.images.dl2,
+      window.images.ob4,
+      window.images.st1,
+      window.images.tr4,
+      window.images.r3,
+      window.images.ss6,
+      window.images.hh5,
+      window.images.rrd4,
+      window.images.ng1,
+      window.images.qq4,
+      window.images.hjp7,
+    ];
+
+    this.images2 = [
+      window.images.pj2,
+      window.images.lp3,
+      window.images.ll3,
+      window.images.sk3,
+      window.images.w3,
+      window.images.al2,
+      window.images.f3,
+      window.images.am1,
+      window.images.vb3,
+      window.images.dl1,
+      window.images.ob3,
+      window.images.st3,
+      window.images.tr1,
+      window.images.r2,
+      window.images.ss3,
+      window.images.hh3,
+      window.images.rrd3,
+      window.images.ng4,
+      window.images.qq1,
+      window.images.hjp1,
+    ];
   }
 
   componentDidMount() {
@@ -32,9 +101,9 @@ class ProjectShow extends React.Component {
 
     return (
       <div className="proj-wrapper">
-        <img id='project-show-bg' src={window.images.pjpotion} />
+        <img id='project-show-bg' src={this.images[this.props.project.id - 1]} />
         <div className="proj-title">
-          <img id='proj-icon' src={window.images.splash1} />
+          <img id='proj-icon' src={this.images1[this.props.project.id - 1]} />
           <h3 >{this.props.project.title}</h3>
           <div className="proj-title-details">
             <span>{this.props.project_author.username}</span>
@@ -49,7 +118,7 @@ class ProjectShow extends React.Component {
         </div>
         <div className="proj-body">
           <span>{this.props.project.description}</span>
-          <img id='proj-body-main-img' src={window.images.splash1} />
+          <img id='proj-body-main-img' src={this.images2[this.props.project.id - 1]} />
         </div>
         {step}
         <div className="proj-comment-body"><h3>Discussions</h3>
