@@ -22,6 +22,12 @@ class ProjectForm extends React.Component {
       <div>
         <h1>This is modal</h1>
         <div onClick={this.props.closeModal} className="close-x">X</div>
+        <h1>Create Your Own Wizardable</h1>
+        <div onClick={this.props.closeModal} className="close-x">X</div>
+        <form action="">
+          <input type="button" value="" />
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </form>
       </div>
     )
   }

@@ -220,6 +220,142 @@ step3 = Step.create!(title: 'Step3: Willpower', description: 'Moderate', project
 step4 = Step.create!(title: 'Step4: Concentration', description: 'Moderate to high', project_id: 12)
 step5 = Step.create!(title: 'Step5: Directions', description: "Once the target is hit, the effect will be immediate and they will drop to the ground in a state of unconsciousness. At this point, they are considered unable to continue combat (if in a dueling situation) and are in danger. The individual is incapable of defending themselves, which now puts you, the caster, in a position of moral responsibility.", project_id: 12)
 
+# -----------------------
+# ***** project #13 ******
+# -----------------------
+project13 = Project.create!(title: 'Tom Riddle\'s Diary', description: "T. M. Riddle's Diary was a simple blank diary, which Tom Riddle transformed into a Horcrux. The diary was made into a Horcrux in 1943, during Riddle's sixth year at Hogwarts School of Witchcraft and Wizardry. It was the first Horcrux he ever made and was used as a weapon.", author_id: 13, category: 'Horcrux')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Hiding place', description: 'In the possession of Lucius Malfoy, later given to Ginny Weasley (without her knowing it), and eventually found by Harry Potter in the girls lavatory on the 2nd floor.', project_id: 13)
+step2 = Step.create!(title: 'Step2: Created with the murder of', description: 'Myrtle Warren by the Serpent of Slytherin', project_id: 13)
+step3 = Step.create!(title: 'Step3: Location of murder', description: 'First-floor girls\' lavatory, Hogwarts Castle', project_id: 13)
+step4 = Step.create!(title: 'Step4: Date created', description: '13 June, 1943', project_id: 13)
+step5 = Step.create!(title: 'Step5: Destroyed by', description: 'Harry Potter', project_id: 13)
+step6 = Step.create!(title: 'Step6: Destruction method', description: 'Stabbed with one of the Basilisk\'s fangs', project_id: 13)
+step7 = Step.create!(title: 'Step7: Destruction site', description: 'Chamber of Secrets, Hogwarts Castle', project_id: 13)
+step8 = Step.create!(title: 'Step8: Date destroyed', description: '29 May, 1993', project_id: 13)
+
+# -----------------------
+# ***** project #14 ******
+# -----------------------
+project14 = Project.create!(title: 'Marvolo Gaunt\'s Ring', description: "The ring's story begins (and ends) with its black stone. The stone happened to be the Resurrection Stone, one of the Deathly Hallows of legend, and had the symbol of the Deathly Hallows engraved on its surface.", author_id: 14, category: 'Horcrux')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Hiding place', description: 'In the Gaunt Shack', project_id: 14)
+step2 = Step.create!(title: 'Step2: Created with the murder of', description: 'Tom Riddle Senior with Morfin Gaunt\'s wand', project_id: 14)
+step3 = Step.create!(title: 'Step3: Location of murder', description: 'Riddle House, Little Hangleton', project_id: 14)
+step4 = Step.create!(title: 'Step4: Date created', description: 'August 1943', project_id: 14)
+step5 = Step.create!(title: 'Step5: Destroyed by', description: 'Albus Dumbledore', project_id: 14)
+step6 = Step.create!(title: 'Step6: Destruction method', description: 'Cut with Godric Gryffindor\'s Sword', project_id: 14)
+step7 = Step.create!(title: 'Step7: Destruction site', description: 'Headmaster\'s office, Hogwarts Castle', project_id: 14)
+step8 = Step.create!(title: 'Step8: Date destroyed', description: 'July 1996', project_id: 14)
+
+# -----------------------
+# ***** project #15 ******
+# -----------------------
+project15 = Project.create!(title: 'Salazar Slytherin\'s Locket', description: "The locket was a creation of Salazar Slytherin, the celebrated Founder of Slytherin House at Hogwarts School of Witchcraft and Wizardry. When Slytherin created the locket, he enchanted it so that only a Parselmouth, like himself, could open it.[3] When Slytherin left Hogwarts, he took the locket with him.", author_id: 15, category: 'Horcrux')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Hiding place', description: 'The Crystal Cave, later moved to 12 Grimmauld Place, later stolen by Mundungus Fletcher, who gave it to Dolores Umbridge as a bribe.', project_id: 15)
+step2 = Step.create!(title: 'Step2: Created with the murder of', description: 'A Muggle tramp', project_id: 15)
+step3 = Step.create!(title: 'Step3: Location of murder', description: 'Unknown', project_id: 15)
+step4 = Step.create!(title: 'Step4: Date created', description: 'c. 1946 or later, but before 1979', project_id: 15)
+step5 = Step.create!(title: 'Step5: Destroyed by', description: 'Ron Weasley', project_id: 15)
+step6 = Step.create!(title: 'Step6: Destruction method', description: 'Stabbed with Godric Gryffindor\'s Sword', project_id: 15)
+step7 = Step.create!(title: 'Step7: Destruction site', description: 'Forest of Dean, Gloucestershire', project_id: 15)
+step8 = Step.create!(title: 'Step8: Date destroyed', description: '28 December, 1997', project_id: 15)
+
+# -----------------------
+# ***** project #16 ******
+# -----------------------
+project16 = Project.create!(title: 'Helga Hufflepuff\'s Cup', description: "Helga Hufflepuff's Cup was a magical item created by Helga Hufflepuff, one of the founders of Hogwarts School of Witchcraft and Wizardry. It was a small golden cup with two finely-wrought handles with a badger engraved on the side and a few jewels.", author_id: 16, category: 'Horcrux')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Hiding place', description: 'The Lestrange family vault at Gringotts Wizarding Bank.', project_id: 16)
+step2 = Step.create!(title: 'Step2: Created with the murder of', description: 'Hepzibah Smith', project_id: 16)
+step3 = Step.create!(title: 'Step3: Location of murder', description: 'Hepzibah Smith\'s home', project_id: 16)
+step4 = Step.create!(title: 'Step4: Date created', description: 'c. 1946 or later', project_id: 16)
+step5 = Step.create!(title: 'Step5: Destroyed by', description: 'Hermione Granger', project_id: 16)
+step6 = Step.create!(title: 'Step6: Destruction method', description: 'Stabbed with a Basilisk fang', project_id: 16)
+step7 = Step.create!(title: 'Step7: Destruction site', description: 'Chamber of Secrets, Hogwarts Castle', project_id: 16)
+step8 = Step.create!(title: 'Step8: Date destroyed', description: 'Battle of Hogwarts, 2 May, 1998', project_id: 16)
+
+# -----------------------
+# ***** project #17 ******
+# -----------------------
+project17 = Project.create!(title: 'Rowena Ravenclaw\'s Diadem', description: "Ravenclaw's Diadem[1] (also known as the Lost Diadem of Ravenclaw) was the only known relic once belonging to Rowena Ravenclaw, the founder of Ravenclaw House at Hogwarts School of Witchcraft and Wizardry. Etched upon its surface was Ravenclaw's famous quote: Wit beyond measure is man's greatest treasure.", author_id: 17, category: 'Horcrux')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Hiding place', description: 'In the Room of Requirement at Hogwarts Castle', project_id: 17)
+step2 = Step.create!(title: 'Step2: Created with the murder of', description: 'An Albanian peasant', project_id: 17)
+step3 = Step.create!(title: 'Step3: Location of murder', description: 'Albania', project_id: 17)
+step4 = Step.create!(title: 'Step4: Date created', description: 'c. 1946 or later', project_id: 17)
+step5 = Step.create!(title: 'Step5: Destroyed by', description: 'Vincent Crabbe. Stabbed with a Basilisk fang and then kicked into Vincent Crabbe\'s unintentional Fiendfyre', project_id: 17)
+step6 = Step.create!(title: 'Step6: Destruction method', description: 'Fiendfyre', project_id: 17)
+step7 = Step.create!(title: 'Step7: Destruction site', description: 'Room of Requirement, Hogwarts Castle', project_id: 17)
+step8 = Step.create!(title: 'Step8: Date destroyed', description: 'Battle of Hogwarts, 2 May 1998', project_id: 17)
+
+# -----------------------
+# ***** project #18 ******
+# -----------------------
+project18 = Project.create!(title: 'Nagini', description: "Nagini (d. 2 May, 1998) was a Maledictus cursed to transform into a snake. Originating possibly in Indonesia,[2] by 1927 she was a performer at the Circus Arcanus where she met Credence Barebone and had the ability then to transform at will. By 1994, Nagini was seemingly trapped in snake form and belonged to Lord Voldemort, with whom she had a special bond largely due to becoming a Horcrux, after her master had killed Bertha Jorkins in 1994.", author_id: 18, category: 'Horcrux')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Hiding place', description: 'Always by Lord Voldemort\'s side after the cup was stolen', project_id: 18)
+step2 = Step.create!(title: 'Step2: Created with the murder of', description: 'Bertha Jorkins', project_id: 18)
+step3 = Step.create!(title: 'Step3: Location of murder', description: 'Albania', project_id: 18)
+step4 = Step.create!(title: 'Step4: Date created', description: 'Summer 1994', project_id: 18)
+step5 = Step.create!(title: 'Step5: Destroyed by', description: 'Neville Longbottom', project_id: 18)
+step6 = Step.create!(title: 'Step6: Destruction method', description: 'Beheaded with Godric Gryffindor\'s Sword', project_id: 18)
+step7 = Step.create!(title: 'Step7: Destruction site', description: 'Front steps of Hogwarts', project_id: 18)
+step8 = Step.create!(title: 'Step8: Date destroyed', description: 'Battle of Hogwarts, 2 May 1998', project_id: 18)
+
+# -----------------------
+# ***** project #19 ******
+# -----------------------
+project19 = Project.create!(title: 'Quirinus Quirrell', description: "As a boy, Quirinus was gifted but also delicate, teased for his timidity and nerves during his school life. Feeling inadequate and wishing to prove himself, he developed an (initially theoretical) interest in the Dark Arts. The feelings of insignificance and worthlessness that this bullying fostered embittered the boy, forging a latent desire to make the world sit up and notice him.", author_id: 19, category: 'Horcrux')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Hiding place', description: 'Hogwarts School of Witchcraft and Wizardry', project_id: 19)
+step2 = Step.create!(title: 'Step2: Created with the murder of', description: 'None (soul very unstable at the time; possession)', project_id: 19)
+step3 = Step.create!(title: 'Step3: Location of murder', description: 'NA', project_id: 19)
+step4 = Step.create!(title: 'Step4: Date created', description: '1990-1991', project_id: 19)
+step5 = Step.create!(title: 'Step5: Destroyed by', description: 'Harry Potter', project_id: 19)
+step6 = Step.create!(title: 'Step6: Destruction method', description: 'Burnt to death under Harry\'s touch', project_id: 19)
+step7 = Step.create!(title: 'Step7: Destruction site', description: 'Underground Chambers, Hogwarts Castle', project_id: 19)
+step8 = Step.create!(title: 'Step8: Date destroyed', description: '4 June, 1992', project_id: 19)
+
+# -----------------------
+# ***** project #20 ******
+# -----------------------
+project20 = Project.create!(title: 'Harry Potter', description: "Harry James Potter (b. 31 July, 1980) was an English half-blood wizard, one of the most famous wizards of modern times. He was the only child and son of James and Lily Potter (née Evans), both members of the original Order of the Phoenix. Harry's birth was overshadowed by a prophecy, naming either himself or Neville Longbottom as the one with the power to vanquish Lord Voldemort.", author_id: 20, category: 'Horcrux')
+
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Hiding place', description: 'Harry Potter', project_id: 20)
+step2 = Step.create!(title: 'Step2: Created with the murder of', description: 'Voldemort had rendered his soul so unstable that it broke apart when he committed those acts of unspeakable evil, the murder of Harry\'s parents, the attempted murder of an infant Harry.', project_id: 20)
+step3 = Step.create!(title: 'Step3: Location of murder', description: 'Godric\'s Hollow, West Country', project_id: 20)
+step4 = Step.create!(title: 'Step4: Date created', description: '31 October, 1981', project_id: 20)
+step5 = Step.create!(title: 'Step5: Destroyed by', description: 'Lord Voldemort', project_id: 20)
+step6 = Step.create!(title: 'Step6: Destruction method', description: 'Destroyed with a Killing Curse from The Elder Wand', project_id: 20)
+step7 = Step.create!(title: 'Step7: Destruction site', description: 'Forbidden Forest, Hogwarts School of Witchcraft and Wizardry', project_id: 20)
+step8 = Step.create!(title: 'Step8: Date destroyed', description: '2 May, 1998', project_id: 20)
+
 
 
 # -----------------------

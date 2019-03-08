@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SearchContainer from './search_container';
+// import CategoryContainer from './category_container';
 // import Splash from '../splash/splash';
 
 const Greeting = ({ currentUser, logout, newProjectButton, closeModal}) => {
@@ -23,8 +24,11 @@ const Greeting = ({ currentUser, logout, newProjectButton, closeModal}) => {
       </div>
     </nav>
     <div className="empty-below-nav-bar">
+      {/* <div><CategoryContainer /></div> */}
+      {/* <div> */}
         <img id='nav-bar-slogan-logo' src={window.images.slogan_logo} />
-      <span>AT HOGWARTS, help is always given to those who ask for it.</span>
+        <span>AT HOGWARTS, help is always given to those who ask for it.</span>
+      {/* </div> */}
     </div>
     </>
   );
@@ -46,8 +50,11 @@ const Greeting = ({ currentUser, logout, newProjectButton, closeModal}) => {
           </div>
       </nav>
       <div className="empty-below-nav-bar">
-        <img id='nav-bar-slogan-logo' src={window.images.slogan_logo} />
-        <span>AT HOGWARTS, help is always given to those who ask for it.</span>
+        {/* <div><CategoryContainer /></div> */}
+        {/* <div> */}
+          <img id='nav-bar-slogan-logo' src={window.images.slogan_logo} />
+          <span>AT HOGWARTS, help is always given to those who ask for it.</span>
+        {/* </div> */}
       </div>
     </>
   );

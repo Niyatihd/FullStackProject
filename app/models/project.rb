@@ -31,17 +31,14 @@ class Project < ApplicationRecord
   end
 
   def self.search_by_title(description)
-    # Project
-    #   .where("projects.title LIKE ?", "%#{title}%" )
-    # one = self.projects.title.downcase
-    # two = title.downcase
+    projects = Project.arel_table
+    Project.where(projects[:description].matches("%#{description}%"))
+  end
 
-    # Project.where("projects.title.downcase LIKE ?", "%#{two}%")
-    #  Project.where(:title => ['title LIKE ?', title])
-     projects = Project.arel_table
-     Project.where(projects[:description].matches("%#{description}%"))
+  def self.search_by_category(item)
+    projects = Project.arel_table
+    Project.where(projects[:category].matches("#{item}"))
   end
 
 end
 
-# Product.where('lower(name) = ?', name.downcase).first 

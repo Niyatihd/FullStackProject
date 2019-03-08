@@ -12,6 +12,8 @@
   src: asset-url('HP.TTF');
 }
 
+
+
 body {
   margin: 0 auto;
 }
@@ -228,4 +230,18 @@ form.search-form::after {
   width: 40px;
   border-radius: 4px;
   // margin-right: 15px;
+}
+
+@media all and (max-width: 960px) {
+  #nav-bar-logo {
+    margin-left: 0px;
+  }
+
+  .session-btns {
+    margin-right: 0px;
+  }
+
+  form>button>.search-icon {
+    left: 378px;
+  }
 }

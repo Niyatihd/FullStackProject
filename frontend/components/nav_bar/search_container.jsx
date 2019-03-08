@@ -1,13 +1,11 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { searchByTitle } from '../../reducers/selectors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, Redirect , withRouter } from 'react-router-dom';
 import { fetchProjects } from '../../actions/project_actions';
 
 
 const mapDispatchToProps = dispatch => ({
-  // searchByTitle: () => dispatch(searchByTitle(string)),
   fetchProjects: (string) => dispatch(fetchProjects(string)),
 });
 
