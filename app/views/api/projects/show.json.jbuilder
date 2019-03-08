@@ -22,10 +22,20 @@ end
 @project.follows.each do |follow|
   json.follows do
     json.set! follow.id do
-      json.partial! 'api/follows/follow', follow: follow
+      if follow.user_id === current_user.id 
+        json.partial! 'api/follows/follow', follow: follow
+      end
     end
   end
 end
+
+# @project.follows.each do |follow|
+#   json.follows do
+#     json.set! follow.id do
+#       json.partial! 'api/follows/follow', follow: follow
+#     end
+#   end
+# end
 
 # json.author @project.author 
 json.project_author do

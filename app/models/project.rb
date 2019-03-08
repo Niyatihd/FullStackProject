@@ -30,7 +30,7 @@ class Project < ApplicationRecord
     follows.length
   end
 
-  def self.search_by_title(title)
+  def self.search_by_title(description)
     # Project
     #   .where("projects.title LIKE ?", "%#{title}%" )
     # one = self.projects.title.downcase
@@ -39,7 +39,7 @@ class Project < ApplicationRecord
     # Project.where("projects.title.downcase LIKE ?", "%#{two}%")
     #  Project.where(:title => ['title LIKE ?', title])
      projects = Project.arel_table
-     Project.where(projects[:title].matches("%#{title}%"))
+     Project.where(projects[:description].matches("%#{description}%"))
   end
 
 end

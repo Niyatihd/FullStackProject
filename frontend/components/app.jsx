@@ -26,9 +26,9 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginContainer} />
       <AuthRoute exact path="/signup" component={SignupContainer} />
       <Route exact path="/projects/:projectId" component={ProjectShowContainer} />
-      <Route exact path="/index" component={ProjectIndexContainer} />
       <Route exact path="/cindex" component={CommentsIndexContainer} />
       <Route exact path="/index" component={ProjectIndexContainer} />
+      <Route exact path="/search/:query" component={ProjectIndexContainer} />
       <Route exact path="/" component={Splash} />
       {/* <Route exact path="/projects/:projectId/comments" component={CreateCommentContainer} /> */}
       <Redirect to="/" path="/" component={Splash} />

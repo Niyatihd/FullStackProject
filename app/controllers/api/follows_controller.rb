@@ -19,8 +19,9 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    follow = Follow.find_by_credentials(params[:follow][:user_id], params[:follow][:project_id])
-    debugger
+    # follow = Follow.find_by_credentials(params[:follow][:user_id], params[:follow][:project_id])
+    # debugger
+    follow = Follow.find(params[:id])
     project_id = follow.project_id
     follow_id = follow.id
     # debugger

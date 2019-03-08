@@ -28,7 +28,7 @@ const ProjectsReducer = (state={}, action) => {
       return newState;
     case REMOVE_FOLLOW:
     // debugger
-      let { project_id, id } = action;
+      let { project_id, id } = action.deletedFollow;
       newState = merge({}, state);
       newState[project_id].proj_follows -= 1;
       return newState;

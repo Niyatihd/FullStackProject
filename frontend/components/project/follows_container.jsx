@@ -20,7 +20,7 @@ const mapDispatchToprops = (dispatch) => {
     createFollow: (follow) => dispatch(createFollow(follow)),
     deleteFollow: (follow) => dispatch(deleteFollow(follow)),
     fetchProject: (id) => dispatch(fetchProject(id)),
-    getFollowId: (follows, user_id, project_id) => dispatch(getFollowId(follows, user_id, project_id))
+    // getFollowId: (follows, user_id, project_id) => dispatch(getFollowId(follows, user_id, project_id))
   });
 };
 
@@ -28,7 +28,6 @@ class FollowsContainer extends React.Component {
   
   constructor(props) {
     super(props);
-    
     this.state = {
       user_id: this.props.user_id,
       project_id: this.props.project_id,
@@ -39,43 +38,53 @@ class FollowsContainer extends React.Component {
   }
 
   // componentDidMount() {
-  //   // debugger
   //   this.props.fetchProject(this.props.project_id);
   // }
 
   toggleFollow() {
-    this.setState(state => ({ editFollow: !state.editFollow }));
-    this.props.fetchProject(this.props.project_id).then(() => {
-    if (this.state.editFollow) {
-      console.log("yay!");
-      this.props.createFollow(this.state);
-      console.log(this.state.editFollow);
-    // }
-    } else {
-      // let followId = getFollowId(this.props.follows, this.props.user_id, this.props.project_id);
-      // debugger
-      this.props.deleteFollow(this.state);
-      console.log("deleted this follow");
-    } 
-    }); 
-    }
-  // }
-
-  // handleSubmit() {
-  //   
-  // }
+    const newState = !this.state.editFollow;
+    
+    // this.props.fetchProject(this.props.project_id).then(() => {
+      if (!this.state.editFollow) {
+        // console.log("yay!");
+        this.props.fetchProject(this.props.project_id)
+          .then(() => this.props.createFollow(this.state))
+          .then(() => this.props.fetchProject(this.props.project_id))
+          .then(this.setState({ editFollow: newState }));
+        // console.log(this.state.editFollow);
+      } else {
+        this.props.fetchProject(this.props.project_id)
+          .then((res) => {
+            // debugger
+            let followId = Object.values(res.follows)[0].id;
+            // debugger
+            this.props.deleteFollow(followId);
+          })
+          .then(() => this.props.fetchProject(this.props.project_id))
+          .then(this.setState({ editFollow: newState }));
+        // console.log("deleted this follow");
+      } 
+    // }); 
+  }
 
   render() {
     if (this.props.project_id === undefined) {
       return null;
     }
-    // debugger
+    const buttonText = () => {
+      if (this.state.editFollow) {
+        return 'Unfollow';
+      } else {
+        return 'Follow';
+      }
+    }
+
     return (
       <div className="project-follows">
         <p>{this.props.project.proj_follows} Followers</p>
-        {this.props.loggedIn ? <button onClick={this.toggleFollow} className="project-follow-link">Follow</button>
+        {this.props.loggedIn ? <button onClick={this.toggleFollow} className="project-follow-link">{buttonText()}</button>
           :
-          <Link to="/login" className="project-follow-link">Follow</Link>
+          <Link to="/login" className="project-follow-link">{buttonText()}</Link>
         }
       </div>
     )

@@ -1,7 +1,7 @@
 import merge from 'lodash/merge';
 
 import {
-  RECEIVE_PROJECT, RECEIVE_FOLLOW, REMOVE_FOLLOW
+  RECEIVE_PROJECT, RECEIVE_FOLLOW, REMOVE_FOLLOW, RECEIVE_ALL_PROJECTS
 } from '../actions/project_actions';
 
 const FollowsReducer = (state = {}, action) => {

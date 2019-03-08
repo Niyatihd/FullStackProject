@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { searchByTitle } from '../../reducers/selectors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect , withRouter } from 'react-router-dom';
 import { fetchProjects } from '../../actions/project_actions';
 
 
@@ -30,8 +30,10 @@ class SearchContainer extends React.Component {
   }
    
   handleSubmit(e) {
+    // window.location.href = "http://localhost:3000/#/index";
+    this.props.history.push(`/search/${this.state.searchString}`);
     e.preventDefault();
-    this.props.fetchProjects(this.state.searchString);
+    // this.props.fetchProjects(this.state.searchString);
     this.setState({
       searchString: ""
     });
@@ -52,4 +54,4 @@ class SearchContainer extends React.Component {
 }
 
 
-export default connect(null, mapDispatchToProps)(SearchContainer);
+export default withRouter(connect(null, mapDispatchToProps)(SearchContainer));

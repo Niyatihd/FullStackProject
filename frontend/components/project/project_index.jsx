@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectIndexItem from './project_index_item';
 import { Link } from 'react-router-dom';
+import { debug } from 'util';
 
 class ProjectIndex extends React.Component {
   constructor(props) {
@@ -16,7 +17,12 @@ class ProjectIndex extends React.Component {
   }
   
   componentDidMount() {
-    this.props.fetchProjects();
+    if (this.props.location.pathname.includes("search")) {
+      // debugger
+      this.props.fetchProjects(this.props.match.params.query);
+    } else {
+      this.props.fetchProjects();
+    }
     // debugger
   }
 
