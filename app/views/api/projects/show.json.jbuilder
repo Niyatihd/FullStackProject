@@ -19,11 +19,15 @@ end
   end
 end
 
+json.project_author do
+  json.extract! @project.proj_author, :id, :username, :email
+end
+
 @project.follows.each do |follow|
   json.follows do
     json.set! follow.id do
-      if follow.user_id === current_user.id 
-        json.partial! 'api/follows/follow', follow: follow
+      if current_user && follow.user_id === current_user.id 
+        json.partial! 'api/follows/follow', follow: follow  
       end
     end
   end
@@ -38,9 +42,7 @@ end
 # end
 
 # json.author @project.author 
-json.project_author do
-  json.extract! @project.project_author, :id, :username, :email
-end
+
 # //Note:Render each under separate headsto be an outermost key in 
 # the state and set their own reducers
 

@@ -10,6 +10,7 @@ class ProjectForm extends React.Component {
   render() {
     return(
       <div>
+        <img id='modal-bg' src={window.images.logo_hp} />
         <h1>Create Your Own Wizardable</h1>
         <div onClick={this.props.closeModal} className="close-x">X</div>
         <form action="">

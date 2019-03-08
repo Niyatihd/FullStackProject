@@ -49,7 +49,7 @@ class FollowsContainer extends React.Component {
         // console.log("yay!");
         this.props.fetchProject(this.props.project_id)
           .then(() => this.props.createFollow(this.state))
-          .then(() => this.props.fetchProject(this.props.project_id))
+          // .then(() => this.props.fetchProject(this.props.project_id))
           .then(this.setState({ editFollow: newState }));
         // console.log(this.state.editFollow);
       } else {
@@ -60,7 +60,7 @@ class FollowsContainer extends React.Component {
             // debugger
             this.props.deleteFollow(followId);
           })
-          .then(() => this.props.fetchProject(this.props.project_id))
+          // .then(() => this.props.fetchProject(this.props.project_id))
           .then(this.setState({ editFollow: newState }));
         // console.log("deleted this follow");
       } 

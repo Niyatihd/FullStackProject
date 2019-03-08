@@ -59,9 +59,10 @@
   font-size: 15px;
   font-family: fantasy;
   display: flex;
-  width: 250px;
-  justify-content: space-evenly;
-  margin-top: -29px;
+  width: 150px;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: -20px;
 }
 
 .proj-body {

@@ -30,6 +30,10 @@ class Project < ApplicationRecord
     follows.length
   end
 
+  def proj_author
+    project_author
+  end
+
   def self.search_by_title(description)
     projects = Project.arel_table
     Project.where(projects[:description].matches("%#{description}%"))
