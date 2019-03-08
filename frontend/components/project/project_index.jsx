@@ -32,6 +32,7 @@ class ProjectIndex extends React.Component {
 
   }
   
+  //refactor into it's own container DELETE
   componentDidMount() {
     if (this.props.location.pathname.includes("search")) {
       // debugger
@@ -40,6 +41,12 @@ class ProjectIndex extends React.Component {
       this.props.fetchProjects();
     }
     // debugger
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.match.params.query !== this.props.match.params.query) {
+      this.props.fetchProjects(this.props.match.params.query);
+    }
   }
 
   render () {

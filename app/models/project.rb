@@ -34,15 +34,15 @@ class Project < ApplicationRecord
     project_author
   end
 
-  def self.search_by_title(description)
+  def self.search_by_title(title)
     projects = Project.arel_table
-    Project.where(projects[:description].matches("%#{description}%"))
+    Project.where(projects[:title].matches("%#{title}%"))
   end
 
-  def self.search_by_category(item)
-    projects = Project.arel_table
-    Project.where(projects[:category].matches("#{item}"))
-  end
+  # def self.search_by_category(item)
+  #   projects = Project.arel_table
+  #   Project.where(projects[:category].matches("#{item}"))
+  # end
 
 end
 

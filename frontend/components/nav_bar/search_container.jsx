@@ -41,9 +41,11 @@ class SearchContainer extends React.Component {
   render() {
 
     return (
-      <form className="search-form">
+      <form className="search-form" onSubmit={this.handleSubmit}>
         <input onChange={this.handleInput} type="text" placeholder="  Let's Make ..." name="search" value={this.state.searchString} />
-        <button onSubmit={this.handleSubmit} type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
+        <button type="submit">
+          <FontAwesomeIcon className=" search-icon" icon="search" />
+        </button>
         <Link to="/index" id="featured-proj-btn">Featured</Link>
         {this.props.newProjectButton}
       </form>      
