@@ -14,7 +14,7 @@ const Greeting = ({ currentUser, logout, newProjectButton, closeModal}) => {
           <img id='nav-bar-logo' src={window.images.logo_hp} />
           <h3><a href="/">Wizardables</a></h3>
         </div>
-          <SearchContainer newProjectButton={newProjectButton}/>
+        <SearchContainer newProjectButton={newProjectButton}/>
       </div>
       <div className="session-btns">
         <img className='welcome-user' src={window.images.hp_navbar_logo} />    
@@ -36,13 +36,9 @@ const Greeting = ({ currentUser, logout, newProjectButton, closeModal}) => {
             <img id='nav-bar-logo' src={window.images.logo_hp} />
             <h3><a href="/">Wizardables</a></h3>
           </div>
-          <form className="search-form">
-            <input type="text" placeholder="  Let's Make ..." name="search" />
-            <button type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
-            <Link to="/index" id="featured-proj-btn">Featured</Link>
-            {newProjectButton}
-          </form>
+          <SearchContainer newProjectButton={newProjectButton} />
         </div>
+
           <div className="session-btns">
           <img className='welcome-user' src={window.images.freedobby} />
             <p className="header-name">Hello, {currentUser.username}</p>

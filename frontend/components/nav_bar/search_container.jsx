@@ -32,6 +32,9 @@ class SearchContainer extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.fetchProjects(this.state.searchString);
+    this.setState({
+      searchString: ""
+    });
   }
 
 
@@ -39,7 +42,7 @@ class SearchContainer extends React.Component {
 
     return (
       <form className="search-form">
-        <input onChange={this.handleInput} type="text" placeholder="  Let's Make ..." name="search" />
+        <input onChange={this.handleInput} type="text" placeholder="  Let's Make ..." name="search" value={this.state.searchString} />
         <button onClick={this.handleSubmit} type="submit"><FontAwesomeIcon className="search-icon" icon="search" /></button>
         <Link to="/index" id="featured-proj-btn">Featured</Link>
         {this.props.newProjectButton}
