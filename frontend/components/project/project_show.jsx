@@ -42,7 +42,7 @@ class ProjectShow extends React.Component {
       window.images.w1,
       window.images.al1,
       window.images.f1,
-      window.images.am4,
+      window.images.am1,
       window.images.vb4,
       window.images.dl2,
       window.images.ob4,
