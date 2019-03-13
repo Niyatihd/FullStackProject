@@ -166,59 +166,59 @@ step5 = Step.create!(title: 'Step5: Directions', description: "How does this spe
 # -----------------------
 # ***** project #9 ******
 # -----------------------
-project9 = Project.create!(title: 'Veritaserum Potion Recipe', description: "One of the most powerful potions ever seen, Veritaserum is a truth potion. It’s odourless and transparent liquid which forces the speaker tell the truth. Even it’s the most powerful truth serum, it is possible to use some techniques to resist its effects.", author_id: 9, category: 'Potion')
+project9 = Project.create!(title: 'Veritaserum Potion Recipe', description: "One of the most powerful potions ever seen, Veritaserum is a truth potion. It’s odourless and transparent liquid which forces the speaker tell the truth. Even it’s the most powerful truth serum, it is possible to use some techniques to resist its effects.", author_id: user9.id, category: 'Potion')
 
 # -----------------------
 # ******** steps ********
 # -----------------------
-step1 = Step.create!(title: 'Step1: Ingredients', description: 'Wand, 1/2 a cauldron full of water, Powdered Griffin Claw, Shredded Boomslang Skin, Knotgrass, Snake Fangs, Powdered Snake Weed picked 21 days before a full moon, Stargrass picked on the summer solcest, Wormwood', project_id: 9)
-step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Add 8 measures of powdered griffin claws, add 3 pieces of shredded boomslang skin, add 2 measures of knotgrass', project_id: 9)
-step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Wave wand over cauldron and let stew for 30 minutes with peweter cauldron ( 28 minutes with silver and 22 minutes with copper). Add 5 easures of snake fangs, add 8 meausures of powdered snakeweed', project_id: 9)
-step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Add  measures of stargrass. Add 6 pieces of cut up wormwood. Wave wand over cauldron again and let stew for 78 minutes if pewter ( 75 minutes with silver and 70 minutes with copper)', project_id: 9)
-step5 = Step.create!(title: 'Step5: Effects', description: "Another potion whose use has been debated among ethicists for centuries is Veritaserum. While individual views on the subject vary, the two most popular in the literature are those who think it should be banned and those who think its use is permissible under certain circumstances.", project_id: 9)
+step1 = Step.create!(title: 'Step1: Ingredients', description: 'Wand, 1/2 a cauldron full of water, Powdered Griffin Claw, Shredded Boomslang Skin, Knotgrass, Snake Fangs, Powdered Snake Weed picked 21 days before a full moon, Stargrass picked on the summer solcest, Wormwood', project_id: project9.id)
+step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Add 8 measures of powdered griffin claws, add 3 pieces of shredded boomslang skin, add 2 measures of knotgrass', project_id: project9.id)
+step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Wave wand over cauldron and let stew for 30 minutes with peweter cauldron ( 28 minutes with silver and 22 minutes with copper). Add 5 easures of snake fangs, add 8 meausures of powdered snakeweed', project_id: project9.id)
+step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Add  measures of stargrass. Add 6 pieces of cut up wormwood. Wave wand over cauldron again and let stew for 78 minutes if pewter ( 75 minutes with silver and 70 minutes with copper)', project_id: project9.id)
+step5 = Step.create!(title: 'Step5: Effects', description: "Another potion whose use has been debated among ethicists for centuries is Veritaserum. While individual views on the subject vary, the two most popular in the literature are those who think it should be banned and those who think its use is permissible under certain circumstances.", project_id: project9.id)
 
 # -----------------------
 # ***** project #10 ******
 # -----------------------
-project10 = Project.create!(title: 'Draught of Living Death Potion Recipe', description: "The Draught of Living Death brings upon its drinker a very powerful sleep that can last indefinitely. This draught is very dangerous if not used with caution. This is an extremely dangerous potion. Execute with maximum caution.", author_id: 10, category: 'Potion')
+project10 = Project.create!(title: 'Draught of Living Death Potion Recipe', description: "The Draught of Living Death brings upon its drinker a very powerful sleep that can last indefinitely. This draught is very dangerous if not used with caution. This is an extremely dangerous potion. Execute with maximum caution.", author_id: user10.id, category: 'Potion')
 
 # -----------------------
 # ******** steps ********
 # -----------------------
-step1 = Step.create!(title: 'Step1: Ingredients', description: 'Water, Powdered root of asphodel, Infusion of Wormwood, Valerian root, A Sopophorous Bean,A Sloth brain', project_id: 10)
-step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Add the Infusion of Wormwood. Add the powdered root of asphodel. Stir twice clockwise.', project_id: 10)
-step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Add the sloth brain. Add the Sopophorous bean juice. Stir seven times anti-clockwise.', project_id: 10)
-step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Half-Blood Prince \'s Notes: The Sopophorous bean should be crushed with a silver dagger, not cut, releases juices more efficiently. The juice from 13 Sopophorous beans should be used, rather than 12. Stir anticlockwise seven times and clockwise once instead.', project_id: 10)
-step5 = Step.create!(title: 'Step5: Effects', description: "The potion is difficult to concoct, since Hermione Granger, a very talented potion-maker, who managed to concoct Polyjuice Potion in her second year, had trouble doing it. Indeed, Horace Slughorn states that only once before in his career was a student (presumably Severus Snape, the Half-Blood Prince whose bookmarked instructions deviated from the potion-making process made a far more effective draught than any other student, though this was never confirmed) able to brew a mostly finished draught in only a single hour.", project_id: 10)
+step1 = Step.create!(title: 'Step1: Ingredients', description: 'Water, Powdered root of asphodel, Infusion of Wormwood, Valerian root, A Sopophorous Bean,A Sloth brain', project_id: project10.id)
+step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Add the Infusion of Wormwood. Add the powdered root of asphodel. Stir twice clockwise.', project_id: project10.id)
+step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Add the sloth brain. Add the Sopophorous bean juice. Stir seven times anti-clockwise.', project_id: project10.id)
+step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Half-Blood Prince \'s Notes: The Sopophorous bean should be crushed with a silver dagger, not cut, releases juices more efficiently. The juice from 13 Sopophorous beans should be used, rather than 12. Stir anticlockwise seven times and clockwise once instead.', project_id: project10.id)
+step5 = Step.create!(title: 'Step5: Effects', description: "The potion is difficult to concoct, since Hermione Granger, a very talented potion-maker, who managed to concoct Polyjuice Potion in her second year, had trouble doing it. Indeed, Horace Slughorn states that only once before in his career was a student (presumably Severus Snape, the Half-Blood Prince whose bookmarked instructions deviated from the potion-making process made a far more effective draught than any other student, though this was never confirmed) able to brew a mostly finished draught in only a single hour.", project_id: project10.id)
 
 # -----------------------
 # ***** project #11 ******
 # -----------------------
-project11 = Project.create!(title: 'Obliviate charm', description: "The Forgetfulness Charm is a popular memory-affecting charm frequently used by Ministry obliviators (whose name comes from this spell) to remove memories of the wizarding world from Muggle minds.", author_id: 11, category: 'Charm')
+project11 = Project.create!(title: 'Obliviate charm', description: "The Forgetfulness Charm is a popular memory-affecting charm frequently used by Ministry obliviators (whose name comes from this spell) to remove memories of the wizarding world from Muggle minds.", author_id: user11.id, category: 'Charm')
 
 # -----------------------
 # ******** steps ********
 # -----------------------
-step1 = Step.create!(title: 'Step1: Incantation', description: 'Obliviate (oh-BLI-vee-ate)', project_id: 11)
-step2 = Step.create!(title: 'Step2: Wand Movement', description: 'Point your wand at the forehead of your target and move it in slow, clockwise circles, as if erasing a chalk board.', project_id: 11)
-step3 = Step.create!(title: 'Step3: Willpower', description: 'Willpower: Moderate.', project_id: 11)
-step4 = Step.create!(title: 'Step4: Concentration', description: 'Concentration: Very high; Concentration should be maintained on the memories to be removed. Keep in mind the spell\'s designated target.', project_id: 11)
-step5 = Step.create!(title: 'Step5: Directions', description: "To cast the spell, the user needs to understand the memories that are to be erased and concentrate on those. The more precise the caster’s concentration, the fewer unintended side effects will result. Casting many Forgetfulness Charms on one target in a short time will likely cause severe confusion in the target. Note that this spell does not truly erase memories but merely encapsulates an existing one within white filler, preventing the target from accessing or extracting the memory within the whitewash.", project_id: 11)
+step1 = Step.create!(title: 'Step1: Incantation', description: 'Obliviate (oh-BLI-vee-ate)', project_id: project11.id)
+step2 = Step.create!(title: 'Step2: Wand Movement', description: 'Point your wand at the forehead of your target and move it in slow, clockwise circles, as if erasing a chalk board.', project_id: project11.id)
+step3 = Step.create!(title: 'Step3: Willpower', description: 'Willpower: Moderate.', project_id: project11.id)
+step4 = Step.create!(title: 'Step4: Concentration', description: 'Concentration: Very high; Concentration should be maintained on the memories to be removed. Keep in mind the spell\'s designated target.', project_id: project11.id)
+step5 = Step.create!(title: 'Step5: Directions', description: "To cast the spell, the user needs to understand the memories that are to be erased and concentrate on those. The more precise the caster’s concentration, the fewer unintended side effects will result. Casting many Forgetfulness Charms on one target in a short time will likely cause severe confusion in the target. Note that this spell does not truly erase memories but merely encapsulates an existing one within white filler, preventing the target from accessing or extracting the memory within the whitewash.", project_id: project11.id)
 
 
 # -----------------------
 # ***** project #12 ******
 # -----------------------
-project12 = Project.create!(title: 'Stupefy charm', description: "The Stunning Spell is an interesting spell because its effect has no known cause. We know for sure that the Stunning Spell causes the victim to fall instantly unconscious, but there are a plethora of reasons that can cause unconsciousness.", author_id: 12, category: 'Charm')
+project12 = Project.create!(title: 'Stupefy charm', description: "The Stunning Spell is an interesting spell because its effect has no known cause. We know for sure that the Stunning Spell causes the victim to fall instantly unconscious, but there are a plethora of reasons that can cause unconsciousness.", author_id: user12.id, category: 'Charm')
 
 # -----------------------
 # ******** steps ********
 # -----------------------
-step1 = Step.create!(title: 'Step1: Incantation', description: 'Stupefy (STEW-puh-fye)', project_id: 12)
-step2 = Step.create!(title: 'Step2: Wand Movement', description: 'A downward vertical slash', project_id: 12)
-step3 = Step.create!(title: 'Step3: Willpower', description: 'Moderate', project_id: 12)
-step4 = Step.create!(title: 'Step4: Concentration', description: 'Moderate to high', project_id: 12)
-step5 = Step.create!(title: 'Step5: Directions', description: "Once the target is hit, the effect will be immediate and they will drop to the ground in a state of unconsciousness. At this point, they are considered unable to continue combat (if in a dueling situation) and are in danger. The individual is incapable of defending themselves, which now puts you, the caster, in a position of moral responsibility.", project_id: 12)
+step1 = Step.create!(title: 'Step1: Incantation', description: 'Stupefy (STEW-puh-fye)', project_id: project12.id)
+step2 = Step.create!(title: 'Step2: Wand Movement', description: 'A downward vertical slash', project_id: project12.id)
+step3 = Step.create!(title: 'Step3: Willpower', description: 'Moderate', project_id: project12.id)
+step4 = Step.create!(title: 'Step4: Concentration', description: 'Moderate to high', project_id: project12.id)
+step5 = Step.create!(title: 'Step5: Directions', description: "Once the target is hit, the effect will be immediate and they will drop to the ground in a state of unconsciousness. At this point, they are considered unable to continue combat (if in a dueling situation) and are in danger. The individual is incapable of defending themselves, which now puts you, the caster, in a position of moral responsibility.", project_id: project12.id)
 
 # # -----------------------
 # # ***** project #13 ******
