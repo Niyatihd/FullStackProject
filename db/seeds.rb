@@ -78,33 +78,33 @@ step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Next add in
 step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Once your potion is ready, steam will rise from your cauldron in spirals and you will begin to smell a strong aroma. Amortentia has a different aroma for everyone who smells it, reminding each person of the things that they find most attractive. Amortentia is recognised by its distinctive for its mother of pearl sheen.', project_id: project2.id)
 step5 = Step.create!(title: 'Step5: Effects', description: 'Once prepared, you will need to get your crush to drink one drop of the potion, a single dose usually lasts up to 24 hours, the drinker will only hold an obsession for the person who administered the potion. However, this is not really love, its impossible to manufacture or imitate love but the drinker will become instantly infatuated with the person who administered it. Amortentia must be drunk continuously in order to maintain the false love. As stated its dangerous to underestimate a powerful infatuation. Despite its power, Amortentia doesnt create actual love; its impossible to manufacture or imitate love.', project_id: project2.id)
 
-# # -----------------------
-# # ***** project #3 ******
-# # -----------------------
-# project3 = Project.create!(title: 'Liquid luck Recipe', description: "Felix Felicis is liquid luck, which makes the person who drinks it lucky for a certain period of time.", author_id: user3.id, category: 'Potion')
+# -----------------------
+# ***** project #3 ******
+# -----------------------
+project3 = Project.create!(title: 'Liquid luck Recipe', description: "Felix Felicis is liquid luck, which makes the person who drinks it lucky for a certain period of time.", author_id: user3.id, category: 'Potion')
 
-# # -----------------------
-# # ******** steps ********
-# # -----------------------
-# step1 = Step.create!(title: 'Step1: Ingredients', description: 'Ashwinder egg, Squill bulb, Murtlap tentacle, Tincture of thyme, Occamy eggshell, Powdered common rue', project_id: project3.id)
-# step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Add Ashwinder egg to a cauldron, then add horseradish and heat. Juice a squill bulb, add to the cauldron and stir vigorously. Chop up anemone-like growth on the back of Murtlap, add to mixture and heat.', project_id: project3.id)
-# step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Add a dash of tincture of thyme and stir slowly. Grind up Occamy eggshell and add to mixture. Stir slowly then heat the cauldron.', project_id: project3.id)
-# step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Add a sprinkle of powdered common rue. Stir vigorously then heat the cauldron one last time. Wave wand over potion in a figure of eight and say incantation Felixempra!', project_id: project3.id)
-# step5 = Step.create!(title: 'Step5: Effects', description: 'Felix Felicis causes the drinker to have a limited period of good luck, during which they are likely to to succeed in all endeavours in which success is possible. They have a strong perception of this effect, including a high level of confidence and a "sensation of infinite opportunity."', project_id: project3.id)
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Ingredients', description: 'Ashwinder egg, Squill bulb, Murtlap tentacle, Tincture of thyme, Occamy eggshell, Powdered common rue', project_id: project3.id)
+step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Add Ashwinder egg to a cauldron, then add horseradish and heat. Juice a squill bulb, add to the cauldron and stir vigorously. Chop up anemone-like growth on the back of Murtlap, add to mixture and heat.', project_id: project3.id)
+step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Add a dash of tincture of thyme and stir slowly. Grind up Occamy eggshell and add to mixture. Stir slowly then heat the cauldron.', project_id: project3.id)
+step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Add a sprinkle of powdered common rue. Stir vigorously then heat the cauldron one last time. Wave wand over potion in a figure of eight and say incantation Felixempra!', project_id: project3.id)
+step5 = Step.create!(title: 'Step5: Effects', description: 'Felix Felicis causes the drinker to have a limited period of good luck, during which they are likely to to succeed in all endeavours in which success is possible. They have a strong perception of this effect, including a high level of confidence and a "sensation of infinite opportunity."', project_id: project3.id)
 
-# # -----------------------
-# # ***** project #4 ******
-# # -----------------------
-# project4 = Project.create!(title: 'Skele Gro Potion Recipe', description: 'Skele-Gro (alternately spelled Skelegro) is a dreadful-tasting potion which restores bones. It is able to mend broken bones and even regrow entire bones that have vanished or been otherwise lost. For regrowing entire bones, the process is a notably slow and painful process, that can take over a full day.', author_id: user2.id, category: 'Potion')
+# -----------------------
+# ***** project #4 ******
+# -----------------------
+project4 = Project.create!(title: 'Skele Gro Potion Recipe', description: 'Skele-Gro (alternately spelled Skelegro) is a dreadful-tasting potion which restores bones. It is able to mend broken bones and even regrow entire bones that have vanished or been otherwise lost. For regrowing entire bones, the process is a notably slow and painful process, that can take over a full day.', author_id: user2.id, category: 'Potion')
 
-# # -----------------------
-# # ******** steps ********
-# # -----------------------
-# step1 = Step.create!(title: 'Step1: Ingredients', description: 'scarab beetles, rose water, dried seahorses, doxy eggs, powdered sulfur, Chinese chomping cabbage, essence of dittany, chamomile flower petals, pufferfish, jellyfish, honeywater, griffin claws, Velnamēle Pepper', project_id: project4.id)
-# step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Crush 3 scarab beetles and 2 dried seahorses with mortar and pestle. Add 2.5 tablespoons of the crushed mixture to the cauldron. Add 3 milliliters of rose water to the cauldron. Leave the potion to brew in your cauldron for 60 minutes.', project_id: project4.id)
-# step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Add 2 doxy eggs to the cauldron. Add 2 tablespoons of powdered sulfur. Carefully cut the Chinese chomping cabbage width-wise. Add the last 2 scarab beetles and 1 dried seahorse.', project_id: project4.id)
-# step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Add 4 milliliters of rose water to the cauldron and let simmer. Add 2 milliliters of essence of dittany to the cauldron. Add 2 chamomile flower petals, 1 jellyfish, and 1 pufferfish to the cauldron. Add 2 chamomile flower petals to the cauldron.', project_id: project4.id)
-# step5 = Step.create!(title: 'Step5: Effects', description: 'Once consumed, the potion will slowly work to repair bone damage and even rebuild bones that have been removed through magical or non-magical means. This potion typically takes at least twelve hours to repair and regrow bones. Depending on the severity of the injury, it may take far longer. It should be noted, however, that the potion cannot rebuild limbs or parts of the body as a whole, only the skeletal structure. It also cannot repair bodies born with deformities, such as those born with missing bones.', project_id: project4.id)
+# -----------------------
+# ******** steps ********
+# -----------------------
+step1 = Step.create!(title: 'Step1: Ingredients', description: 'scarab beetles, rose water, dried seahorses, doxy eggs, powdered sulfur, Chinese chomping cabbage, essence of dittany, chamomile flower petals, pufferfish, jellyfish, honeywater, griffin claws, Velnamēle Pepper', project_id: project4.id)
+step2 = Step.create!(title: 'Step2: Directions-Part1', description: 'Crush 3 scarab beetles and 2 dried seahorses with mortar and pestle. Add 2.5 tablespoons of the crushed mixture to the cauldron. Add 3 milliliters of rose water to the cauldron. Leave the potion to brew in your cauldron for 60 minutes.', project_id: project4.id)
+step3 = Step.create!(title: 'Step3: Directions-Part2', description: 'Add 2 doxy eggs to the cauldron. Add 2 tablespoons of powdered sulfur. Carefully cut the Chinese chomping cabbage width-wise. Add the last 2 scarab beetles and 1 dried seahorse.', project_id: project4.id)
+step4 = Step.create!(title: 'Step4: Directions-Part3', description: 'Add 4 milliliters of rose water to the cauldron and let simmer. Add 2 milliliters of essence of dittany to the cauldron. Add 2 chamomile flower petals, 1 jellyfish, and 1 pufferfish to the cauldron. Add 2 chamomile flower petals to the cauldron.', project_id: project4.id)
+step5 = Step.create!(title: 'Step5: Effects', description: 'Once consumed, the potion will slowly work to repair bone damage and even rebuild bones that have been removed through magical or non-magical means. This potion typically takes at least twelve hours to repair and regrow bones. Depending on the severity of the injury, it may take far longer. It should be noted, however, that the potion cannot rebuild limbs or parts of the body as a whole, only the skeletal structure. It also cannot repair bodies born with deformities, such as those born with missing bones.', project_id: project4.id)
 
 # # -----------------------
 # # ***** project #5 ******
@@ -364,8 +364,8 @@ step5 = Step.create!(title: 'Step5: Effects', description: 'Once prepared, you w
 
 comment1 = Comment.create!(body: 'great!', author_id: user1.id, project_id: project1.id)
 comment2 = Comment.create!(body: 'another great one', author_id: user2.id, project_id: project2.id)
-# comment3 = Comment.create!(body: 'great work!', author_id: user3.id, project_id: project3.id)
-# comment4 = Comment.create!(body: 'Yay! another great one', author_id: user4.id, project_id: project4.id)
+comment3 = Comment.create!(body: 'great work!', author_id: user3.id, project_id: project3.id)
+comment4 = Comment.create!(body: 'Yay! another great one', author_id: user4.id, project_id: project4.id)
 # comment5 = Comment.create!(body: 'Awesome!', author_id: user1.id, project_id: project5.id)
 # comment6 = Comment.create!(body: 'Keep up the great work', author_id: user2.id, project_id: project6.id)
 # comment7 = Comment.create!(body: 'Fantastic!', author_id: user3.id, project_id: project7.id)
@@ -378,8 +378,8 @@ comment2 = Comment.create!(body: 'another great one', author_id: user2.id, proje
 
 Follow.create!(user_id: user1.id, project_id: project1.id)
 Follow.create!(user_id: user1.id, project_id: project2.id)
-# Follow.create!(user_id: user1.id, project_id: project3.id)
-# Follow.create!(user_id: user1.id, project_id: project4.id)
+Follow.create!(user_id: user1.id, project_id: project3.id)
+Follow.create!(user_id: user1.id, project_id: project4.id)
 # Follow.create!(user_id: user1.id, project_id: project5.id)
 # Follow.create!(user_id: user1.id, project_id: project6.id)
 # Follow.create!(user_id: user1.id, project_id: project7.id)
