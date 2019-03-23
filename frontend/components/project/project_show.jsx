@@ -103,7 +103,8 @@ class ProjectShow extends React.Component {
       <div className="proj-wrapper">
         <img id='project-show-bg' src={this.images[this.props.project.id - 1]} />
         <div className="proj-title">
-          <img id='proj-icon' src={this.images1[this.props.project.id - 1]} />
+          {/* <img id='proj-icon' src={this.images1[this.props.project.id - 1]} /> */}
+          <img id='proj-icon' src={this.props.project.photo} />
           <h3 >{this.props.project.title}</h3>
           <div className="proj-title-details">
             <span>{this.props.project_author.username}</span>

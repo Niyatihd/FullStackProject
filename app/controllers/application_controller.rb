@@ -9,8 +9,9 @@ class ApplicationController < ActionController::Base
   end
 
   def logout
-    session[:session_token] = nil
     current_user.reset_session_token!
+    session[:session_token] = nil
+    @current_user = nil
   end
 
   def current_user
@@ -21,4 +22,9 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  def require_login
+    unless current_user
+    render json: {base: ['Please Sign In']}, status: 401
+    end
+  end
 end
