@@ -162,6 +162,13 @@ step5 = Step.create!(title: 'Step5: Directions', description: "As you say Wingar
 # -----------------------
 project6 = Project.create!(title: 'Alohomora charm', description: "The Unlocking Charm, also known as the Thief's Friend (Alohomora) is a charm that unlocks the target, including doors, windows or other objects. It is also able to open doors locked by the Locking Spell (Colloportus), and as such, is its Counter-charm. There also exists a spell to prevent this charm from being used on a locked target.", author_id: user1.id, category: 'Charm')
 
+proj6_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/al1.png")
+project6.photos.attach(io: proj6_photo1, filename: 'al1.png')
+proj6_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/al2.gif")
+project6.photos.attach(io: proj6_photo2, filename: 'al2.gif')
+proj6_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/al3.gif")
+project6.photos.attach(io: proj6_photo3, filename: 'al3.gif')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -177,6 +184,13 @@ step5 = Step.create!(title: 'Step5: Directions', description: "The charm’s wan
 # -----------------------
 project7 = Project.create!(title: 'Finite charm', description: "The General Counter-Spell (Finite or Finite Incantatem) is a counter-spell for general use. It may be used in duels to counter or reverse minor damage, such as the effects of minor jinxes and curses.", author_id: user1.id, category: 'Charm')
 
+proj7_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/f1.gif")
+project7.photos.attach(io: proj7_photo1, filename: 'f1.gif')
+proj7_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/f2.gif")
+project7.photos.attach(io: proj7_photo2, filename: 'f2.gif')
+proj7_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/f3.png")
+project7.photos.attach(io: proj7_photo3, filename: 'f3.png')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -190,6 +204,13 @@ step5 = Step.create!(title: 'Step5: Directions', description: "The Effect-Cancel
 # ***** project #8 ******
 # -----------------------
 project8 = Project.create!(title: 'Arresto Momentum charm', description: "he Slowing Charm (Arresto Momentum) is a charm that can be used by a witch or wizard to slow the velocity of an object.", author_id: user1.id, category: 'Charm')
+
+proj8_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/am1.jpg")
+project8.photos.attach(io: proj8_photo1, filename: 'am1.jpg')
+proj8_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/am2.gif")
+project8.photos.attach(io: proj8_photo2, filename: 'am2.gif')
+proj8_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/am3.png")
+project8.photos.attach(io: proj8_photo3, filename: 'am3.png')
 
 # -----------------------
 # ******** steps ********
@@ -205,6 +226,13 @@ step5 = Step.create!(title: 'Step5: Directions', description: "How does this spe
 # -----------------------
 project9 = Project.create!(title: 'Veritaserum Potion Recipe', description: "One of the most powerful potions ever seen, Veritaserum is a truth potion. It’s odourless and transparent liquid which forces the speaker tell the truth. Even it’s the most powerful truth serum, it is possible to use some techniques to resist its effects.", author_id: user9.id, category: 'Potion')
 
+proj9_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/vb3.jpg")
+project9.photos.attach(io: proj9_photo1, filename: 'vb3.jpg')
+proj9_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/vb5.gif")
+project9.photos.attach(io: proj9_photo2, filename: 'vb5.gif')
+proj9_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/vb4.jpg")
+project9.photos.attach(io: proj9_photo3, filename: 'vb4.jpg')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -219,6 +247,13 @@ step5 = Step.create!(title: 'Step5: Effects', description: "Another potion whose
 # -----------------------
 project10 = Project.create!(title: 'Draught of Living Death Potion Recipe', description: "The Draught of Living Death brings upon its drinker a very powerful sleep that can last indefinitely. This draught is very dangerous if not used with caution. This is an extremely dangerous potion. Execute with maximum caution.", author_id: user10.id, category: 'Potion')
 
+proj10_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/dl1.jpg")
+project10.photos.attach(io: proj10_photo1, filename: 'dl1.jpg')
+proj10_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/dl2.gif")
+project10.photos.attach(io: proj10_photo2, filename: 'dl2.gif')
+proj10_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/dl3.jpg")
+project10.photos.attach(io: proj10_photo3, filename: 'dl3.jpg')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -232,6 +267,13 @@ step5 = Step.create!(title: 'Step5: Effects', description: "The potion is diffic
 # ***** project #11 ******
 # -----------------------
 project11 = Project.create!(title: 'Obliviate charm', description: "The Forgetfulness Charm is a popular memory-affecting charm frequently used by Ministry obliviators (whose name comes from this spell) to remove memories of the wizarding world from Muggle minds.", author_id: user11.id, category: 'Charm')
+
+proj11_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ob1.jpg")
+project11.photos.attach(io: proj11_photo1, filename: 'ob1.jpg')
+proj11_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ob2.gif")
+project11.photos.attach(io: proj11_photo2, filename: 'ob2.gif')
+proj11_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ob3.gif")
+project11.photos.attach(io: proj11_photo3, filename: 'ob3.gif')
 
 # -----------------------
 # ******** steps ********
