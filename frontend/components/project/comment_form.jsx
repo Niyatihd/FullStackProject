@@ -39,7 +39,7 @@ class CommentForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-input">
               <img id='avatar' src={window.images.hp_navbar_logo} />
-              <textarea value={this.state.body} onChange={this.handleInput("body")}></textarea>
+              <textarea placeholder="Comment" value={this.state.body} onChange={this.handleInput("body")}></textarea>
             </div>
             <div className="form-input-bottom">
               <div className="policy-text">

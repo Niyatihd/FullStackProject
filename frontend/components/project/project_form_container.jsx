@@ -29,8 +29,8 @@ class ProjectForm extends React.Component {
           {/* <h1>This is modal</h1> */}
           <h1>Create Your Own Wizardable</h1>
           <form action="">
-            <input className="modal-input1" type="text" placeholder="  Title" />
-            <textarea className="textarea" id="" cols="30" rows="10" placeholder="  Description"></textarea>
+            <input className="modal-input1" type="text" placeholder="Title" />
+            <textarea className="textarea" id="" cols="30" rows="10" placeholder="Description"></textarea>
             <input value="Create" className="modal-input2" type="submit" />
           </form>
         </div>

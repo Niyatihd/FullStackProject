@@ -25,19 +25,30 @@
 
 .form-input {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   // flex-direction: column;
 }
 
-.comment-create-box > form > .form-input > textarea {
-  width: 600px;
-  position: relative;
+.form-input > textarea {
+  width: 620px;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 12px;
-  margin-left: 20px;
-  min-height: 86px;
-  align-self: flex-end;
+  min-height: 95px;
+  text-align: start;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.form-input>textarea::placeholder {
+  // padding: 0;
+  color: lightgrey;
+  // margin-top: 20px;
+  // padding-top: 20px;
+  // padding-left: 10px;
+  // padding-top: 10px;
+  // margin-left: -100px;
 }
 
 .form-input-bottom > input {
