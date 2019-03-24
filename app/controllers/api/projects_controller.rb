@@ -38,7 +38,7 @@ class Api::ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :author_id, :photo)
+    params.require(:project).permit(:title, :description, :author_id, photos: [])
   end
 
 end

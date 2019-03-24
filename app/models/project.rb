@@ -2,7 +2,8 @@ class Project < ApplicationRecord
   validates :title, :description, :author_id, presence: true
   validates :title, uniqueness: true
 
-  has_one_attached :photo
+  # has_one_attached :photo
+  has_many_attached :photos
 
   belongs_to :project_author,
     primary_key: :id,

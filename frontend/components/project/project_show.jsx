@@ -101,10 +101,10 @@ class ProjectShow extends React.Component {
 
     return (
       <div className="proj-wrapper">
-        <img id='project-show-bg' src={this.images[this.props.project.id - 1]} />
+        <img id='project-show-bg' src={this.props.project.photos[1]} />
         <div className="proj-title">
           {/* <img id='proj-icon' src={this.images1[this.props.project.id - 1]} /> */}
-          <img id='proj-icon' src={this.props.project.photo} />
+          <img id='proj-icon' src={this.props.project.photos[0]} />
           <h3 >{this.props.project.title}</h3>
           <div className="proj-title-details">
             <span>{this.props.project_author.username}</span>
@@ -119,7 +119,7 @@ class ProjectShow extends React.Component {
         </div>
         <div className="proj-body">
           <span>{this.props.project.description}</span>
-          <img id='proj-body-main-img' src={this.images2[this.props.project.id - 1]} />
+          <img id='proj-body-main-img' src={this.props.project.photos[2]} />
         </div>
         {step}
         <div className="proj-comment-body"><h3>Discussions</h3>

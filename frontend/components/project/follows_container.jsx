@@ -68,6 +68,8 @@ class FollowsContainer extends React.Component {
   }
 
   render() {
+    
+
     if (this.props.project_id === undefined) {
       return null;
     }
@@ -77,11 +79,15 @@ class FollowsContainer extends React.Component {
       } else {
         return 'Follow';
       }
-    }
+    };
+
+    const followerText = () => {
+      return this.props.project.proj_follows < 2 ? "Follower" : "Followers";
+    };
 
     return (
       <div className="project-follows">
-        <p>{this.props.project.proj_follows} Followers</p>
+        <p>{this.props.project.proj_follows} {followerText()}</p>
         {this.props.loggedIn ? <button onClick={this.toggleFollow} className="project-follow-link">{buttonText()}</button>
           :
           <Link to="/login" className="project-follow-link">{buttonText()}</Link>

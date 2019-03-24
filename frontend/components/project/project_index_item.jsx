@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 const ProjectIndexItem = props => (
   <li>
   <div className="project-box">
-    <Link className="project-show" to={`/projects/${props.project.id}`}><img id='project-img' src={props.project.photo} /></Link>
+    <Link className="project-show" to={`/projects/${props.project.id}`}><img id='project-img' src={props.project.photos[0]} /></Link>
     <div className="project-info">
-      <img id='project-icon' src={props.image} />
+        <img id='project-icon' src={props.project.photos[0]} />
       <div className="project-content">
         <h4>{ props.project.title }</h4>
         {/* <div className="project-follows"> */}

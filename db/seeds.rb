@@ -52,8 +52,12 @@ user30 = User.create!(username: 'Argus Filch', email: 'filch@filch.com', passwor
 project1 = Project.create!(title: 'Poly-Juice Potion Recipe', description: "The Polyjuice Potion, which is a complex and time-consuming concoction, is best left to highly skilled witches and wizards. It enables the consumer to assume the physical appearance of another person, as long as they have first procured part of that individual's body to add to the brew (this may be anything — toenail clippings, dandruff or worse — but it is most usual to use hair)", author_id: user4.id, category: 'Potion')
 
 
-proj1_photo = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
-project1.photo.attach(io: proj1_photo, filename: 'll1.jpeg')
+proj1_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
+project1.photos.attach(io: proj1_photo1, filename: 'll1.jpeg')
+proj1_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/saemus_potions.gif")
+project1.photos.attach(io: proj1_photo2, filename: 'saemus_potions.gif')
+proj1_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/pj2.gif")
+project1.photos.attach(io: proj1_photo3, filename: 'saemus_potions.gif')
 
 # -----------------------
 # ******** steps ********
@@ -75,7 +79,7 @@ step7 = Step.create!(title: 'Step7: Known Uses', description: "Some of the known
 project2 = Project.create!(title: 'Love Potion Recipe', description: "Amortentia is the world's most powerful love potion, it's name comes from the Latin 'Amor Tentia' which means 'love held'. Not only is the potion very powerful, it's also considered to be highly dangerous.", author_id: user1.id, category: 'Potion')
 
 proj2_photo = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp1.jpg")
-project2.photo.attach(io: proj2_photo, filename: 'lp1.jpeg')
+project2.photos.attach(io: proj2_photo, filename: 'lp1.jpeg')
 
 
 # -----------------------
@@ -93,7 +97,7 @@ step5 = Step.create!(title: 'Step5: Effects', description: 'Once prepared, you w
 project3 = Project.create!(title: 'Liquid luck Recipe', description: "Felix Felicis is liquid luck, which makes the person who drinks it lucky for a certain period of time.", author_id: user3.id, category: 'Potion')
 
 proj3_photo = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ll1.jpeg")
-project3.photo.attach(io: proj3_photo, filename: 'lp1.jpeg')
+project3.photos.attach(io: proj3_photo, filename: 'lp1.jpeg')
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -109,7 +113,7 @@ step5 = Step.create!(title: 'Step5: Effects', description: 'Felix Felicis causes
 project4 = Project.create!(title: 'Skele Gro Potion Recipe', description: 'Skele-Gro (alternately spelled Skelegro) is a dreadful-tasting potion which restores bones. It is able to mend broken bones and even regrow entire bones that have vanished or been otherwise lost. For regrowing entire bones, the process is a notably slow and painful process, that can take over a full day.', author_id: user2.id, category: 'Potion')
 
 proj4_photo = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/sk1.jpg")
-project4.photo.attach(io: proj4_photo, filename: 'lp1.jpeg')
+project4.photos.attach(io: proj4_photo, filename: 'lp1.jpeg')
 # -----------------------
 # ******** steps ********
 # -----------------------
