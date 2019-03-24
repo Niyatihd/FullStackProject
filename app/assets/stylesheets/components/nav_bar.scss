@@ -84,7 +84,7 @@ form>button>.search-icon {
   color: white;
   position: absolute;
   top: 30px;
-  left: 418px;
+  left: 428px;
   height: 14px;
 }
 
@@ -181,6 +181,7 @@ form.search-form>input {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
   width: 128px;
+  padding-left: 10px;
 }
 
 form.search-form>input::placeholder {
@@ -242,6 +243,6 @@ form.search-form::after {
   }
 
   form>button>.search-icon {
-    left: 378px;
+    left: 388px;
   }
 }
