@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import CommentIndexItem from './comments_index_item';
+import CommentsIndexItem from './comments_index_item';
 import EditCommentContainer from './edit_comment_container';
 import { deleteComment } from '../../actions/project_actions';
 
@@ -18,7 +18,7 @@ const mapDispatchToprops = (dispatch) => {
   });
 };
 
-class CommentsIndexItem extends React.Component {
+class CommentsIndex extends React.Component {
   constructor(props) {
     super(props);
 
@@ -45,10 +45,10 @@ class CommentsIndexItem extends React.Component {
       )
     } else {
 
-      return <CommentIndexItem isOwner={this.props.isOwner} comment={this.props.comment} toggleEdit={this.toggleEdit} deleteComment={this.props.deleteComment}/>
+      return <CommentsIndexItem isOwner={this.props.isOwner} comment={this.props.comment} toggleEdit={this.toggleEdit} deleteComment={this.props.deleteComment}/>
     }
   }
 }
 
 
-export default connect(mapStateToProps, mapDispatchToprops)(CommentsIndexItem);
+export default connect(mapStateToProps, mapDispatchToprops)(CommentsIndex);

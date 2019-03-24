@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import ProjectShowItem from './project_show_item';
 import CommentsIndexContainer from './comments_index_container';
-import CreateCommentContainer from './create_comment_container';
+import CommentFormContainer from './comment_form_container';
 import FollowsContainer from './follows_container';
 
 
@@ -101,40 +101,49 @@ class ProjectShow extends React.Component {
 
     return (
       <div className="proj-wrapper">
-        <img id='project-show-bg' src={this.props.project.photos[1]} />
+        <img id="project-show-bg" src={this.props.project.photos[1]} />
         <div className="proj-title">
           {/* <img id='proj-icon' src={this.images1[this.props.project.id - 1]} /> */}
-          <img id='proj-icon' src={this.props.project.photos[0]} />
-          <h3 >{this.props.project.title}</h3>
+          <img id="proj-icon" src={this.props.project.photos[0]} />
+          <h3>{this.props.project.title}</h3>
           <div className="proj-title-details">
             <span>{this.props.project_author.username}</span>
             {/* <span>|</span> */}
             {/* <span>{this.props.project.proj_follows}  Followers</span> */}
             {/* <span>Followers 29</span> */}
-          {/* </div>
+            {/* </div>
           <div className="proj-link"> */}
-            <FollowsContainer className="proj-follow-link" project={this.props.project} />
+            <FollowsContainer
+              className="proj-follow-link"
+              project={this.props.project}
+            />
             {/* <Link to="/" className="proj-follow-link">Follow</Link> */}
           </div>
         </div>
         <div className="proj-body">
           <span>{this.props.project.description}</span>
-          <img id='proj-body-main-img' src={this.props.project.photos[2]} />
+          <img id="proj-body-main-img" src={this.props.project.photos[2]} />
         </div>
         {step}
-        <div className="proj-comment-body"><h3>Discussions</h3>
-        {this.props.loggedIn ? 
-          <HashLink to={`${this.props.location.pathname}#goto-create-comment`} className="proj-comment-link">Comment</HashLink>
-          :
-          <HashLink to={"/login"} className="proj-comment-link">Comment</HashLink>
-        }
+        <div className="proj-comment-body">
+          <h3>Discussions</h3>
+          {this.props.loggedIn ? (
+            <HashLink
+              to={`${this.props.location.pathname}#goto-create-comment`}
+              className="proj-comment-link"
+            >
+              Comment
+            </HashLink>
+          ) : (
+            <HashLink to={"/login"} className="proj-comment-link">
+              Comment
+            </HashLink>
+          )}
         </div>
         <div className="to-reverse-comments">
-          <div className="test">
-          {comment}
-          </div>
+          <div className="test">{comment}</div>
         </div>
-        {this.props.loggedIn ? <CreateCommentContainer /> : ""}
+        {this.props.loggedIn ? <CommentFormContainer /> : ""}
       </div>
     );
   }
