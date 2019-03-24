@@ -290,6 +290,13 @@ step5 = Step.create!(title: 'Step5: Directions', description: "To cast the spell
 # -----------------------
 project12 = Project.create!(title: 'Stupefy charm', description: "The Stunning Spell is an interesting spell because its effect has no known cause. We know for sure that the Stunning Spell causes the victim to fall instantly unconscious, but there are a plethora of reasons that can cause unconsciousness.", author_id: user12.id, category: 'Charm')
 
+proj12_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/st1.gif")
+project12.photos.attach(io: proj12_photo1, filename: 'st1.gif')
+proj12_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/st2.gif")
+project12.photos.attach(io: proj12_photo2, filename: 'st2.gif')
+proj12_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/st3.gif")
+project12.photos.attach(io: proj12_photo3, filename: 'st3.gif')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -303,6 +310,13 @@ step5 = Step.create!(title: 'Step5: Directions', description: "Once the target i
 # ***** project #13 ******
 # -----------------------
 project13 = Project.create!(title: 'Tom Riddle\'s Diary', description: "T. M. Riddle's Diary was a simple blank diary, which Tom Riddle transformed into a Horcrux. The diary was made into a Horcrux in 1943, during Riddle's sixth year at Hogwarts School of Witchcraft and Wizardry. It was the first Horcrux he ever made and was used as a weapon.", author_id: 13, category: 'Horcrux')
+
+proj13_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/tr1.jpg")
+project13.photos.attach(io: proj13_photo1, filename: 'tr1.jpg')
+proj13_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/tr2.gif")
+project13.photos.attach(io: proj13_photo2, filename: 'tr2.gif')
+proj13_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/tr3.gif")
+project13.photos.attach(io: proj13_photo3, filename: 'tr3.gif')
 
 # -----------------------
 # ******** steps ********
@@ -321,6 +335,13 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: '29 May, 1993'
 # -----------------------
 project14 = Project.create!(title: 'Marvolo Gaunt\'s Ring', description: "The ring's story begins (and ends) with its black stone. The stone happened to be the Resurrection Stone, one of the Deathly Hallows of legend, and had the symbol of the Deathly Hallows engraved on its surface. It was a horcrux.", author_id: 14, category: 'Horcrux')
 
+proj14_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/r1.gif")
+project14.photos.attach(io: proj14_photo1, filename: 'r1.gif')
+proj14_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/r2.gif")
+project14.photos.attach(io: proj14_photo2, filename: 'r2.gif')
+proj14_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/r3.jpg")
+project14.photos.attach(io: proj14_photo3, filename: 'r3.jpg')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -337,6 +358,13 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: 'July 1996', p
 # ***** project #15 ******
 # -----------------------
 project15 = Project.create!(title: 'Salazar Slytherin\'s Locket', description: "The locket was a creation of Salazar Slytherin, the celebrated Founder of Slytherin House at Hogwarts School of Witchcraft and Wizardry. When Slytherin created the locket, he enchanted it so that only a Parselmouth, like himself, could open it.[3] When Slytherin left Hogwarts, he took the locket with him. It was a horcrux.", author_id: 15, category: 'Horcrux')
+
+proj15_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ss1.jpg")
+project15.photos.attach(io: proj15_photo1, filename: 'ss1.jpg')
+proj15_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ss2.gif")
+project15.photos.attach(io: proj15_photo2, filename: 'ss2.gif')
+proj15_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ss3.gif")
+project15.photos.attach(io: proj15_photo3, filename: 'ss3.gif')
 
 # -----------------------
 # ******** steps ********
@@ -355,6 +383,13 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: '28 December, 
 # -----------------------
 project16 = Project.create!(title: 'Helga Hufflepuff\'s Cup', description: "Helga Hufflepuff's Cup was a magical item created by Helga Hufflepuff, one of the founders of Hogwarts School of Witchcraft and Wizardry. It was a small golden cup with two finely-wrought handles with a badger engraved on the side and a few jewels. It was a horcrux.", author_id: 16, category: 'Horcrux')
 
+proj16_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/hh1.jpg")
+project16.photos.attach(io: proj16_photo1, filename: 'hh1.jpg')
+proj16_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/hh2.gif")
+project16.photos.attach(io: proj16_photo2, filename: 'hh2.gif')
+proj16_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/hh3.jpg")
+project16.photos.attach(io: proj16_photo3, filename: 'hh3.jpg')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -371,6 +406,13 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: 'Battle of Hog
 # ***** project #17 ******
 # -----------------------
 project17 = Project.create!(title: 'Rowena Ravenclaw\'s Diadem', description: "Ravenclaw's Diadem[1] (also known as the Lost Diadem of Ravenclaw) was the only known relic once belonging to Rowena Ravenclaw, the founder of Ravenclaw House at Hogwarts School of Witchcraft and Wizardry. Etched upon its surface was Ravenclaw's famous quote: Wit beyond measure is man's greatest treasure. It was a horcrux.", author_id: 17, category: 'Horcrux')
+
+proj17_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/rrd1.png")
+project17.photos.attach(io: proj17_photo1, filename: 'rrd1.png')
+proj17_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/rrd2.gif")
+project17.photos.attach(io: proj17_photo2, filename: 'rrd2.gif')
+proj17_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/rrd3.jpg")
+project17.photos.attach(io: proj17_photo3, filename: 'rrd3.jpg')
 
 # -----------------------
 # ******** steps ********
@@ -389,6 +431,13 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: 'Battle of Hog
 # -----------------------
 project18 = Project.create!(title: 'Nagini', description: "Nagini (d. 2 May, 1998) was a Maledictus cursed to transform into a snake. Originating possibly in Indonesia,[2] by 1927 she was a performer at the Circus Arcanus where she met Credence Barebone and had the ability then to transform at will. By 1994, Nagini was seemingly trapped in snake form and belonged to Lord Voldemort, with whom she had a special bond largely due to becoming a Horcrux, after her master had killed Bertha Jorkins in 1994.", author_id: 18, category: 'Horcrux')
 
+proj18_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ng1.gif")
+project18.photos.attach(io: proj18_photo1, filename: 'ng1.gif')
+proj18_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ng2.gif")
+project18.photos.attach(io: proj18_photo2, filename: 'ng2.gif')
+proj18_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/ng3.gif")
+project18.photos.attach(io: proj18_photo3, filename: 'ng3.gif')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -406,6 +455,13 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: 'Battle of Hog
 # -----------------------
 project19 = Project.create!(title: 'Quirinus Quirrell', description: "As a boy, Quirinus was gifted but also delicate, teased for his timidity and nerves during his school life. Feeling inadequate and wishing to prove himself, he developed an (initially theoretical) interest in the Dark Arts. The feelings of insignificance and worthlessness that this bullying fostered embittered the boy, forging a latent desire to make the world sit up and notice him. He was a pseudo horcrux.", author_id: 19, category: 'Horcrux')
 
+proj19_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/qq1.jpg")
+project19.photos.attach(io: proj19_photo1, filename: 'qq1.jpg')
+proj19_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/qq2.gif")
+project19.photos.attach(io: proj19_photo2, filename: 'qq2.gif')
+proj19_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/qq3.jpg")
+project19.photos.attach(io: proj19_photo3, filename: 'qq3.jpg')
+
 # -----------------------
 # ******** steps ********
 # -----------------------
@@ -422,6 +478,13 @@ step8 = Step.create!(title: 'Step8: Date destroyed', description: '4 June, 1992'
 # ***** project #20 ******
 # -----------------------
 project20 = Project.create!(title: 'Harry Potter', description: "Harry James Potter (b. 31 July, 1980) was an English half-blood wizard, one of the most famous wizards of modern times. He was the only child and son of James and Lily Potter (née Evans), both members of the original Order of the Phoenix. Harry's birth was overshadowed by a prophecy, naming either himself or Neville Longbottom as the one with the power to vanquish Lord Voldemort. He was a pseudo horcrux.", author_id: 20, category: 'Horcrux')
+
+proj20_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/hjp1.png")
+project20.photos.attach(io: proj20_photo1, filename: 'hjp1.png')
+proj20_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/hjp2.gif")
+project20.photos.attach(io: proj20_photo2, filename: 'hjp2.gif')
+proj20_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/hjp3.jpg")
+project20.photos.attach(io: proj20_photo3, filename: 'hjp3.jpg')
 
 # -----------------------
 # ******** steps ********
