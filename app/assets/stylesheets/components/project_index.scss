@@ -86,12 +86,12 @@
 
 
 .project-content {
-  // margin-bottom: 15px;  
   display: flex;
   flex-direction: column;
-  height: 90px;
-  justify-content: space-around;
-
+  height: 70px;
+  padding-top: 10px;
+  justify-content: space-between;
+  padding-bottom: 10px;
 }
 
 .project-content > h4 {
