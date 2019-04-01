@@ -337,10 +337,10 @@ project14 = Project.create!(title: 'Marvolo Gaunt\'s Ring', description: "The ri
 
 proj14_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/r1.gif")
 project14.photos.attach(io: proj14_photo1, filename: 'r1.gif')
-proj14_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/r2.gif")
-project14.photos.attach(io: proj14_photo2, filename: 'r2.gif')
-proj14_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/r3.jpg")
-project14.photos.attach(io: proj14_photo3, filename: 'r3.jpg')
+proj14_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/r3.jpg")
+project14.photos.attach(io: proj14_photo2, filename: 'r3.jpg')
+proj14_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/r2.gif")
+project14.photos.attach(io: proj14_photo3, filename: 'r2.gif')
 
 # -----------------------
 # ******** steps ********

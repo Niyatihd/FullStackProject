@@ -108,16 +108,17 @@
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  width: 150px;
+  width: 180px;
+  line-height: 20px;
 }
 
 .project-follows > p {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .project-follow-link {
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 15px;
+  // line-height: 15px;
   font-family: 'harry2';
   letter-spacing: 1px;
   color: gray;
