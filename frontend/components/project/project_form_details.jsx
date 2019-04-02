@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-class ProjectForm extends React.Component {
+class ProjectFormDetails extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -24,4 +24,4 @@ class ProjectForm extends React.Component {
 
 
 
-export default ProjectForm;
+export default ProjectFormDetails;

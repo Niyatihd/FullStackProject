@@ -38,6 +38,16 @@ export const deleteFollow = (id) => {
   );
 };
 
+export const createProject = (project) => {
+  return (
+    $.ajax({
+      url: "api/projects",
+      method: "post",
+      data: project
+    })
+  );
+};
+
 
 
 // DELETE

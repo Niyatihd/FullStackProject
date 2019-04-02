@@ -12,15 +12,16 @@ class Api::ProjectsController < ApplicationController
     render 'api/projects/index'
   end
 
-  # def create
-  #   @project = Project.new(project_params)
+  def create
+    @project = Project.new(project_params)
+    @project.author_id = current_user.id
 
-  #   if @project.save
-  #     render 'api/projects/show'
-  #   else
-  #     render json: @project.errors.full_messages, status: :unprocessable_entity
-  #   end
-  # end
+    if @project.save
+      render 'api/projects/_project'
+    else
+      render json: @project.errors.full_messages, status: :unprocessable_entity
+    end
+  end
 
   def edit
     
@@ -33,7 +34,10 @@ class Api::ProjectsController < ApplicationController
   end
 
   def destroy
-    
+    project = Project.find(params[:id])
+    project_id = project.id
+    project.destroy
+    render json: {id: project_id}
   end
 
   private

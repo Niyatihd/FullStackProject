@@ -7,6 +7,9 @@
   src: asset-url('HP.TTF');
 }
 
+@keyframes blink { 50% { border-color: transparent; }  }
+
+
 #splash-bkgrd-img {
   width: 100%;
   background-size: cover;
@@ -56,6 +59,10 @@
   font-family: 'harry2';
   margin-left: 40px;
   position: absolute;
-  top: -60px;
+  top: -21px;
+  line-height: 0;
+  border-right: 5px solid white;
+  height: 57px;
+  animation: blink .3s step-end infinite alternate;
 }
 

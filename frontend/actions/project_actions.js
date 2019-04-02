@@ -73,4 +73,8 @@ export const createFollow = follow => dispatch => (
 
 export const deleteFollow = follow => dispatch => (
   FollowAPIUtil.deleteFollow(follow).then((follow) => dispatch(removeFollow(follow)))
-);
+  );
+  
+  export const createProject = project => dispatch => (
+    ProjectAPIUtil.createProject(project).then(payload => dispatch(receiveProject(payload)))
+  );

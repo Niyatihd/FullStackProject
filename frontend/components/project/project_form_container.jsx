@@ -15,6 +15,13 @@ const mapDispatchToProps = (dispatch) => {
 class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    
   }
 
   render() {
