@@ -6,7 +6,7 @@ import Root from './components/root';
 
 ///////DELETE
 import { fetchProjects } from './actions/project_actions';
-import { fetchProject } from './actions/project_actions';
+import { fetchProject, createProject } from './actions/project_actions';
 ///////DELETE
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   // window.fetchProjects = fetchProjects();
   window.fetchProject = fetchProject(1);
+  window.createProject = createProject({
+    title: 'custom3',
+    description: 'trial4'
+  });
   // window.createFollow = fetchProject(1);
   ///////DELETE
   

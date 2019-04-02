@@ -15,9 +15,15 @@ class Api::ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.author_id = current_user.id
+    photo = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
+    photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp1.jpg")
+
+    @project.photos.attach(io: photo, filename: 'splash1.jpg')
+    @project.photos.attach(io: photo1, filename: 'lp1.jpg')
 
     if @project.save
-      render 'api/projects/_project'
+      render 'api/projects/show'
+      # render json: @project
     else
       render json: @project.errors.full_messages, status: :unprocessable_entity
     end
@@ -42,7 +48,8 @@ class Api::ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :author_id, photos: [])
+    params.require(:project).permit(:title, :description)
+    # params.require(:project).permit(:title, :description, :author_id, photos: [])
   end
 
 end

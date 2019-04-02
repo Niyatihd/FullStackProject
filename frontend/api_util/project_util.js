@@ -43,7 +43,9 @@ export const createProject = (project) => {
     $.ajax({
       url: "api/projects",
       method: "post",
-      data: project
+      data: { 
+        project: project 
+      }
     })
   );
 };

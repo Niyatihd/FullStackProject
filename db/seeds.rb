@@ -53,11 +53,11 @@ project1 = Project.create!(title: 'Poly-Juice Potion Recipe', description: "The 
 
 
 proj1_photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
-project1.photos.attach(io: proj1_photo1, filename: 'll1.jpeg')
+project1.photos.attach(io: proj1_photo1, filename: 'splash1.jpg')
 proj1_photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/saemus_potions.gif")
 project1.photos.attach(io: proj1_photo2, filename: 'saemus_potions.gif')
 proj1_photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/pj2.gif")
-project1.photos.attach(io: proj1_photo3, filename: 'saemus_potions.gif')
+project1.photos.attach(io: proj1_photo3, filename: 'pj2.gif')
 
 # -----------------------
 # ******** steps ********

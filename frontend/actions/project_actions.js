@@ -25,7 +25,7 @@ export const receiveProject = ({ project, project_author, steps, comments, follo
   follows
 });
 
-export const receiveComment = ({ comment}) => ({
+export const receiveComment = ({ comment }) => ({
   type: RECEIVE_COMMENT,
   comment
 });
@@ -75,6 +75,6 @@ export const deleteFollow = follow => dispatch => (
   FollowAPIUtil.deleteFollow(follow).then((follow) => dispatch(removeFollow(follow)))
   );
   
-  export const createProject = project => dispatch => (
-    ProjectAPIUtil.createProject(project).then(payload => dispatch(receiveProject(payload)))
-  );
+export const createProject = project => dispatch => (
+  ProjectAPIUtil.createProject(project).then(payload => dispatch(receiveProject(payload)))
+);
