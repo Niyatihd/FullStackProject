@@ -45,7 +45,7 @@ class ProjectForm extends React.Component {
       description: ''
     };
     this.props.closeModal()
-    .then(this.props.history.push("/projectform"));
+    .then(this.props.history.push("/projectdetails"));
   }
 
   render() {
