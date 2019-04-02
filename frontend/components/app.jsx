@@ -6,7 +6,6 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import FooterContainer from './footer/footer';
 import ProjectIndexContainer from './project/project_index_container';
 import ProjectShowContainer from './project/project_show_container';
-import ProjectDetailsContainer from './project/new_project_details';
 import CommentsIndexContainer from './project/comments_index_container';
 import Splash from './splash/splash';
 import { AuthRoute } from '../api_util/route_api_util/route_util';
@@ -30,7 +29,6 @@ const App = () => (
       <Route exact path="/projects/:projectId" component={ProjectShowContainer} />
       <Route exact path="/cindex" component={CommentsIndexContainer} />
       <Route exact path="/index" component={ProjectIndexContainer} />
-      <Route exact path="/projectdetails" component={ProjectDetailsContainer} />
       <Route exact path="/search/:query" component={ProjectIndexContainer} />
       {/* <Route exact path="/category/:item" component={ProjectIndexContainer} /> */}
       <Route exact path="/" component={Splash} />

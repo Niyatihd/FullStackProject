@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import ProjectShowItem from './project_show_item';
+import StepsIndexItem from './steps_index_item';
 import CommentsIndexContainer from './comments_index_container';
 import CommentFormContainer from './comment_form_container';
 import FollowsContainer from './follows_container';
@@ -95,7 +95,7 @@ class ProjectShow extends React.Component {
     }
     //////////IMPORTANT/////////
 
-    const step = this.props.steps.map(step => <ProjectShowItem step={step} key={step.id}/>);
+    const step = this.props.steps.map(step => <StepsIndexItem step={step} key={step.id}/>);
     
     const comment = this.props.comments.map(comment => <CommentsIndexContainer comment={comment} key={comment.id} />)
 

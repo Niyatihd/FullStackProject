@@ -13,6 +13,12 @@ const mapDispatchToProps = (dispatch) => {
   });
 };
 
+const mapStateToProps = (state) => {
+  return ({
+    projectId: state.entities.newProject.id
+  });
+};
+
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -39,13 +45,13 @@ class ProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log(this.state);
-    this.props.createProject(this.state);
+    this.props.createProject(this.state)
+    .then(() => this.props.history.push(`/projects/${this.props.projectId}`))
+    .then(() => this.props.closeModal());
     this.state = {
       title: '',
       description: ''
     };
-    this.props.closeModal()
-    .then(this.props.history.push("/projectdetails"));
   }
 
   render() {
@@ -71,4 +77,4 @@ class ProjectForm extends React.Component {
   }
 }
 
-export default withRouter(connect(null, mapDispatchToProps)(ProjectForm));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectForm));

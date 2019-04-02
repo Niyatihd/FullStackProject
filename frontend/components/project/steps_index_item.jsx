@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProjectShowItem = props => (
+const StepsIndexItem = props => (
   <div className="proj-step-body">
     <div className="proj-step-content">
       <h3>{props.step.title}</h3>
@@ -10,4 +10,4 @@ const ProjectShowItem = props => (
   </div>
 );
 
-export default ProjectShowItem;
+export default StepsIndexItem;
