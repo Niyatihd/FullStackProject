@@ -117,6 +117,7 @@ class ProjectShow extends React.Component {
               className="proj-follow-link"
               project={this.props.project}
             />
+            {this.props.session.id === this.props.project.author_id ? <div className="project-update"><button id="uptdel">Update</button><button id="uptdel">Delete</button></div> : ""}
             {/* <Link to="/" className="proj-follow-link">Follow</Link> */}
           </div>
         </div>
