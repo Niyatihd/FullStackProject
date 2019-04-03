@@ -85,6 +85,10 @@ class ProjectShow extends React.Component {
     this.props.fetchProject(this.props.projectId);
   }
 
+  handleDelete(e) {
+    
+  }
+
   render() {
   
     //////////IMPORTANT/////////
@@ -97,7 +101,14 @@ class ProjectShow extends React.Component {
 
     const step = this.props.steps.map(step => <StepsIndexItem step={step} key={step.id}/>);
     
-    const comment = this.props.comments.map(comment => <CommentsIndexContainer comment={comment} key={comment.id} />)
+    const comment = this.props.comments.map(comment => <CommentsIndexContainer comment={comment} key={comment.id} />);
+
+    const updateDelete = (
+      <div className="project-update">
+        <button id="uptdel">Update</button>
+        <button id="uptdel" onclick={this.handleDelete}>Delete</button>
+      </div>
+    );
 
     return (
       <div className="proj-wrapper">

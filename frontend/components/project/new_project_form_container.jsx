@@ -45,7 +45,7 @@ class ProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props.currentUserId);
+    // console.log(this.props.currentUserId);
     if (this.props.currentUserId) {
       this.props.createProject(this.state)
       .then(() => this.props.history.push(`/projects/${this.props.projectId}`))
