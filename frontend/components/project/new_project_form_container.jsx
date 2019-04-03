@@ -15,7 +15,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return ({
-    projectId: state.entities.newProject.id
+    projectId: state.entities.newProject.id,
+    currentUserId: state.session.id
   });
 };
 
@@ -44,14 +45,19 @@ class ProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
-    this.props.createProject(this.state)
-    .then(() => this.props.history.push(`/projects/${this.props.projectId}`))
-    .then(() => this.props.closeModal());
-    this.state = {
-      title: '',
-      description: ''
-    };
+    console.log(this.props.currentUserId);
+    if (this.props.currentUserId) {
+      this.props.createProject(this.state)
+      .then(() => this.props.history.push(`/projects/${this.props.projectId}`))
+      .then(() => this.props.closeModal());
+      this.state = {
+        title: '',
+        description: ''
+      };
+    } else {
+      this.props.closeModal();
+      this.props.history.push("/login");
+    }
   }
 
   render() {
