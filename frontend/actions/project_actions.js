@@ -1,5 +1,6 @@
 import * as ProjectAPIUtil from '../api_util/project_util';
 import * as CommentAPIUtil from '../api_util/comment_api_util';
+import * as StepAPIUtil from '../api_util/step_api_util';
 import * as FollowAPIUtil from '../api_util/follow_api_util';
 
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
@@ -62,9 +63,13 @@ export const createComment = comment => dispatch => (
 export const updateComment = comment => dispatch => (
   CommentAPIUtil.updateComment(comment).then(payload => dispatch(receiveComment(payload)))
 );
-
+  
 export const deleteComment = id => dispatch => (
   CommentAPIUtil.deleteComment(id).then(() => dispatch(removeComment(id)))
+);
+
+export const createStep = step => dispatch => (
+  StepAPIUtil.createStep(step).then(payload => dispatch(receiveStep(payload)))
 );
 
 export const createFollow = follow => dispatch => (
