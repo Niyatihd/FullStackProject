@@ -133,3 +133,29 @@
 .project-update {
   margin-top: 35px;
 }
+
+.check-delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background: white;
+  color: darkslategrey;
+  font-family: fantasy;
+  font-size: 17px;
+  padding: 11px;
+  border-radius: 15px;
+  top: 330px;
+  box-shadow: 3px 3px orange;
+}
+
+#delete-y, #delete-n {
+  margin-right: 15px;
+  margin-left: 15px;
+  background: orange;
+  padding: 2px 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px lightgrey;
+  margin-top: 5px;
+  font-size: 15px;
+}

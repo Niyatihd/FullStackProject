@@ -11,82 +11,34 @@ class ProjectShow extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.images = [//gif
-    //   window.images.pjpotion,
-    //   window.images.lp2,
-    //   window.images.ll3,
-    //   window.images.sk1,
-    //   window.images.w2,
-    //   window.images.al1,
-    //   window.images.f2,
-    //   window.images.am2,
-    //   window.images.vb5,
-    //   window.images.dl2,
-    //   window.images.ob2,
-    //   window.images.st2,
-    //   window.images.tr3,
-    //   window.images.r1,
-    //   window.images.ss1,
-    //   window.images.hh1,
-    //   window.images.rrd3,
-    //   window.images.ng5,
-    //   window.images.qq3,
-    //   window.images.hjp3,
-    // ];
+    this.state = {
+      checked: false
+    };
 
-    // this.images1 = [//icon
-    //   window.images.splash1,
-    //   window.images.lp1,
-    //   window.images.ll1,
-    //   window.images.sk1,
-    //   window.images.w1,
-    //   window.images.al1,
-    //   window.images.f1,
-    //   window.images.am1,
-    //   window.images.vb4,
-    //   window.images.dl2,
-    //   window.images.ob4,
-    //   window.images.st1,
-    //   window.images.tr4,
-    //   window.images.r3,
-    //   window.images.ss6,
-    //   window.images.hh5,
-    //   window.images.rrd4,
-    //   window.images.ng1,
-    //   window.images.qq4,
-    //   window.images.hjp7,
-    // ];
-
-    // this.images2 = [
-    //   window.images.pj2,
-    //   window.images.lp3,
-    //   window.images.ll3,
-    //   window.images.sk3,
-    //   window.images.w3,
-    //   window.images.al1,
-    //   window.images.f3,
-    //   window.images.am1,
-    //   window.images.vb3,
-    //   window.images.dl1,
-    //   window.images.ob3,
-    //   window.images.st3,
-    //   window.images.tr1,
-    //   window.images.r2,
-    //   window.images.ss6,
-    //   window.images.hh3,
-    //   window.images.rrd3,
-    //   window.images.ng1,
-    //   window.images.qq3,
-    //   window.images.hjp1,
-    // ];
+    this.handleDelete = this.handleDelete.bind(this);
+    this.handleDoNotDelete = this.handleDoNotDelete.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchProject(this.props.projectId);
   }
 
+  handleCheck(e) {
+    e.preventDefault();
+    this.setState(state => ({ checked: !state.checked }));
+  }
+
   handleDelete(e) {
-    
+    e.preventDefault();
+    this.props.deleteProject(this.props.projectId);
+    this.props.history.push("/index");
+    this.setState(state => ({ checked: !state.checked }));
+  }
+
+  handleDoNotDelete(e) {
+    e.preventDefault();
+    this.setState(state => ({ checked: !state.checked }));
   }
 
   render() {
@@ -103,10 +55,20 @@ class ProjectShow extends React.Component {
     
     const comment = this.props.comments.map(comment => <CommentsIndexContainer comment={comment} key={comment.id} />);
 
-    const updateDelete = (
+    const updateDeleteButton = (
       <div className="project-update">
         <button id="uptdel">Update</button>
-        <button id="uptdel" onclick={this.handleDelete}>Delete</button>
+        <button id="uptdel" onClick={this.handleCheck}>Delete</button>
+      </div>
+    );
+
+    const checkDelete = (
+      <div className="check-delete">
+        <span>Are you sure, you want to delete project permanently?</span>
+        <div>
+          <button id="delete-y" onClick={this.handleDelete}>Yes</button>
+          <button id="delete-n" onClick={this.handleDoNotDelete}>No</button>
+        </div>
       </div>
     );
 
@@ -128,9 +90,11 @@ class ProjectShow extends React.Component {
               className="proj-follow-link"
               project={this.props.project}
             />
-            {this.props.session.id === this.props.project.author_id ? <div className="project-update"><button id="uptdel">Update</button><button id="uptdel">Delete</button></div> : ""}
+            {this.props.session.id === this.props.project.author_id ? updateDeleteButton : ""}
+            {/* {this.props.session.id === this.props.project.author_id ? <div className="project-update"><button id="uptdel">Update</button><button id="uptdel">Delete</button></div> : ""} */}
             {/* <Link to="/" className="proj-follow-link">Follow</Link> */}
           </div>
+          {this.state.checked === true ? checkDelete : ""}
         </div>
         <div className="proj-body">
           <span>{this.props.project.description}</span>

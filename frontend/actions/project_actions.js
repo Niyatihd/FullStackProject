@@ -5,6 +5,7 @@ import * as FollowAPIUtil from '../api_util/follow_api_util';
 
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
+export const REMOVE_PROJECT = "REMOVE_PROJECT";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
 export const RECEIVE_FOLLOW = "RECEIVE_FOLLOW";
@@ -24,6 +25,11 @@ export const receiveProject = ({ project, project_author, steps, comments, follo
   steps,
   comments,
   follows
+});
+
+export const removeProject = (id) => ({
+  type: REMOVE_PROJECT,
+  id
 });
 
 export const receiveComment = ({ comment }) => ({
@@ -82,4 +88,8 @@ export const deleteFollow = follow => dispatch => (
   
 export const createProject = project => dispatch => (
   ProjectAPIUtil.createProject(project).then(payload => dispatch(receiveProject(payload)))
+);
+
+export const deleteProject = id => dispatch => (
+  ProjectAPIUtil.deleteProject(id).then(() => dispatch(removeProject(id)))
 );

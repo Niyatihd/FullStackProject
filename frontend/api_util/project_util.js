@@ -50,6 +50,15 @@ export const createProject = (project) => {
   );
 };
 
+export const deleteProject = (id) => {
+  return (
+    $.ajax({
+      url: `api/projects/${id}`,
+      method: "delete"
+    })
+  );
+};
+
 
 
 // DELETE
