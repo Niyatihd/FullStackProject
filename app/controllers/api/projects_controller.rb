@@ -29,8 +29,15 @@ class Api::ProjectsController < ApplicationController
     end
   end
 
-  def edit
-    
+  def update
+    # @project = Project.find(params[:id]) #to test on postman
+    @project = current_user.authored_projects.find(params[:id])
+
+    if @project.update_attributes(project_params)
+      render 'api/projects/show'
+    else
+      render :json ["Not authorized to edit project!!"], status: 435
+    end
   end
 
   def show

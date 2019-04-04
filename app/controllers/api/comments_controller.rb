@@ -19,7 +19,7 @@ class Api::CommentsController < ApplicationController
   end
 
   def update 
-    # @comment = Comment.find(params[:id])
+    # @comment = Comment.find(params[:id]) #to test on postman
     @comment = current_user.project_comments.find(params[:id])
 
     if @comment.update_attributes(comment_params)

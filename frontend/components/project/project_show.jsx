@@ -12,33 +12,40 @@ class ProjectShow extends React.Component {
     super(props);
 
     this.state = {
-      checked: false
+      deleteProj: false,
+      updateProj: false
     };
 
     this.handleDelete = this.handleDelete.bind(this);
     this.handleDoNotDelete = this.handleDoNotDelete.bind(this);
-    this.handleCheck = this.handleCheck.bind(this);
+    this.toggleProjDel = this.toggleProjDel.bind(this);
+    this.toggleProjUpdate = this.toggleProjUpdate.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchProject(this.props.projectId);
   }
 
-  handleCheck(e) {
+  toggleProjUpdate(e) {
     e.preventDefault();
-    this.setState(state => ({ checked: !state.checked }));
+    this.setState(state => ({ updateProj: !state.updateProj }));
+  }
+
+  toggleProjDel(e) {
+    e.preventDefault();
+    this.setState(state => ({ deleteProj: !state.deleteProj }));
   }
 
   handleDelete(e) {
     e.preventDefault();
     this.props.deleteProject(this.props.projectId);
     this.props.history.push("/index");
-    this.setState(state => ({ checked: !state.checked }));
+    this.setState(state => ({ deleteProj: !state.deleteProj }));
   }
 
   handleDoNotDelete(e) {
     e.preventDefault();
-    this.setState(state => ({ checked: !state.checked }));
+    this.setState(state => ({ deleteProj: !state.deleteProj }));
   }
 
   render() {
@@ -57,8 +64,8 @@ class ProjectShow extends React.Component {
 
     const updateDeleteButton = (
       <div className="project-update">
-        <button id="uptdel">Update</button>
-        <button id="uptdel" onClick={this.handleCheck}>Delete</button>
+        <button id="uptdel" onClick={this.toggleProjUpdate}>Update</button>
+        <button id="uptdel" onClick={this.toggleProjDel}>Delete</button>
       </div>
     );
 
@@ -73,8 +80,14 @@ class ProjectShow extends React.Component {
     );
 
     const displayUpdateDelete = (
-      this.state.checked === true ? checkDelete : updateDeleteButton
+      this.state.deleteProj === true ? checkDelete : updateDeleteButton
     )
+
+    // const updateTitle = (
+    //   <form action="">
+    //     <input type="text" value/>
+    //   </form>
+    // )
 
     return (
       <div className="proj-wrapper">
