@@ -4,7 +4,6 @@ import { HashLink } from 'react-router-hash-link';
 import StepsIndexItem from './steps_index_item';
 import CommentsIndexContainer from './comments_index_container';
 import CommentFormContainer from './comment_form_container';
-import FollowsContainer from './follows_container';
 import TitleContainer from './title_container';
 
 

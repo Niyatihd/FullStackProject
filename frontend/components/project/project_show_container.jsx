@@ -20,8 +20,7 @@ const mapStateToProps = ({ entities: { projects, project_author, users, steps, c
 
 const mapDispatchToProps = dispatch => {
   return ({
-    fetchProject: (id) => dispatch(fetchProject(id)),
-    deleteProject: (id) => dispatch(deleteProject(id))
+    fetchProject: (id) => dispatch(fetchProject(id))
   });
 };
 
