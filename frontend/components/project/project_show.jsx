@@ -72,29 +72,26 @@ class ProjectShow extends React.Component {
       </div>
     );
 
+    const displayUpdateDelete = (
+      this.state.checked === true ? checkDelete : updateDeleteButton
+    )
+
     return (
       <div className="proj-wrapper">
         <img id="project-show-bg" src={this.props.project.photos[1]} />
         <div className="proj-title">
-          {/* <img id='proj-icon' src={this.images1[this.props.project.id - 1]} /> */}
           <img id="proj-icon" src={this.props.project.photos[0]} />
           <h3>{this.props.project.title}</h3>
           <div className="proj-title-details">
             <span>{this.props.project_author.username}</span>
-            {/* <span>|</span> */}
-            {/* <span>{this.props.project.proj_follows}  Followers</span> */}
-            {/* <span>Followers 29</span> */}
-            {/* </div>
-          <div className="proj-link"> */}
             <FollowsContainer
               className="proj-follow-link"
               project={this.props.project}
             />
-            {this.props.session.id === this.props.project.author_id ? updateDeleteButton : ""}
-            {/* {this.props.session.id === this.props.project.author_id ? <div className="project-update"><button id="uptdel">Update</button><button id="uptdel">Delete</button></div> : ""} */}
-            {/* <Link to="/" className="proj-follow-link">Follow</Link> */}
+            {/* {this.props.session.id === this.props.project.author_id ? updateDeleteButton : ""} */}
+            {this.props.session.id === this.props.project.author_id ? displayUpdateDelete : ""}
           </div>
-          {this.state.checked === true ? checkDelete : ""}
+          {/* {this.state.checked === true ? checkDelete : ""} */}
         </div>
         <div className="proj-body">
           <span>{this.props.project.description}</span>
