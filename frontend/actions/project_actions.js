@@ -10,6 +10,8 @@ export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
 export const RECEIVE_FOLLOW = "RECEIVE_FOLLOW";
 export const REMOVE_FOLLOW = "REMOVE_FOLLOW";
+export const REMOVE_STEP = "REMOVE_STEP";
+export const RECEIVE_STEP = "RECEIVE_STEP";
 
 //regular action creators
 
@@ -52,6 +54,17 @@ export const removeFollow = (follow) => ({
   deletedFollow: follow
 });
 
+
+export const receiveStep = ({ step }) => ({
+  type: RECEIVE_STEP,
+  step
+});
+
+export const removeStep = (id) => ({
+  type: REMOVE_STEP,
+  id
+});
+
 //Thunk action creators
 
 export const fetchProjects = (str) => (dispatch) => (
@@ -76,6 +89,10 @@ export const deleteComment = id => dispatch => (
 
 export const createStep = step => dispatch => (
   StepAPIUtil.createStep(step).then(payload => dispatch(receiveStep(payload)))
+);
+
+export const deleteStep = id => dispatch => (
+  StepAPIUtil.deleteStep(id).then(() => dispatch(removeStep(id)))
 );
 
 export const createFollow = follow => dispatch => (

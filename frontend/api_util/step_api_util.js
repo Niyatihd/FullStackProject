@@ -33,11 +33,11 @@ export const createStep = (step) => {
 //   );
 // };
 
-// export const deleteComment = (id) => {
-//   return (
-//     $.ajax({
-//       url: `api/comments/${id}`,
-//       method: "delete",
-//     })
-//   );
-// };
+export const deleteStep = (id) => {
+  return (
+    $.ajax({
+      url: `api/steps/${id}`,
+      method: "delete",
+    })
+  );
+};

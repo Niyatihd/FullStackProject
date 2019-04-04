@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import StepsIndexItem from './steps_index_item';
+import StepsIndexContainer from './steps_index_container';
+import StepFormContainer from './step_form_container';
 import CommentsIndexContainer from './comments_index_container';
 import CommentFormContainer from './comment_form_container';
 import TitleContainer from './title_container';
@@ -10,10 +11,24 @@ import TitleContainer from './title_container';
 class ProjectShow extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      addStep: 0
+    };
+
+    this.handleAddStep = this.handleAddStep.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchProject(this.props.projectId);
+  }
+
+  handleAddStep(e) {
+    e.preventDefault();
+    // this.state.addStep === 0 ?
+    this.setState( state => ({ addStep: !state.addStep }));
+    // :
+    // this.setState( state => ({ addStep: !!state.addStep }))
   }
 
   render() {
@@ -26,10 +41,10 @@ class ProjectShow extends React.Component {
     }
     //////////IMPORTANT/////////
 
-    const step = this.props.steps.map(step => <StepsIndexItem step={step} key={step.id}/>);
+    const step = this.props.steps.map(step => <StepsIndexContainer step={step} key={step.id}/>);
     
     const comment = this.props.comments.map(comment => <CommentsIndexContainer comment={comment} key={comment.id} />);
-
+    
     return (
       <div className="proj-wrapper">
         <img id="project-show-bg" src={this.props.project.photos[1]} />
@@ -39,6 +54,8 @@ class ProjectShow extends React.Component {
           <img id="proj-body-main-img" src={this.props.project.photos[2]} />
         </div>
         {step}
+        {this.state.addStep === true ? <StepFormContainer /> : ""}
+        {this.props.project.author_id === this.props.session.id ? <div className="add-step-div"><button id="add-step" onClick={this.handleAddStep}>Add Steps</button></div> : ""}
         <div className="proj-comment-body">
           <h3>Discussions</h3>
           {this.props.loggedIn ? (

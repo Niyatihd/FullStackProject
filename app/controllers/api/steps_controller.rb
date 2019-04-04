@@ -7,8 +7,8 @@ class Api::StepsController < ApplicationController
     @step.project_id = params[:step][:project_id]
 
     if @step.save
-      # render 'api/step/show'
-      render json: @step
+      render 'api/steps/show'
+      # render json: @step
     else
       render json: @step, status: :unprocessable_entity
     end
