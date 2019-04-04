@@ -5,48 +5,49 @@ import StepsIndexItem from './steps_index_item';
 import CommentsIndexContainer from './comments_index_container';
 import CommentFormContainer from './comment_form_container';
 import FollowsContainer from './follows_container';
+import TitleContainer from './title_container';
 
 
 class ProjectShow extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      deleteProj: false,
-      updateProj: false
-    };
+    // this.state = {
+      // deleteProj: false,
+      // updateProj: false
+    // };
 
-    this.handleDelete = this.handleDelete.bind(this);
-    this.handleDoNotDelete = this.handleDoNotDelete.bind(this);
-    this.toggleProjDel = this.toggleProjDel.bind(this);
-    this.toggleProjUpdate = this.toggleProjUpdate.bind(this);
+    // this.handleDelete = this.handleDelete.bind(this);
+    // this.handleDoNotDelete = this.handleDoNotDelete.bind(this);
+    // this.toggleProjDel = this.toggleProjDel.bind(this);
+    // this.toggleProjUpdate = this.toggleProjUpdate.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchProject(this.props.projectId);
   }
 
-  toggleProjUpdate(e) {
-    e.preventDefault();
-    this.setState(state => ({ updateProj: !state.updateProj }));
-  }
+  // toggleProjUpdate(e) {
+  //   e.preventDefault();
+  //   this.setState(state => ({ updateProj: !state.updateProj }));
+  // }
 
-  toggleProjDel(e) {
-    e.preventDefault();
-    this.setState(state => ({ deleteProj: !state.deleteProj }));
-  }
+  // toggleProjDel(e) {
+  //   e.preventDefault();
+  //   this.setState(state => ({ deleteProj: !state.deleteProj }));
+  // }
 
-  handleDelete(e) {
-    e.preventDefault();
-    this.props.deleteProject(this.props.projectId);
-    this.props.history.push("/index");
-    this.setState(state => ({ deleteProj: !state.deleteProj }));
-  }
+  // handleDelete(e) {
+  //   e.preventDefault();
+  //   this.props.deleteProject(this.props.projectId);
+  //   this.props.history.push("/index");
+  //   this.setState(state => ({ deleteProj: !state.deleteProj }));
+  // }
 
-  handleDoNotDelete(e) {
-    e.preventDefault();
-    this.setState(state => ({ deleteProj: !state.deleteProj }));
-  }
+  // handleDoNotDelete(e) {
+  //   e.preventDefault();
+  //   this.setState(state => ({ deleteProj: !state.deleteProj }));
+  // }
 
   render() {
   
@@ -62,26 +63,26 @@ class ProjectShow extends React.Component {
     
     const comment = this.props.comments.map(comment => <CommentsIndexContainer comment={comment} key={comment.id} />);
 
-    const updateDeleteButton = (
-      <div className="project-update">
-        <button id="uptdel" onClick={this.toggleProjUpdate}>Update</button>
-        <button id="uptdel" onClick={this.toggleProjDel}>Delete</button>
-      </div>
-    );
+    // const updateDeleteButton = (
+    //   <div className="project-update">
+    //     <button id="uptdel" onClick={this.toggleProjUpdate}>Update</button>
+    //     <button id="uptdel" onClick={this.toggleProjDel}>Delete</button>
+    //   </div>
+    // );
 
-    const checkDelete = (
-      <div className="check-delete">
-        <span>Are you sure, you want to delete project permanently?</span>
-        <div>
-          <button id="delete-y" onClick={this.handleDelete}>Yes</button>
-          <button id="delete-n" onClick={this.handleDoNotDelete}>No</button>
-        </div>
-      </div>
-    );
+    // const checkDelete = (
+    //   <div className="check-delete">
+    //     <span>Are you sure, you want to delete project permanently?</span>
+    //     <div>
+    //       <button id="delete-y" onClick={this.handleDelete}>Yes</button>
+    //       <button id="delete-n" onClick={this.handleDoNotDelete}>No</button>
+    //     </div>
+    //   </div>
+    // );
 
-    const displayUpdateDelete = (
-      this.state.deleteProj === true ? checkDelete : updateDeleteButton
-    )
+    // const displayUpdateDelete = (
+    //   this.state.deleteProj === true ? checkDelete : updateDeleteButton
+    // )
 
     // const updateTitle = (
     //   <form action="">
@@ -92,7 +93,8 @@ class ProjectShow extends React.Component {
     return (
       <div className="proj-wrapper">
         <img id="project-show-bg" src={this.props.project.photos[1]} />
-        <div className="proj-title">
+        <TitleContainer props={this.props}/>
+        {/* <div className="proj-title">
           <img id="proj-icon" src={this.props.project.photos[0]} />
           <h3>{this.props.project.title}</h3>
           <div className="proj-title-details">
@@ -100,12 +102,12 @@ class ProjectShow extends React.Component {
             <FollowsContainer
               className="proj-follow-link"
               project={this.props.project}
-            />
-            {/* {this.props.session.id === this.props.project.author_id ? updateDeleteButton : ""} */}
-            {this.props.session.id === this.props.project.author_id ? displayUpdateDelete : ""}
-          </div>
-          {/* {this.state.checked === true ? checkDelete : ""} */}
-        </div>
+            /> */}
+            {/* //////{this.props.session.id === this.props.project.author_id ? updateDeleteButton : ""} */}
+            {/* {this.props.session.id === this.props.project.author_id ? displayUpdateDelete : ""}
+          </div> */}
+          {/* //////{this.state.checked === true ? checkDelete : ""} */}
+        {/* </div> */}
         <div className="proj-body">
           <span>{this.props.project.description}</span>
           <img id="proj-body-main-img" src={this.props.project.photos[2]} />
