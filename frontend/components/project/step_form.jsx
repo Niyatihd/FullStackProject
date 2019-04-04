@@ -31,21 +31,15 @@ class StepForm extends React.Component {
   render() {
     // debugger
     return (
-      <div className="comment-create-wrapper" id="goto-create-comment">
-        <div className="comment-create-box">
+      <div className="step-create-wrapper">
+        <div className="step-create-box">
           <form onSubmit={this.handleSubmit}>
-            <div className="form-input">
+            <div className="step-form-input">
               {/* <img id="avatar" src={window.images.hp_navbar_logo} /> */}
               <input placeholder="Title" value={this.state.title} onChange={this.handleInput("title")}/>
               <textarea placeholder="Step" value={this.state.description} onChange={this.handleInput("description")}/>
             </div>
-            <div className="form-input-bottom">
-              <div className="policy-text">
-                <span>
-                  We have a <strong>be nice</strong> policy.
-                </span>
-                <span>Please be positive and constructive.</span>
-              </div>
+            <div className="step-form-input-bottom">
               <input type="submit" value={this.props.formType} />
             </div>
             {/* <Link to="/">Add Images</Link> */}

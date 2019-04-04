@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default ({isOwner, step, toggleEdit}) => {
+export default ({isOwner, step, toggleEdit, deleteStep}) => {
   // debugger
   return (
     <div className="proj-step-body">
@@ -12,7 +12,7 @@ export default ({isOwner, step, toggleEdit}) => {
       {isOwner ?
         <div>
           <button className="comment-update-link" onClick={toggleEdit}>Update</button>
-          <button className="comment-update-link">Delete</button>
+          <button className="comment-update-link" onClick={() => deleteStep(step.id)}>Delete</button>
         </div>
         :
         "" }
