@@ -2,16 +2,13 @@ import { connect } from 'react-redux';
 import Title from './title';
 import { fetchProject, deleteProject } from '../../actions/project_actions';
 
-const mapStateToProps = ({ entities: { projects, project_author, users, steps, comments }, session, errors }, { props: {match} }) => {
-// debugger
+const mapStateToProps = ({ entities: { projects, project_author, users, comments }, session, errors }, { props: {match} }) => {
   let projectId = match.params.projectId;
 
   return ({
     projectId: projectId,
     project: projects[projectId],
-    // steps: Object.values(steps),
     project_author,
-    comments: Object.values(comments),
     session,
     users,
     loggedIn: session.id !== null,
