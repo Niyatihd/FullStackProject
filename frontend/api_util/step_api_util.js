@@ -1,13 +1,3 @@
-// export const fetchComment = (id) => {
-//   // debugger
-//   return (
-//     $.ajax({
-//       url: `/api/comments/${id}`,
-//       method: "get"
-//     })
-//   );
-// };
-
 export const createStep = (step) => {
   // debugger
   return (
@@ -21,17 +11,17 @@ export const createStep = (step) => {
   );
 };
 
-// export const updateComment = (comment) => {
-//   return (
-//     $.ajax({
-//       url: `api/comments/${comment.id}`,
-//       method: "patch",
-//       data: {
-//         comment: comment
-//       }
-//     })
-//   );
-// };
+export const updateStep = (step) => {
+  return (
+    $.ajax({
+      url: `api/steps/${step.id}`,
+      method: "patch",
+      data: {
+        step: step
+      }
+    })
+  );
+};
 
 export const deleteStep = (id) => {
   return (

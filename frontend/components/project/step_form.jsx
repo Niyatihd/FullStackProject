@@ -25,7 +25,9 @@ class StepForm extends React.Component {
       title: "",
       description: ""
     });
-    // this.props.toggleEdit();
+    if (this.props.formType === "Update Step") {
+      this.props.toggleEdit();
+    }
   }
 
   render() {

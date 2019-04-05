@@ -4,8 +4,7 @@ import { createStep } from '../../actions/project_actions';
 import { withRouter } from 'react-router-dom';
 
 
-const mapStateToProps = (state, { match, toggleEdit}) => {
-// debugger
+const mapStateToProps = (state, { match }) => {
   let projectId = match.params.projectId;
   // let author_id = state.entities.users[state.session.id];
 

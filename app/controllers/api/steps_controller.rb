@@ -14,9 +14,15 @@ class Api::StepsController < ApplicationController
     end
   end
 
-  # def edit
-    
-  # end
+  def update
+    @step = Step.find(params[:id])
+    # @step = current_user.authored_projects.find(params[:step][:project_id]).steps[params[:id]]
+    if @step.update_attributes(step_params)
+      render 'api/steps/show'
+    else
+      render :json ["Not authorized to edit step!"], status: 435
+    end
+  end
 
   def destroy
     step = Step.find(params[:id])

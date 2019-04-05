@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import StepsIndexItem from './steps_index_item';
-import StepFormContainer from './step_form_container';
+import EditStepContainer from './edit_step_container';
 import { deleteStep } from '../../actions/project_actions';
 
 const mapStateToProps = ({ entities: {projects}, session: {id}}, { step }) => {
@@ -41,7 +41,7 @@ class StepsIndex extends React.Component {
     if (this.state.editLink === true) {
       // this.toggleEdit
       return (
-        <StepFormContainer step={this.props.step} toggleEdit={this.toggleEdit} />
+        <EditStepContainer step={this.props.step} toggleEdit={this.toggleEdit} />
         // <h1>EditCommentContainer</h1>
       )
     } else {

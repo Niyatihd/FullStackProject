@@ -6,7 +6,7 @@
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :projects, only: [:index, :create, :update, :show, :destroy]
-    resources :steps, only: [:create, :edit, :destroy]
+    resources :steps, only: [:create, :update, :destroy]
     resources :comments, only: [:index, :create, :update, :destroy, :show]
     resources :follows, only: [:index, :create, :destroy, :show]
   end

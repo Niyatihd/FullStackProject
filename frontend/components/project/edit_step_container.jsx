@@ -1,28 +1,30 @@
-// import { connect } from 'react-redux';
-// import StepForm from './step_form';
-// import { createStep } from '../../actions/project_actions';
-// import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import StepForm from './step_form';
+import { createStep } from '../../actions/project_actions';
+import { withRouter } from 'react-router-dom';
+import { updateStep } from '../../actions/project_actions';
 
 
-// const mapStateToProps = (state, { match }) => {
-//   // debugger
-//   let projectId = match.params.projectId;
-//   // let author_id = state.entities.users[state.session.id];
+const mapStateToProps = ({ entities: { steps } }, { match, step, toggleEdit }) => {
+  // debugger
+  let projectId = match.params.projectId;
 
-//   return ({
-//     comment: {
-//       title: "",
-//       desccription: "",
-//       project_id: projectId
-//     },
-//     formType: 'Add Step'
-//   });
-// };
+  return ({
+    step: {
+      id: step.id,
+      title: step.title,
+      description: step.description,
+      project_id: projectId
+    },
+    formType: 'Update Step',
+    toggleEdit
+  });
+};
 
-// const mapDispatchToProps = (dispatch) => {
-//   return ({
-//     action: (step) => dispatch(createStep(step))
-//   });
-// };
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    action: (step) => dispatch(updateStep(step))
+  });
+};
 
-// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(StepForm));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(StepForm));

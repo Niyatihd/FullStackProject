@@ -25,7 +25,7 @@ class Api::CommentsController < ApplicationController
     if @comment.update_attributes(comment_params)
       render 'api/comments/show'
     else
-      render :json ["Not authorized to edit comment!!"], status: 435
+      render :json ["Not authorized to edit comment!"], status: 435
     end
   end
 

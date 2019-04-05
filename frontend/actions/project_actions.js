@@ -95,6 +95,10 @@ export const deleteStep = id => dispatch => (
   StepAPIUtil.deleteStep(id).then(() => dispatch(removeStep(id)))
 );
 
+export const updateStep = step => dispatch => (
+  StepAPIUtil.updateStep(step).then(payload => dispatch(receiveStep(payload)))
+);
+
 export const createFollow = follow => dispatch => (
   FollowAPIUtil.createFollow(follow).then(payload => dispatch(receiveFollow(payload)))
 );

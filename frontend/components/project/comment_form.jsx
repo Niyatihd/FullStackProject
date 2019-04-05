@@ -25,7 +25,7 @@ class CommentForm extends React.Component {
     this.setState({
       body: ""
     });
-    // debugger
+    
     if (this.props.formType === "Update Comment") {
       this.props.toggleEdit();
     }
