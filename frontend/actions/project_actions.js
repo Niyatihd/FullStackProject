@@ -5,6 +5,8 @@ import * as FollowAPIUtil from '../api_util/follow_api_util';
 
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
+export const RECEIVE_PROJECT_ERRORS = "RECEIVE_PROJECT_ERRORS";
+export const CLEAR_PROJECT_ERRORS = 'CLEAR_PROJECT_ERRORS';
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
@@ -63,6 +65,15 @@ export const receiveStep = ({ step }) => ({
 export const removeStep = (id) => ({
   type: REMOVE_STEP,
   id
+});
+
+const receiveErrors = (errors) => ({
+  type: RECEIVE_PROJECT_ERRORS,
+  errors
+});
+
+export const clearErrors = () => ({
+  type: CLEAR_PROJECT_ERRORS
 });
 
 //Thunk action creators
