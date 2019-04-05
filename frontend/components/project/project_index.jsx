@@ -1,35 +1,13 @@
 import React from 'react';
 import ProjectIndexItem from './project_index_item';
+import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { debug } from 'util';
 
 class ProjectIndex extends React.Component {
   constructor(props) {
     super(props);
-    
-    // this.images = [//icon
-    //   window.images.splash1,
-    //   window.images.lp1,
-    //   window.images.ll3,
-    //   window.images.sk1,
-    //   window.images.w1,
-    //   window.images.al1,
-    //   window.images.f1,
-    //   window.images.am1,
-    //   window.images.vb4,
-    //   window.images.dl2,
-    //   window.images.ob4,
-    //   window.images.st1,
-    //   window.images.tr4,
-    //   window.images.r3,
-    //   window.images.ss6,
-    //   window.images.hh5,
-    //   window.images.rrd4,
-    //   window.images.ng1,
-    //   window.images.qq4,
-    //   window.images.hjp7,
-    // ];
-
+    this.projectOnClick = this.projectOnClick.bind(this);
   }
   
   //refactor into it's own container DELETE
@@ -49,10 +27,16 @@ class ProjectIndex extends React.Component {
     }
   }
 
+  projectOnClick(path) {
+    // debugger
+    this.props.history.push(path);
+  }
+
   render () {
+    // debugger
     let project = this.props.projects.map((project, i) => {
       return (
-        <ProjectIndexItem project={project} key={project.id} followsCount={this.props.followsCount}/>
+        <ProjectIndexItem project={project} key={project.id} followsCount={this.props.followsCount} projectOnClick={this.projectOnClick}/>
       )
     })
 
