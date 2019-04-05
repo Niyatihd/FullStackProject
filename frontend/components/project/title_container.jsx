@@ -23,7 +23,7 @@ const mapDispatchToProps = dispatch => {
     deleteProject: (id) => dispatch(deleteProject(id)),
     updateProjectButton: (
       <button id="uptdel" onClick={() => dispatch(openModal("updateProject"))}>
-        Update a Wizardable
+        Update
       </button>
     )
   });

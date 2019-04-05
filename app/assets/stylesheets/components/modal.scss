@@ -46,6 +46,7 @@
 
 .close-x {
   position: absolute;
+  cursor: pointer;
 }
 
 .modal-head {
@@ -93,7 +94,7 @@
   background: orange;
   color: white;
   align-self: center;
-  width: 90px;
+  width: 165px;
   height: 30px;
   font-size: 18px;
   letter-spacing: 1px;

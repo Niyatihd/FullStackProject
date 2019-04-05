@@ -37,7 +37,8 @@ class ProjectForm extends React.Component {
         this.props.history.push("/login");
       }
     } else if (this.props.formType === "Update Project") {
-      this.props.updateProject(this.state);
+      this.props.updateProject(this.state)
+      .then(this.props.closeModal());
     }
   }
 
@@ -51,7 +52,7 @@ class ProjectForm extends React.Component {
         </div>
         <div className="modal-body">
           {/* <h1>This is modal</h1> */}
-          <h1>Create Your Own Wizardable</h1>
+          {this.props.formType === "Create Project" ? <h1>Create Your Own Wizardable</h1> : <h1>Update Your Wizardable</h1>}
           <form onSubmit={this.handleSubmit}>
             <input className="modal-input1" type="text" placeholder="Title" value={this.state.title} onChange={this.handleInput("title")} />
             <textarea className="textarea" id="" cols="30" rows="10" placeholder="Description" value={this.state.description} onChange={this.handleInput("description")}></textarea>
