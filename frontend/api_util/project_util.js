@@ -50,6 +50,18 @@ export const createProject = (project) => {
   );
 };
 
+export const updateProject = (project) => {
+  return (
+    $.ajax({
+      url: `api/projects/${project.id}`,
+      method: "patch",
+      data: { 
+        project: project 
+      }
+    })
+  );
+};
+
 export const deleteProject = (id) => {
   return (
     $.ajax({
