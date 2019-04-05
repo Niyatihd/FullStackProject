@@ -43,7 +43,8 @@ class Title extends React.Component {
   render() {
     const updateDeleteButton = (
       <div className="project-update">
-        <button id="uptdel" onClick={this.toggleProjUpdate}>Update</button>
+        {/* <button id="uptdel" onClick={this.toggleProjUpdate}>Update</button> */}
+        {this.props.updateProjectButton}
         <button id="uptdel" onClick={this.toggleProjDel}>Delete</button>
       </div>
     );

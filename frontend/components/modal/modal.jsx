@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import NewProjectContainer from '../project/new_project_container';
+import UpdateProjectContainer from '../project/edit_project_container';
 // import NewProjectFormContainer from '../project/new_project_form_container';
 
 const mapStateToProps = state => {
@@ -25,6 +26,10 @@ const Modal = ({ modal, closeModal })  => {
   switch (modal) {
     case 'newProject':
       component = <NewProjectContainer closeModal={closeModal}/>;
+      // component = <NewProjectFormContainer closeModal={closeModal}/>;
+      break;
+    case 'updateProject':
+      component = <UpdateProjectContainer closeModal={closeModal} />;
       // component = <NewProjectFormContainer closeModal={closeModal}/>;
       break;
     default:

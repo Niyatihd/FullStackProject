@@ -1,6 +1,8 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import Title from './title';
 import { fetchProject, deleteProject } from '../../actions/project_actions';
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = ({ entities: { projects, project_author, users, comments }, session, errors }, { props: {match} }) => {
   let projectId = match.params.projectId;
@@ -18,7 +20,12 @@ const mapStateToProps = ({ entities: { projects, project_author, users, comments
 const mapDispatchToProps = dispatch => {
   return ({
     fetchProject: (id) => dispatch(fetchProject(id)),
-    deleteProject: (id) => dispatch(deleteProject(id))
+    deleteProject: (id) => dispatch(deleteProject(id)),
+    updateProjectButton: (
+      <button id="uptdel" onClick={() => dispatch(openModal("updateProject"))}>
+        Update a Wizardable
+      </button>
+    )
   });
 };
 
