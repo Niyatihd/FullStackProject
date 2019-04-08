@@ -25,7 +25,8 @@ class Api::ProjectsController < ApplicationController
       render 'api/projects/show'
       # render json: @project
     else
-      render json: @project.errors.full_messages, status: :unprocessable_entity
+      render json: ["Title and description cannot be empty"], status: 435
+      # render json: @project.errors.full_messages, status: :unprocessable_entity
     end
   end
 

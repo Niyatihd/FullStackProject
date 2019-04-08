@@ -120,6 +120,9 @@ export const deleteFollow = follow => dispatch => (
   
 export const createProject = project => dispatch => (
   ProjectAPIUtil.createProject(project).then(payload => dispatch(receiveProject(payload)))
+  // ,(err) => (
+  //   dispatch(receiveErrors(err.responseJSON))
+  // )
 );
   
 export const updateProject = project => dispatch => (

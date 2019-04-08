@@ -22,7 +22,6 @@ class ProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(this.props.currentUserId);
     if (this.props.formType === "Create Project") {
       if (this.props.currentUserId) {
         this.props.createProject(this.state)
@@ -42,6 +41,18 @@ class ProjectForm extends React.Component {
     }
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}: `}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
   render() {
     return (
       <>
@@ -54,9 +65,10 @@ class ProjectForm extends React.Component {
           {/* <h1>This is modal</h1> */}
           {this.props.formType === "Create Project" ? <h1>Create Your Own Wizardable</h1> : <h1>Update Your Wizardable</h1>}
           <form onSubmit={this.handleSubmit}>
-            <input className="modal-input1" type="text" placeholder="Title" value={this.state.title} onChange={this.handleInput("title")} />
-            <textarea className="textarea" id="" cols="30" rows="10" placeholder="Description" value={this.state.description} onChange={this.handleInput("description")}></textarea>
+            <input className="modal-input1" type="text" placeholder="Title(required)" value={this.state.title} onChange={this.handleInput("title")} />
+            <textarea className="textarea" id="" cols="30" rows="10" placeholder="Description(required)" value={this.state.description} onChange={this.handleInput("description")}></textarea>
             <input value={this.props.formType} className="modal-input2" type="submit" />
+            <div className="errors"> {this.renderErrors(this.props.errors)} </div>
           </form>
         </div>
         {/* </div> */}

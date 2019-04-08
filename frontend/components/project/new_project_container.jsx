@@ -13,13 +13,14 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
   return {
+    errors: state.errors.project,
     project: {
       title: "",
       description: ""
     },
     projectId: state.entities.newProject.id,
     currentUserId: state.session.id,
-    formType: 'Create Project'
+    formType: "Create Project"
   };
 };
 
