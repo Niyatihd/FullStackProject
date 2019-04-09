@@ -16,7 +16,10 @@ const mapStateToProps = state => {
     errors: state.errors.project,
     project: {
       title: "",
-      description: ""
+      description: "",
+      photos: []
+      // imageUrl: "",
+      // image: ""
     },
     projectId: state.entities.newProject.id,
     currentUserId: state.session.id,

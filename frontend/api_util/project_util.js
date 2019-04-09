@@ -45,7 +45,9 @@ export const createProject = (project) => {
       method: "post",
       data: { 
         project: project 
-      }
+      },
+      // contentType: false,
+      // processData: false
     })
   );
 };
