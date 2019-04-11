@@ -44,7 +44,7 @@
   font-family: 'harry2';
 }
 
-.proj-title > h3 {
+.proj-title>h3 {
   font-weight: normal;
 }
 
@@ -98,7 +98,7 @@
   align-items: center;
 }
 
-.proj-step-content > h3 {
+.proj-step-content>h3 {
   font-family: 'harry2';
   text-align: center;
   letter-spacing: 2px;
@@ -109,9 +109,9 @@
   font-size: 20px;
   line-height: 32px;
   font-family: Nunito,
-  helvetica,
-  arial,
-  sans-serif;
+    helvetica,
+    arial,
+    sans-serif;
   font-weight: 100;
   text-align: left;
   color: #555;
@@ -149,7 +149,8 @@
   box-shadow: 3px 3px orange;
 }
 
-#delete-y, #delete-n {
+#delete-y,
+#delete-n {
   margin-right: 15px;
   margin-left: 15px;
   background: orange;
@@ -181,4 +182,16 @@
   margin-top: 6em;
   margin-left: 5px;
   text-align: center;
+}
+
+@media all and (max-width: 980px) {
+  .proj-title {
+    top: 155px;
+  }
+}
+
+@media all and (max-width: 725px) {
+  .proj-title {
+    top: 225px;
+  }
 }
