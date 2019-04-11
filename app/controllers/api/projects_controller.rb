@@ -18,11 +18,13 @@ class Api::ProjectsController < ApplicationController
     
     @project = Project.new(project_params)
     @project.author_id = current_user.id
-    photo = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
-    photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp1.jpg")
+    photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
+    photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp1.jpg")
+    photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp3.jpg")
 
-    @project.photos.attach(io: photo, filename: 'splash1.jpg')
-    @project.photos.attach(io: photo1, filename: 'lp1.jpg')
+    @project.photos.attach(io: photo1, filename: 'splash1.jpg')
+    @project.photos.attach(io: photo2, filename: 'lp1.jpg')
+    @project.photos.attach(io: photo3, filename: 'lp3.jpg')
 
     if @project.save
       render 'api/projects/show'
