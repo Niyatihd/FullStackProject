@@ -35,9 +35,9 @@
   margin-top: 10px;
 }
 
-.modal-body > h1 {
+.modal-body>h1 {
   font-size: 26px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: 'harry2';
   color: sandybrown;
   text-shadow: 2px 2px 2px black;
@@ -54,12 +54,11 @@
   justify-content: flex-end;
 }
 
-.modal-body > form {
+.modal-body>form {
   // background: lightgrey;
   display: flex;
   flex-direction: column;
   align-content: center;
-  margin-top: 10px; 
 }
 
 
@@ -70,7 +69,7 @@
   width: 340px;
   border: 1px solid lightgray;
   resize: none;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 4px;
   font-size: 16px;
   padding-left: 10px;
@@ -84,11 +83,13 @@
   border-radius: 4px;
   font-size: 16px;
   padding-left: 10px;
+  padding-top: 4px;
+  color: lightgrey;
 }
 
 .modal-input2 {
   border: 1px solid lightgrey;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 4px;
   text-align: center;
   background: orange;
@@ -100,4 +101,3 @@
   letter-spacing: 1px;
   font-size: 20px;
 }
-
