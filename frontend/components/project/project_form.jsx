@@ -1,5 +1,13 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { css } from "@emotion/core";
+import { ClipLoader } from "react-spinners";
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -42,7 +50,7 @@ class ProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = this.appendProject();
-
+    this.setState({ loading: true });
     // // debugger
 
     // formData.append("project[title]", this.state.title);
@@ -148,6 +156,19 @@ class ProjectForm extends React.Component {
             {/* <div className="errors"> {this.renderErrors(this.props.errors)} </div> */}
           </form>
         </div>
+        {this.state.loading ? (
+          <div className="sweet-loading">
+            <ClipLoader
+              css={override}
+              sizeUnit={"px"}
+              size={150}
+              color={"#123abc"}
+              loading={this.state.loading}
+            />
+          </div>
+        ) : (
+          ""
+        )}
         {/* </div> */}
       </>
     );

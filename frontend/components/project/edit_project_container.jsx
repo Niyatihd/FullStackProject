@@ -24,7 +24,8 @@ const mapStateToProps = (
     },
     projectId: newProject.id,
     currentUserId: session.id,
-    formType: "Update Project"
+    formType: "Update Project",
+    loading: false
   };
 };
 

@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import ProjectForm from './project_form';
+import ProjectForm from "./project_form";
 import { withRouter } from "react-router-dom";
 import { closeModal } from "../../actions/modal_actions";
 import { createProject } from "../../actions/project_actions";
@@ -23,8 +23,14 @@ const mapStateToProps = state => {
     },
     projectId: state.entities.newProject.id,
     currentUserId: state.session.id,
-    formType: "Create Project"
+    formType: "Create Project",
+    loading: false
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectForm));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ProjectForm)
+);
