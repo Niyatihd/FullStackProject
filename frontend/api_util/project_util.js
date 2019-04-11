@@ -3,7 +3,9 @@ export const fetchProjects = (search_string) => {
     $.ajax({
       url: `api/projects`,
       method: "get",
-      data: {search_string}
+      data: {
+        search_string
+      }
     })
   );
 };
@@ -39,15 +41,14 @@ export const deleteFollow = (id) => {
 };
 
 export const createProject = (project) => {
+  console.log(project)
   return (
     $.ajax({
       url: "api/projects",
       method: "post",
-      data: { 
-        project: project 
-      },
-      // contentType: false,
-      // processData: false
+      data: project,
+      contentType: false,
+      processData: false
     })
   );
 };
@@ -57,8 +58,8 @@ export const updateProject = (project) => {
     $.ajax({
       url: `api/projects/${project.id}`,
       method: "patch",
-      data: { 
-        project: project 
+      data: {
+        project: project
       }
     })
   );

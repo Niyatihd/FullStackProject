@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { withRouter } from "react-router-dom";
 
 class ProjectForm extends React.Component {
@@ -9,8 +9,7 @@ class ProjectForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.handleUrlInput = this.handleUrlInput.bind(this);
-    this.appendProject = this.appendProject.bind(this);
-
+    // this.appendProject = this.appendProject.bind(this);
   }
 
   handleInput(type) {
@@ -22,34 +21,37 @@ class ProjectForm extends React.Component {
   }
 
   appendProject() {
+    // debugger;
     const { title, description, photos } = this.state;
     const formDataProject = new FormData();
     formDataProject.append("project[title]", title);
     formDataProject.append("project[description]", description);
     for (let i = 0; i < photos.length; i++) {
-      formDataProject.append('project[photos][]', photos[i]);
+      formDataProject.append("project[photos][]", photos[i]);
     }
     // if (this.state.image) {
     //   formDataProject.append("project[photos]", [this.state.image]);
     // }
+    // console.log(formDataProject);
     return formDataProject;
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const formData = this.appendProject();
+
     // // debugger
 
     // formData.append("project[title]", this.state.title);
     // formData.append("project[description]", this.state.description);
     // formData.append("project[photos]", [this.state.image]);
-    
+
     if (this.props.formType === "Create Project") {
       if (this.props.currentUserId) {
         // debugger
         this.props
-          .createProject(this.state)
-          // .createProject(formData)
+          // .createProject(this.state)
+          .createProject(formData)
           .then(() =>
             this.props.history.push(`/projects/${this.props.projectId}`)
           )

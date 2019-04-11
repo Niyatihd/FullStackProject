@@ -14,6 +14,8 @@ class Api::ProjectsController < ApplicationController
 
   def create
     # debugger
+    # request.body.string
+    
     @project = Project.new(project_params)
     @project.author_id = current_user.id
     photo = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
@@ -57,7 +59,9 @@ class Api::ProjectsController < ApplicationController
 
   private
   def project_params
+    # puts request.body.string[2]
     params.require(:project).permit(:title, :description, photos: [])
+    # raise params.inspect
     # params.require(:project).permit(:title, :description, :author_id, photos: [])
   end
 
