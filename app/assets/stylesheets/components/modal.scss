@@ -20,7 +20,7 @@
 
 .modal-child {
   width: 425px;
-  height: 450px;
+  height: 470px;
   background: white;
   position: absolute;
   top: 50%;
@@ -47,6 +47,8 @@
 .close-x {
   position: absolute;
   cursor: pointer;
+  left: 409px;
+  top: 3px;
 }
 
 .modal-head {
@@ -59,6 +61,7 @@
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin-top: 10px;
 }
 
 
@@ -89,7 +92,7 @@
 
 .modal-input2 {
   border: 1px solid lightgrey;
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 4px;
   text-align: center;
   background: orange;
