@@ -58,12 +58,23 @@ export const updateProject = (project) => {
     $.ajax({
       url: `api/projects/${project.id}`,
       method: "patch",
-      data: {
-        project: project
-      }
+      data: project,
+      contentType: false,
+      processData: false
     })
   );
 };
+// export const updateProject = (project) => {
+//   return (
+//     $.ajax({
+//       url: `api/projects/${project.id}`,
+//       method: "patch",
+//       data: {
+//         project: project
+//       }
+//     })
+//   );
+// };
 
 export const deleteProject = (id) => {
   return (

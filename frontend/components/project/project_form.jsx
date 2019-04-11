@@ -9,7 +9,7 @@ class ProjectForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.handleUrlInput = this.handleUrlInput.bind(this);
-    // this.appendProject = this.appendProject.bind(this);
+    this.appendProject = this.appendProject.bind(this);
   }
 
   handleInput(type) {
@@ -21,7 +21,6 @@ class ProjectForm extends React.Component {
   }
 
   appendProject() {
-    // debugger;
     const { title, description, photos } = this.state;
     const formDataProject = new FormData();
     formDataProject.append("project[title]", title);
@@ -29,6 +28,10 @@ class ProjectForm extends React.Component {
     for (let i = 0; i < photos.length; i++) {
       formDataProject.append("project[photos][]", photos[i]);
     }
+    // if (this.props.formType === "Update Project") {
+    // debugger;
+    formDataProject.append("project[id]", this.state.id);
+    // }
     // if (this.state.image) {
     //   formDataProject.append("project[photos]", [this.state.image]);
     // }
@@ -65,7 +68,8 @@ class ProjectForm extends React.Component {
         this.props.history.push("/login");
       }
     } else if (this.props.formType === "Update Project") {
-      this.props.updateProject(this.state).then(this.props.closeModal());
+      // this.props.updateProject(this.state).then(this.props.closeModal());
+      this.props.updateProject(formData).then(this.props.closeModal());
     }
   }
 

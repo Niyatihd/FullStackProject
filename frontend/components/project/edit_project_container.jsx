@@ -11,12 +11,16 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-const mapStateToProps = ({ entities: { newProject, projects }, session}, { match, comment, toggleEdit }) => {
+const mapStateToProps = (
+  { entities: { newProject, projects }, session },
+  { match, comment, toggleEdit }
+) => {
   return {
     project: {
       id: newProject.id,
       title: projects[newProject.id].title,
-      description: projects[newProject.id].description
+      description: projects[newProject.id].description,
+      photos: []
     },
     projectId: newProject.id,
     currentUserId: session.id,
@@ -24,4 +28,9 @@ const mapStateToProps = ({ entities: { newProject, projects }, session}, { match
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectForm));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ProjectForm)
+);
