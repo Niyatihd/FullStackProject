@@ -39,7 +39,7 @@ class Api::ProjectsController < ApplicationController
     # @project = Project.find(params[:id]) #to test on postman
     @project = current_user.authored_projects.find(params[:project][:id])
     # debugger
-    @project.photos.last.purge
+    # @project.photos.last.purge
     # end
     # @project.photos.last.purge
     if @project.update_attributes(project_params)
