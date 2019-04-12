@@ -53,10 +53,10 @@ export const createProject = (project) => {
   );
 };
 
-export const updateProject = (project) => {
+export const updateProject = (project, id) => {
   return (
     $.ajax({
-      url: `api/projects/${project.id}`,
+      url: `api/projects/${id}`,
       method: "patch",
       data: project,
       contentType: false,

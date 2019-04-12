@@ -76,8 +76,11 @@ class ProjectForm extends React.Component {
         this.props.history.push("/login");
       }
     } else if (this.props.formType === "Update Project") {
+      // debugger;
       // this.props.updateProject(this.state).then(this.props.closeModal());
-      this.props.updateProject(formData).then(this.props.closeModal());
+      this.props
+        .updateProject(formData, this.props.projectId)
+        .then(this.props.closeModal());
     }
   }
 

@@ -7,7 +7,6 @@ class Api::ProjectsController < ApplicationController
     else
       @projects = Project.all
     end
-    # debugger
 
     render 'api/projects/index'
   end
@@ -20,11 +19,19 @@ class Api::ProjectsController < ApplicationController
     @project.author_id = current_user.id
     photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
     photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp1.jpg")
-    # photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp3.jpg")
-    # if @project.photos.length == 0
+    photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp3.jpg")
+    if @project.photos.length == 0
       @project.photos.attach(io: photo1, filename: 'splash1.jpg')
       @project.photos.attach(io: photo2, filename: 'lp1.jpg')
-    # end
+      @project.photos.attach(io: photo3, filename: 'lp3.jpg')
+    end
+    if @project.photos.length == 1
+      @project.photos.attach(io: photo1, filename: 'splash1.jpg')
+      @project.photos.attach(io: photo2, filename: 'lp1.jpg')
+    end
+    if @project.photos.length == 2
+      @project.photos.attach(io: photo1, filename: 'splash1.jpg')
+    end
 
     if @project.save
       render 'api/projects/show'
@@ -38,11 +45,25 @@ class Api::ProjectsController < ApplicationController
   def update
     # @project = Project.find(params[:id]) #to test on postman
     @project = current_user.authored_projects.find(params[:project][:id])
-    # debugger
-    # @project.photos.last.purge
-    # end
-    # @project.photos.last.purge
+    @project.photos.purge
+
     if @project.update_attributes(project_params)
+      photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
+      photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp1.jpg")
+      photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp3.jpg")
+      if @project.photos.length == 0
+        @project.photos.attach(io: photo1, filename: 'splash1.jpg')
+        @project.photos.attach(io: photo2, filename: 'lp1.jpg')
+        @project.photos.attach(io: photo3, filename: 'lp3.jpg')
+      end
+      if @project.photos.length == 1
+        @project.photos.attach(io: photo1, filename: 'splash1.jpg')
+        @project.photos.attach(io: photo2, filename: 'lp1.jpg')
+      end
+      if @project.photos.length == 2
+        @project.photos.attach(io: photo1, filename: 'splash1.jpg')
+      end
+
       render 'api/projects/show'
     else
       render :json ["Not authorized to edit project!!"], status: 435
