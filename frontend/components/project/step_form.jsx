@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class StepForm extends React.Component {
   constructor(props) {
@@ -9,13 +9,11 @@ class StepForm extends React.Component {
   }
 
   handleInput(type) {
-    return (
-      (e) => {
-        this.setState({
-          [type]: e.target.value
-        });
-      }
-    );
+    return e => {
+      this.setState({
+        [type]: e.target.value
+      });
+    };
   }
 
   handleSubmit(e) {
@@ -38,19 +36,34 @@ class StepForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <div className="step-form-input">
               {/* <img id="avatar" src={window.images.hp_navbar_logo} /> */}
-              <input placeholder="Title" value={this.state.title} onChange={this.handleInput("title")}/>
-              <textarea placeholder="Step" value={this.state.description} onChange={this.handleInput("description")}/>
+              <input
+                placeholder="Title"
+                value={this.state.title}
+                onChange={this.handleInput("title")}
+              />
+              <textarea
+                placeholder="Step"
+                value={this.state.description}
+                onChange={this.handleInput("description")}
+              />
             </div>
             <div className="step-form-input-bottom">
+              <input
+                id="step-image-input"
+                type="file"
+                placeholder="Step Picture"
+                // onChange={e => this.setState({ photos: e.target.files })}
+                // onChange={this.handleUrlInput}
+              />
               <input type="submit" value={this.props.formType} />
             </div>
+
             {/* <Link to="/">Add Images</Link> */}
           </form>
         </div>
       </div>
     );
   }
-
 }
 
 export default StepForm;
