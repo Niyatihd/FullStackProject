@@ -20,11 +20,11 @@ class Api::ProjectsController < ApplicationController
     @project.author_id = current_user.id
     photo1 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/splash1.jpg")
     photo2 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp1.jpg")
-    photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp3.jpg")
-
-    @project.photos.attach(io: photo1, filename: 'splash1.jpg')
-    @project.photos.attach(io: photo2, filename: 'lp1.jpg')
-    @project.photos.attach(io: photo3, filename: 'lp3.jpg')
+    # photo3 = open("https://s3-us-west-1.amazonaws.com/wizardables-dev/lp3.jpg")
+    # if @project.photos.length == 0
+      @project.photos.attach(io: photo1, filename: 'splash1.jpg')
+      @project.photos.attach(io: photo2, filename: 'lp1.jpg')
+    # end
 
     if @project.save
       render 'api/projects/show'
@@ -36,9 +36,12 @@ class Api::ProjectsController < ApplicationController
   end
 
   def update
-    @project = Project.find(params[:project][:id]) #to test on postman
-    # @project = current_user.authored_projects.find(params[:id])
-
+    # @project = Project.find(params[:id]) #to test on postman
+    @project = current_user.authored_projects.find(params[:project][:id])
+    # debugger
+    @project.photos.last.purge
+    # end
+    # @project.photos.last.purge
     if @project.update_attributes(project_params)
       render 'api/projects/show'
     else
@@ -61,7 +64,7 @@ class Api::ProjectsController < ApplicationController
 
   private
   def project_params
-    # puts request.body.string[2]
+    # puts request.body.string
     params.require(:project).permit(:title, :description, photos: [])
     # raise params.inspect
     # params.require(:project).permit(:title, :description, :author_id, photos: [])

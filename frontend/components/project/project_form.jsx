@@ -50,7 +50,7 @@ class ProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = this.appendProject();
-    this.setState({ loading: true });
+    // this.setState({ loading: true });
     // // debugger
 
     // formData.append("project[title]", this.state.title);
@@ -156,7 +156,7 @@ class ProjectForm extends React.Component {
             {/* <div className="errors"> {this.renderErrors(this.props.errors)} </div> */}
           </form>
         </div>
-        {this.state.loading ? (
+        {/* {this.state.loading ? (
           <div className="sweet-loading">
             <ClipLoader
               css={override}
@@ -168,7 +168,7 @@ class ProjectForm extends React.Component {
           </div>
         ) : (
           ""
-        )}
+        )} */}
         {/* </div> */}
       </>
     );

@@ -41,7 +41,7 @@ export const deleteFollow = (id) => {
 };
 
 export const createProject = (project) => {
-  console.log(project)
+  // console.log(project)
   return (
     $.ajax({
       url: "api/projects",
