@@ -23,10 +23,10 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-      margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.proj-comment-body > h3 {
+.proj-comment-body>h3 {
   font-family: 'harry2';
   text-align: center;
   letter-spacing: 2px;
@@ -34,6 +34,8 @@
   margin: 0;
   margin-top: 40px;
   color: #555;
+  border-bottom: 1px solid lightgrey;
+  width: 700px;
 }
 
 .comment-author-edit {
@@ -43,7 +45,7 @@
 }
 
 
-.proj-comment-content > p {
+.proj-comment-content>p {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -68,7 +70,7 @@
   padding: 30px;
 }
 
-.proj-comment-content > div > span {
+.proj-comment-content>div>span {
   font-size: 13px;
   color: cadetblue;
 }
@@ -84,5 +86,6 @@
   font-size: 14px;
   margin-top: 10px;
   margin-left: 5px;
+  margin-right: 5px;
   text-align: center;
 }

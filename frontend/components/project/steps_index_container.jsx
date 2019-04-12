@@ -1,22 +1,25 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import StepsIndexItem from './steps_index_item';
-import EditStepContainer from './edit_step_container';
-import { deleteStep } from '../../actions/project_actions';
+import React from "react";
+import { connect } from "react-redux";
+import StepsIndexItem from "./steps_index_item";
+import EditStepContainer from "./edit_step_container";
+import { deleteStep } from "../../actions/project_actions";
 
-const mapStateToProps = ({ entities: {projects}, session: {id}}, { step }) => {
+const mapStateToProps = (
+  { entities: { projects }, session: { id } },
+  { step }
+) => {
   // debugger
-  return ({
+  return {
     isOwner: projects[step.project_id].author_id === id,
     step
     // isOwner: comment.author_id === id
-  });
+  };
 };
 
-const mapDispatchToprops = (dispatch) => {
-  return ({
-    deleteStep: (id) => dispatch(deleteStep(id))
-  });
+const mapDispatchToprops = dispatch => {
+  return {
+    deleteStep: id => dispatch(deleteStep(id))
+  };
 };
 
 class StepsIndex extends React.Component {
@@ -26,11 +29,10 @@ class StepsIndex extends React.Component {
     this.state = {
       step: this.props.step,
       id: this.props.step.id,
-      editLink: false,
+      editLink: false
     };
 
     this.toggleEdit = this.toggleEdit.bind(this);
-
   }
 
   toggleEdit() {
@@ -41,15 +43,26 @@ class StepsIndex extends React.Component {
     if (this.state.editLink === true) {
       // this.toggleEdit
       return (
-        <EditStepContainer step={this.props.step} toggleEdit={this.toggleEdit} />
+        <EditStepContainer
+          step={this.props.step}
+          toggleEdit={this.toggleEdit}
+        />
         // <h1>EditCommentContainer</h1>
-      )
+      );
     } else {
-
-      return <StepsIndexItem isOwner={this.props.isOwner} step={this.props.step} toggleEdit={this.toggleEdit} deleteStep={this.props.deleteStep}/>
+      return (
+        <StepsIndexItem
+          isOwner={this.props.isOwner}
+          step={this.props.step}
+          toggleEdit={this.toggleEdit}
+          deleteStep={this.props.deleteStep}
+        />
+      );
     }
   }
 }
 
-
-export default connect(mapStateToProps, mapDispatchToprops)(StepsIndex);
+export default connect(
+  mapStateToProps,
+  mapDispatchToprops
+)(StepsIndex);

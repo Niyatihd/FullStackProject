@@ -6,9 +6,9 @@ export default ({ isOwner, step, toggleEdit, deleteStep }) => {
   return (
     <div className="proj-step-body">
       <div className="proj-step-content">
-        <h3>{step.title}</h3>
+        <h3>Step: {step.title}</h3>
         <span>{step.description}</span>
-        <div>{step.photo}</div>
+        <img src={`${step.photo}`} alt="step-photo" />
       </div>
       {isOwner ? (
         <div>
