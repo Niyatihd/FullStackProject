@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { css } from "@emotion/core";
-import { ClipLoader } from "react-spinners";
+import { RingLoader } from "react-spinners";
 
 const override = css`
   display: block;
@@ -163,11 +163,11 @@ class ProjectForm extends React.Component {
         </div>
         {this.state.loading ? (
           <div className="sweet-loading">
-            <ClipLoader
+            <RingLoader
               css={override}
               sizeUnit={"px"}
               size={150}
-              color={"#123abc"}
+              color={"#000000"}
               loading={this.state.loading}
             />
           </div>
