@@ -50,7 +50,6 @@ class ProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = this.appendProject();
-    // this.setState({ loading: true });
     // // debugger
 
     // formData.append("project[title]", this.state.title);
@@ -58,6 +57,8 @@ class ProjectForm extends React.Component {
     // formData.append("project[photos]", [this.state.image]);
 
     if (this.props.formType === "Create Project") {
+      this.setState({ loading: true });
+
       if (this.props.currentUserId) {
         // debugger
         this.props
@@ -76,11 +77,12 @@ class ProjectForm extends React.Component {
         this.props.history.push("/login");
       }
     } else if (this.props.formType === "Update Project") {
-      // debugger;
-      // this.props.updateProject(this.state).then(this.props.closeModal());
-      this.props
-        .updateProject(formData, this.props.projectId)
-        .then(this.props.closeModal());
+      this.setState({ loading: true }),
+        // debugger;
+        // this.props.updateProject(this.state).then(this.props.closeModal());
+        this.props
+          .updateProject(formData, this.props.projectId)
+          .then(() => this.props.closeModal());
     }
   }
 
@@ -159,7 +161,7 @@ class ProjectForm extends React.Component {
             {/* <div className="errors"> {this.renderErrors(this.props.errors)} </div> */}
           </form>
         </div>
-        {/* {this.state.loading ? (
+        {this.state.loading ? (
           <div className="sweet-loading">
             <ClipLoader
               css={override}
@@ -171,7 +173,7 @@ class ProjectForm extends React.Component {
           </div>
         ) : (
           ""
-        )} */}
+        )}
         {/* </div> */}
       </>
     );
