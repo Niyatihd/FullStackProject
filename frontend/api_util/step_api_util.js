@@ -4,9 +4,12 @@ export const createStep = (step) => {
     $.ajax({
       url: "/api/steps",
       method: "post",
-      data: {
-        step: step
-      }
+      data: step,
+      // data: {
+      //   step: step
+      // },
+      contentType: false,
+      processData: false
     })
   );
 };
@@ -16,9 +19,12 @@ export const updateStep = (step) => {
     $.ajax({
       url: `api/steps/${step.id}`,
       method: "patch",
-      data: {
-        step: step
-      }
+      data: step,
+      contentType: false,
+      processData: false
+      // data: {
+      //   step: step
+      // }
     })
   );
 };

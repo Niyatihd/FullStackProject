@@ -15,7 +15,8 @@ class Api::StepsController < ApplicationController
   end
 
   def update
-    @step = Step.find(params[:id])
+    # debugger
+    @step = Step.find(params[:step][:id])
     # @step = current_user.authored_projects.find(params[:step][:project_id]).steps[params[:id]]
     if @step.update_attributes(step_params)
       render 'api/steps/show'
@@ -33,7 +34,7 @@ class Api::StepsController < ApplicationController
 
   private
   def step_params #might change for pictures and videos from active record
-    params.require(:step).permit(:title, :description, :project_id, :photo)
+    params.require(:step).permit(:title, :description, :id, :project_id, :photo)
   end
 
 end
