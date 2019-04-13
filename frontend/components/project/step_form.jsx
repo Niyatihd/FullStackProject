@@ -42,9 +42,9 @@ class StepForm extends React.Component {
     formData.append("step[id]", this.state.id);
     // }
 
-    if (this.state.photoFile) {
-      formData.append("step[photo]", this.state.photoFile);
-    }
+    // if (this.state.photoFile) {
+    formData.append("step[photo]", this.state.photoFile);
+    // }
 
     // this.props.action(this.state);
     this.props.action(formData);

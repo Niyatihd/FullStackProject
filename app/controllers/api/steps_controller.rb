@@ -34,6 +34,8 @@ class Api::StepsController < ApplicationController
 
   private
   def step_params #might change for pictures and videos from active record
+    puts request.body.string
+
     params.require(:step).permit(:title, :description, :id, :project_id, :photo)
   end
 
