@@ -1,8 +1,13 @@
 class Api::StepsController < ApplicationController
   #DELETE
   skip_before_action :verify_authenticity_token
+  def index
+    @steps = Step.all
+    render json: @steps
+  end
 
   def create
+    # debugger
     @step = Step.new(step_params)
     @step.project_id = params[:step][:project_id]
 
@@ -34,7 +39,7 @@ class Api::StepsController < ApplicationController
 
   private
   def step_params #might change for pictures and videos from active record
-    puts request.body.string
+    # puts request.body.string
 
     params.require(:step).permit(:title, :description, :id, :project_id, :photo)
   end

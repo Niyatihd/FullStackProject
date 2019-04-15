@@ -1,13 +1,27 @@
 import React from "react";
+import ReactQuill from "react-quill"; // ES6
+// import * as ReactQuill from "react-quill"; // Typescript
 
 class StepForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = this.props.step;
+    // this.onChangeTextEditor = this.onChangeTextEditor.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
   }
+
+  // onChangeTextEditor(html) {
+  //   this.setState({ text: html });
+  // }
+  // onChangeTextEditor(field) {
+  //   return e => {
+  //     // const newStep = this.state;
+  //     // newStep[field] = e;
+  //     this.setState({ [field]: e });
+  //   };
+  // }
 
   handleInput(type) {
     return e => {
@@ -28,6 +42,8 @@ class StepForm extends React.Component {
     };
     if (file) {
       fileReader.readAsDataURL(file);
+    } else {
+      this.setState({ photoUrl: "", photoFile: null });
     }
   }
 
@@ -38,13 +54,13 @@ class StepForm extends React.Component {
     formData.append("step[title]", this.state.title);
     formData.append("step[description]", this.state.description);
     formData.append("step[project_id]", this.state.project_id);
-    // if (this.formType === "Update Step") {
-    formData.append("step[id]", this.state.id);
-    // }
+    if (this.props.formType === "Update Step") {
+      formData.append("step[id]", this.state.id);
+    }
 
-    // if (this.state.photoFile) {
-    formData.append("step[photo]", this.state.photoFile);
-    // }
+    if (this.state.photoFile) {
+      formData.append("step[photo]", this.state.photoFile);
+    }
 
     // this.props.action(this.state);
     this.props.action(formData);
@@ -70,6 +86,10 @@ class StepForm extends React.Component {
                 value={this.state.title}
                 onChange={this.handleInput("title")}
               />
+              {/* <ReactQuill
+                value={this.state.description}
+                onChange={this.onChangeTextEditor("description")}
+              /> */}
               <textarea
                 placeholder="Step"
                 value={this.state.description}
