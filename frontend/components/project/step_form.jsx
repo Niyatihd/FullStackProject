@@ -15,13 +15,13 @@ class StepForm extends React.Component {
   // onChangeTextEditor(html) {
   //   this.setState({ text: html });
   // }
-  // onChangeTextEditor(field) {
-  //   return e => {
-  //     // const newStep = this.state;
-  //     // newStep[field] = e;
-  //     this.setState({ [field]: e });
-  //   };
-  // }
+  onChangeTextEditor(field) {
+    return e => {
+      // const newStep = this.state;
+      // newStep[field] = e;
+      this.setState({ [field]: e });
+    };
+  }
 
   handleInput(type) {
     return e => {
@@ -86,15 +86,15 @@ class StepForm extends React.Component {
                 value={this.state.title}
                 onChange={this.handleInput("title")}
               />
-              {/* <ReactQuill
+              <ReactQuill
                 value={this.state.description}
                 onChange={this.onChangeTextEditor("description")}
-              /> */}
-              <textarea
+              />
+              {/* <textarea
                 placeholder="Step"
                 value={this.state.description}
                 onChange={this.handleInput("description")}
-              />
+              /> */}
             </div>
             <div className="step-form-input-bottom">
               <input
