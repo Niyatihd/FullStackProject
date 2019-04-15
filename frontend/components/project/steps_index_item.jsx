@@ -7,7 +7,9 @@ export default ({ isOwner, step, toggleEdit, deleteStep }) => {
     <div className="proj-step-body">
       <div className="proj-step-content">
         <h3>Step: {step.title}</h3>
-        <span>{step.description}</span>
+        <span dangerouslySetInnerHTML={{ __html: step.description }}>
+          {/* {step.description} */}
+        </span>
         {step.photo ? <img src={`${step.photo}`} alt="step-photo" /> : ""}
       </div>
       {isOwner ? (
