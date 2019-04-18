@@ -7,7 +7,11 @@
   src: asset-url('HP.TTF');
 }
 
-@keyframes blink { 50% { border-color: transparent; }  }
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
 
 #splash-bkgrd-img {
@@ -25,11 +29,11 @@
   justify-content: center;
 }
 
-.splash-dynamic-text > form {
+.splash-dynamic-text>form {
   display: flex;
 }
 
-.splash-dynamic-text > form > span {
+.splash-dynamic-text>form>span {
   color: white;
   // font-weight: bold;
   font-size: 76px;
@@ -37,7 +41,7 @@
   text-shadow: 4px 2px black;
 }
 
-.splash-input > input {
+.splash-input>input {
   width: 410px;
   border: 0;
   outline: 0;
@@ -59,10 +63,10 @@
   font-family: 'harry2';
   margin-left: 40px;
   position: absolute;
-  top: -21px;
-  line-height: 0;
-  border-right: 5px solid white;
-  height: 57px;
+  top: -54px;
+  line-height: 1.5;
+  border-right: 4px solid white;
+  height: 52px;
   animation: blink .3s step-end infinite alternate;
+  padding-right: 5px;
 }
-
