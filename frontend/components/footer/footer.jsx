@@ -10,18 +10,28 @@ export default () => {
         </div>
         <div className="footer-icons">
           <div className="link-git-icon-wrapper">
-            <a href="https://www.linkedin.com/in/niyati-desai-70a5758/">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/niyati-desai-70a5758/"
+            >
               <img id="link-git-icon" src={window.images.linkedin} />
             </a>
-            <a href="https://github.com/Niyatihd/FullStackProject">
+            <a
+              target="_blank"
+              href="https://github.com/Niyatihd/FullStackProject"
+            >
               <img id="link-git-icon" src={window.images.git} />
             </a>
           </div>
           <div className="insta-tweet-icon-wrapper">
-            <a href="">
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/1gyu5oZMjSeNNOf0WfDPwu2kaCjpN700D/view"
+              className="button primary"
+            >
               <span id="resume">Resume</span>
             </a>
-            <a href="https://www.niyati-desai.com/">
+            <a target="_blank" href="https://www.niyati-desai.com/">
               <span>Portfolio</span>
             </a>
             {/* <img id="insta-tweet-icon" src={window.images.insta} />
