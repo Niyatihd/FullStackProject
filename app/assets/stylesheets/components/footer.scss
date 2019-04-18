@@ -85,6 +85,32 @@
   margin-right: 4px;
 }
 
+.insta-tweet-icon-wrapper>a>span {
+  padding: 9px;
+  background: darkgrey;
+  color: black;
+  border-radius: 5px;
+}
+
+#resume {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.insta-tweet-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 66px;
+  justify-content: space-between;
+  margin-top: 13px;
+  width: 63px;
+}
+
+.link-git-icon-wrapper>a {
+  margin: 0;
+}
+
 #footer-logo {
   height: 130px;
   width: 130px;
