@@ -9,7 +9,7 @@ export const getProject = (state, projectId) => {
   return project[projectId];
 };
 
-export const getProjectByCategory = (entities, category="") => {
+export const getProjectByCategory = (entities, category = "") => {
   // debugger
   let selected = {};
   let projects = entities.projects;
@@ -26,19 +26,9 @@ export const getProjectByCategory = (entities, category="") => {
 
 export const getFollowId = (follows, user_id, project_id) => {
   // debugger
-  for(var i = 0; i < follows.length; i++) {
+  for (var i = 0; i < follows.length; i++) {
     if (follow[i].user_id === user_id && follow[i].project_id === project_id) {
       return follow[i].id;
     }
   }
 };
-
-// export const getFollowsCount= (follows) => {
-//   // debugger
-//   // for(var i = 0; i < follows.length; i++) {
-//   //   if (follow[i].user_id === user_id && follow[i].project_id === project_id) {
-//   //     return follow[i].id;
-//   //   }
-//   // }
-//   return (follows.length)
-// };

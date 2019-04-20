@@ -37,7 +37,6 @@ class Api::CommentsController < ApplicationController
   def destroy
     comment = Comment.find(params[:id])
     comment_id = comment.id
-    # debugger
     comment.destroy
     render json: { id: comment_id }
   end

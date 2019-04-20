@@ -8,11 +8,9 @@ const mapStateToProps = (
   { entities: { projects }, session: { id } },
   { step }
 ) => {
-  // debugger
   return {
     isOwner: projects[step.project_id].author_id === id,
     step
-    // isOwner: comment.author_id === id
   };
 };
 
@@ -41,13 +39,11 @@ class StepsIndex extends React.Component {
 
   render() {
     if (this.state.editLink === true) {
-      // this.toggleEdit
       return (
         <EditStepContainer
           step={this.props.step}
           toggleEdit={this.toggleEdit}
         />
-        // <h1>EditCommentContainer</h1>
       );
     } else {
       return (

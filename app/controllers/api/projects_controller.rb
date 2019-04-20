@@ -33,7 +33,7 @@ class Api::ProjectsController < ApplicationController
 
     if @project.save
       render 'api/projects/show'
-      # render json: @project
+      # render json: @project #to test on postman
     else
       render json: ["Title and description cannot be empty"], status: 435
       # render json: @project.errors.full_messages, status: :unprocessable_entity

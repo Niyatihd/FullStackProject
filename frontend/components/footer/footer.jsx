@@ -3,7 +3,6 @@ import React from "react";
 export default () => {
   return (
     <div className="footer-wrapper">
-      {/* <div className="footer-top"> */}
       <div className="footer-top">
         <div>
           <img id="footer-logo" src={window.images.logo_hp} />
@@ -34,12 +33,9 @@ export default () => {
             <a target="_blank" href="https://www.niyati-desai.com/">
               <span>Portfolio</span>
             </a>
-            {/* <img id="insta-tweet-icon" src={window.images.insta} />
-            <img id="insta-tweet-icon" src={window.images.tweet} /> */}
           </div>
         </div>
       </div>
-      {/* </div> */}
       <div className="footer-bottom">
         <div className="copyright">
           <span>&copy; 2019 Hogwarts, Inc.</span>

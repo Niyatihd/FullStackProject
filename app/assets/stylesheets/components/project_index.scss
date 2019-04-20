@@ -16,12 +16,9 @@
 }
 
 .project-grid {
-  // margin: 40px 0 40px 0;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  // margin: 0px 70px 0px 70px;
-  // margin: 0px 34px 0px 34px;
 }
 
 .project-show {
@@ -31,7 +28,6 @@
 .project-box {
   display: flex;
   flex-direction: column;
-  // margin: 0px 16px 30px 19px;
   margin: 0px 12px 30px 12px;
   width: 285px;
   height: 360px;
@@ -68,8 +64,6 @@
 @media all and (max-width: 800px) {
   .project-grid {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    // justify-content: flex-end;
-    // margin: 0px 90px 0px 34px;
   }
 
   .project-box {
@@ -99,7 +93,6 @@
 
 .project-content>#clickable-title {
   width: 160px;
-  // height: 93px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -129,7 +122,6 @@
 
 .project-follow-link {
   font-size: 15px;
-  // line-height: 15px;
   font-family: 'harry2';
   letter-spacing: 1px;
   color: gray;

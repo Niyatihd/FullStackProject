@@ -1,24 +1,17 @@
 import React from "react";
 import ReactQuill from "react-quill"; // ES6
-// import * as ReactQuill from "react-quill"; // Typescript
 
 class StepForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = this.props.step;
-    // this.onChangeTextEditor = this.onChangeTextEditor.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
   }
 
-  // onChangeTextEditor(html) {
-  //   this.setState({ text: html });
-  // }
   onChangeTextEditor(field) {
     return e => {
-      // const newStep = this.state;
-      // newStep[field] = e;
       this.setState({ [field]: e });
     };
   }
@@ -62,7 +55,6 @@ class StepForm extends React.Component {
       formData.append("step[photo]", this.state.photoFile);
     }
 
-    // this.props.action(this.state);
     this.props.action(formData);
     this.setState({
       title: "",
@@ -74,40 +66,32 @@ class StepForm extends React.Component {
   }
 
   render() {
-    // debugger
     return (
       <div className="step-create-wrapper">
         <div className="step-create-box">
           <form onSubmit={this.handleSubmit}>
             <div className="step-form-input">
-              {/* <img id="avatar" src={window.images.hp_navbar_logo} /> */}
               <input
-                placeholder="Title"
+                placeholder="Title(required)"
                 value={this.state.title}
                 onChange={this.handleInput("title")}
               />
               <ReactQuill
+                id="react-quill"
+                placeholder="Description(required)"
                 value={this.state.description}
                 onChange={this.onChangeTextEditor("description")}
               />
-              {/* <textarea
-                placeholder="Step"
-                value={this.state.description}
-                onChange={this.handleInput("description")}
-              /> */}
             </div>
             <div className="step-form-input-bottom">
               <input
                 id="step-image-input"
                 type="file"
                 placeholder="Step Picture"
-                // onChange={e => this.setState({ photo: e.target.files[0] })}
                 onChange={this.handleFile}
               />
               <input type="submit" value={this.props.formType} />
             </div>
-
-            {/* <Link to="/">Add Images</Link> */}
           </form>
         </div>
       </div>

@@ -6,10 +6,9 @@ export const fetchComment = (id) => {
       method: "get"
     })
   );
-};  
+};
 
 export const createComment = (comment) => {
-  // debugger
   return (
     $.ajax({
       url: "/api/comments",
@@ -19,7 +18,7 @@ export const createComment = (comment) => {
       }
     })
   );
-};  
+};
 
 export const updateComment = (comment) => {
   return (

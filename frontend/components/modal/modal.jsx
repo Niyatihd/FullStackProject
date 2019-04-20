@@ -1,9 +1,8 @@
-import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
-import { connect } from 'react-redux';
-import NewProjectContainer from '../project/new_project_container';
-import UpdateProjectContainer from '../project/edit_project_container';
-// import NewProjectFormContainer from '../project/new_project_form_container';
+import React from "react";
+import { closeModal } from "../../actions/modal_actions";
+import { connect } from "react-redux";
+import NewProjectContainer from "../project/new_project_container";
+import UpdateProjectContainer from "../project/edit_project_container";
 
 const mapStateToProps = state => {
   return {
@@ -17,20 +16,18 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-const Modal = ({ modal, closeModal })  => {
+const Modal = ({ modal, closeModal }) => {
   if (!modal) {
     return null;
   }
 
   let component;
   switch (modal) {
-    case 'newProject':
-      component = <NewProjectContainer closeModal={closeModal}/>;
-      // component = <NewProjectFormContainer closeModal={closeModal}/>;
+    case "newProject":
+      component = <NewProjectContainer closeModal={closeModal} />;
       break;
-    case 'updateProject':
+    case "updateProject":
       component = <UpdateProjectContainer closeModal={closeModal} />;
-      // component = <NewProjectFormContainer closeModal={closeModal}/>;
       break;
     default:
       return null;
@@ -43,6 +40,9 @@ const Modal = ({ modal, closeModal })  => {
       </div>
     </div>
   );
-}
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Modal);

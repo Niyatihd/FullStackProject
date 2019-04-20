@@ -1,12 +1,11 @@
-import { connect } from 'react-redux';
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, Redirect , withRouter } from 'react-router-dom';
-import { fetchProjects } from '../../actions/project_actions';
-
+import { connect } from "react-redux";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, Redirect, withRouter } from "react-router-dom";
+import { fetchProjects } from "../../actions/project_actions";
 
 const mapDispatchToProps = dispatch => ({
-  fetchProjects: (string) => dispatch(fetchProjects(string)),
+  fetchProjects: string => dispatch(fetchProjects(string))
 });
 
 class SearchContainer extends React.Component {
@@ -26,7 +25,7 @@ class SearchContainer extends React.Component {
       searchString: e.currentTarget.value
     });
   }
-   
+
   handleSubmit(e) {
     // window.location.href = "http://localhost:3000/#/index";
     this.props.history.push(`/search/${this.state.searchString}`);
@@ -37,21 +36,31 @@ class SearchContainer extends React.Component {
     });
   }
 
-
   render() {
-
     return (
       <form className="search-form" onSubmit={this.handleSubmit}>
-        <input onChange={this.handleInput} type="text" placeholder="Let's Make ..." name="search" value={this.state.searchString} />
+        <input
+          onChange={this.handleInput}
+          type="text"
+          placeholder="Let's Make ..."
+          name="search"
+          value={this.state.searchString}
+        />
         <button type="submit">
           <FontAwesomeIcon className=" search-icon" icon="search" />
         </button>
-        <Link to="/index" id="featured-proj-btn">Featured</Link>
+        <Link to="/index" id="featured-proj-btn">
+          Featured
+        </Link>
         {this.props.newProjectButton}
-      </form>      
-    )
+      </form>
+    );
   }
 }
 
-
-export default withRouter(connect(null, mapDispatchToProps)(SearchContainer));
+export default withRouter(
+  connect(
+    null,
+    mapDispatchToProps
+  )(SearchContainer)
+);

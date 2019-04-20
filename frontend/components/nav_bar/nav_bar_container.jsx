@@ -1,9 +1,8 @@
-import { connect } from 'react-redux';
-import React from 'react';
-import NavBar from './nav_bar';
-import { logout } from '../../actions/session_actions';
-import { openModal, closeModal } from '../../actions/modal_actions';
-
+import { connect } from "react-redux";
+import React from "react";
+import NavBar from "./nav_bar";
+import { logout } from "../../actions/session_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = ({ session, entities: { users } }) => {
   return {
@@ -14,26 +13,14 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   newProjectButton: (
-    <button id="new-proj-btn" onClick={() => dispatch(openModal('newProject'))}>
+    <button id="new-proj-btn" onClick={() => dispatch(openModal("newProject"))}>
       Create a Wizardable
     </button>
   ),
   closeModal: () => dispatch(closeModal())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
-
-
-// const mapStateToProps = (state) => {
-//   return ({
-//     currentUser: state.session.currentUser
-//   });
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return ({
-//     logout: () => dispatch(logout())
-//   });
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavBar);

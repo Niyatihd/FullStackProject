@@ -5,9 +5,6 @@ export const createStep = (step) => {
       url: "/api/steps",
       method: "post",
       data: step,
-      // data: {
-      //   step: step
-      // },
       contentType: false,
       processData: false
     })
@@ -22,9 +19,6 @@ export const updateStep = (step) => {
       data: step,
       contentType: false,
       processData: false
-      // data: {
-      //   step: step
-      // }
     })
   );
 };

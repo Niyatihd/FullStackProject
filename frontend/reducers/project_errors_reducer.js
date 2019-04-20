@@ -1,6 +1,5 @@
 import {
   RECEIVE_PROJECT_ERRORS,
-  RECEIVE_CURRENT_USER,
   CLEAR_PROJECT_ERRORS
 } from '../actions/project_actions';
 

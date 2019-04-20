@@ -13,7 +13,7 @@ class Api::StepsController < ApplicationController
 
     if @step.save
       render 'api/steps/show'
-      # render json: @step
+      # render json: @step #to test on postman
     else
       render json: @step, status: :unprocessable_entity
     end
@@ -38,9 +38,8 @@ class Api::StepsController < ApplicationController
   end
 
   private
-  def step_params #might change for pictures and videos from active record
-    # puts request.body.string
-
+  def step_params
+    # puts request.body.string #to debug
     params.require(:step).permit(:title, :description, :id, :project_id, :photo)
   end
 
